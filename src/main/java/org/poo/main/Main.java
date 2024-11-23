@@ -5,7 +5,7 @@ import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.checker.Checker;
 import org.poo.checker.CheckerConstants;
-import org.poo.fileio.ObjectInput;
+import org.poo.input.ObjectInput;
 
 import java.io.File;
 import java.io.IOException;
