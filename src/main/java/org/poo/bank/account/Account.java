@@ -3,6 +3,7 @@ package org.poo.bank.account;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
+import lombok.Setter;
 import org.poo.bank.card.Card;
 import org.poo.bank.client.User;
 
@@ -15,15 +16,15 @@ import static org.poo.bank.Constants.*;
 @Getter
 public abstract class Account {
     protected User owner;
-    @JsonProperty("IBAN")
-    protected String iban;
+    @JsonProperty("IBAN") protected String iban;
     protected double balance = 0;
     protected String currency;
     protected String type;
-    protected final List<Card> cards = new LinkedList<Card>(); // key == card number
     protected String status = "active";
+    @Setter protected double minimumBalance = 0;
+    protected final List<Card> cards = new LinkedList<Card>(); // key == card number
 
-    public Account(User owner, final String iban, final String currency) {
+    public Account(final User owner, final String iban, final String currency) {
         this.owner = owner;
         this.iban = iban;
         this.currency = currency;
@@ -38,12 +39,12 @@ public abstract class Account {
         balance += amount;
     }
 
-    /**\
+    /**
      * Associate the account with a new card.
      *
      * @param card details of the card
      */
-    public void addCard(Card card) {
+    public void addCard(final Card card) {
         if (!hasCard(card.getCardNumber())) {
             cards.add(card);
         }
@@ -72,7 +73,7 @@ public abstract class Account {
      * @return String with an error, if something bad happens
      *          null, if not
      */
-    public String delete(String email) {
+    public String delete(final String email) {
         if (!Objects.equals(owner.getEmail(), email)) {
             return INVALID_USER;
         }
@@ -94,14 +95,34 @@ public abstract class Account {
         }
     }
 
+    /**
+     * Someone take money from the account to pay something.
+     *
+     * @param amount sum of money
+     * @return null
+     */
+    public String pay(final double amount) {
+        if (balance < amount) {
+            return null;
+        }
+
+        balance -= amount;
+        return null;
+    }
+
     @JsonIgnore
     private User getOwner() {
         return owner;
     }
 
     @JsonIgnore
-    public String getStatus() {
+    public final String getStatus() {
         return status;
+    }
+
+    @JsonIgnore
+    public final double getMinimumBalance() {
+        return minimumBalance;
     }
 }
 

@@ -40,15 +40,24 @@
   "timestamp" : 8
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 9
+  },
   "timestamp" : 9
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 10
+  },
   "timestamp" : 10
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 11
+  },
   "timestamp" : 11
 }, {
   "command" : "printUsers",
@@ -92,11 +101,17 @@
   "timestamp" : 12
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 14
+  },
   "timestamp" : 14
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 15
+  },
   "timestamp" : 15
 }, {
   "command" : "printUsers",

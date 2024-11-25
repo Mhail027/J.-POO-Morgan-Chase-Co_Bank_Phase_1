@@ -79,8 +79,9 @@ public final class Main {
         ArrayNode output = objectMapper.createArrayNode();
 
         Utils.resetRandom();
-        DataBase dataBase = DataBase.init(inputData.getUsers());
+        DataBase dataBase = DataBase.init(inputData.getUsers(), inputData.getExchangeRates());
 
+        System.out.println(filePath1);
         for (Command command : inputData.getCommands()) {
             JsonNode outputMessage = command.execute(dataBase);
             if (!outputMessage.isNull()) {

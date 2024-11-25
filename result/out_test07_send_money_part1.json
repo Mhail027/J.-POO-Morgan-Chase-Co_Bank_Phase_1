@@ -1,6 +1,9 @@
 [ {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 5
+  },
   "timestamp" : 5
 }, {
   "command" : "printUsers",
@@ -30,7 +33,10 @@
   "timestamp" : 6
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 7
+  },
   "timestamp" : 7
 }, {
   "command" : "printUsers",

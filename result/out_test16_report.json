@@ -37,16 +37,11 @@
   } ],
   "timestamp" : 9
 }, {
-  "command" : "payOnline",
-  "output" : "Command is not valid",
-  "timestamp" : 11
-}, {
-  "command" : "payOnline",
-  "output" : "Command is not valid",
-  "timestamp" : 12
-}, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 13
+  },
   "timestamp" : 13
 }, {
   "command" : "printUsers",
@@ -55,7 +50,7 @@
     "lastName" : "James",
     "email" : "Gary_James@hotmail.us",
     "accounts" : [ {
-      "balance" : 280.0,
+      "balance" : 133.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
@@ -91,34 +86,51 @@
   "timestamp" : 14
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 17
+  },
   "timestamp" : 17
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
-  "timestamp" : 18
-}, {
-  "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 23
+  },
   "timestamp" : 23
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 24
+  },
   "timestamp" : 24
 }, {
   "command" : "report",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 25
+  },
   "timestamp" : 25
 }, {
   "command" : "report",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 26
+  },
   "timestamp" : 26
 }, {
   "command" : "report",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 27
+  },
   "timestamp" : 27
 }, {
   "command" : "report",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 28
+  },
   "timestamp" : 28
 } ]

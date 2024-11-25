@@ -1,6 +1,9 @@
 [ {
   "command" : "splitPayment",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 9
+  },
   "timestamp" : 9
 }, {
   "command" : "printUsers",
@@ -52,7 +55,10 @@
   "timestamp" : 10
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 11
+  },
   "timestamp" : 11
 }, {
   "command" : "printUsers",
@@ -104,14 +110,23 @@
   "timestamp" : 16
 }, {
   "command" : "splitPayment",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 17
+  },
   "timestamp" : 17
 }, {
   "command" : "splitPayment",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 18
+  },
   "timestamp" : 18
 }, {
   "command" : "printTransactions",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 19
+  },
   "timestamp" : 19
 } ]

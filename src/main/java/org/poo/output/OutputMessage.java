@@ -26,7 +26,7 @@ public final class OutputMessage {
      * Alternative to constructor, without to break Singleton pattern.
      *
      * @param output output
-     * @param timestamp receiving time of command
+     * @param timestamp the time from where the output comes
      * @return null, if output is null
      *         the created simple output, in contrary case
      */

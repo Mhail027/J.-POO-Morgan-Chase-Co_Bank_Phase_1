@@ -2,9 +2,9 @@ package org.poo.bank.account;
 
 import org.poo.bank.client.User;
 
-public final class ClassicAccount extends Account{
-    public ClassicAccount(final User owner, final String IBAN, final String currency) {
-        super(owner, IBAN, currency);
+public final class ClassicAccount extends Account {
+    public ClassicAccount(final User owner, final String iban, final String currency) {
+        super(owner, iban, currency);
         type = "classic";
     }
 }

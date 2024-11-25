@@ -1,4 +1,18 @@
 [ {
+  "command" : "deleteCard",
+  "output" : {
+    "description" : "User not found",
+    "timestamp" : 5
+  },
+  "timestamp" : 5
+}, {
+  "command" : "deleteCard",
+  "output" : {
+    "description" : "User not found",
+    "timestamp" : 6
+  },
+  "timestamp" : 6
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Severin",
@@ -10,7 +24,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
@@ -24,7 +38,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
@@ -32,11 +46,17 @@
   "timestamp" : 7
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 9
+  },
   "timestamp" : 9
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 11
+  },
   "timestamp" : 11
 }, {
   "command" : "printUsers",
@@ -50,7 +70,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "inactive"
+        "status" : "active"
       }, {
         "cardNumber" : "7004757825892043",
         "status" : "active"
@@ -73,7 +93,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
@@ -82,14 +102,10 @@
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 13
   },
   "timestamp" : 13
-}, {
-  "command" : "payOnline",
-  "output" : "Command is not valid",
-  "timestamp" : 14
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -102,7 +118,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "inactive"
+        "status" : "active"
       }, {
         "cardNumber" : "7004757825892043",
         "status" : "active"
@@ -125,7 +141,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
@@ -143,7 +159,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "inactive"
+        "status" : "active"
       }, {
         "cardNumber" : "7004757825892043",
         "status" : "active"
@@ -166,7 +182,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
-        "status" : "inactive"
+        "status" : "active"
       }, {
         "cardNumber" : "6796819982034243",
         "status" : "active"
@@ -177,6 +193,9 @@
   "timestamp" : 19
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 20
+  },
   "timestamp" : 20
 } ]

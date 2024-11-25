@@ -92,10 +92,6 @@
   } ],
   "timestamp" : 9
 }, {
-  "command" : "setMinimumBalance",
-  "output" : "Command is not valid",
-  "timestamp" : 12
-}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Edmond",

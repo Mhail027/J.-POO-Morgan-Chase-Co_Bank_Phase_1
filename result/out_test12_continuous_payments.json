@@ -1,6 +1,9 @@
 [ {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 6
+  },
   "timestamp" : 6
 }, {
   "command" : "printUsers",
@@ -79,47 +82,80 @@
   "timestamp" : 7
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Currency not found",
+    "timestamp" : 23
+  },
   "timestamp" : 23
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Currency not found",
+    "timestamp" : 24
+  },
   "timestamp" : 24
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "User not found",
+    "timestamp" : 25
+  },
   "timestamp" : 25
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Currency not found",
+    "timestamp" : 26
+  },
   "timestamp" : 26
 }, {
   "command" : "setAlias",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 27
+  },
   "timestamp" : 27
 }, {
   "command" : "setAlias",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 28
+  },
   "timestamp" : 28
 }, {
   "command" : "setAlias",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 29
+  },
   "timestamp" : 29
 }, {
   "command" : "setAlias",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 30
+  },
   "timestamp" : 30
 }, {
   "command" : "setAlias",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 31
+  },
   "timestamp" : 31
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "User not found",
+    "timestamp" : 40
+  },
   "timestamp" : 40
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 41
+  },
   "timestamp" : 41
 }, {
   "command" : "printUsers",
@@ -228,35 +264,59 @@
   "timestamp" : 42
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 65
+  },
   "timestamp" : 65
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 66
+  },
   "timestamp" : 66
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 67
+  },
   "timestamp" : 67
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 68
+  },
   "timestamp" : 68
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 69
+  },
   "timestamp" : 69
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 70
+  },
   "timestamp" : 70
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 71
+  },
   "timestamp" : 71
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 72
+  },
   "timestamp" : 72
 }, {
   "command" : "printUsers",
@@ -389,19 +449,31 @@
   "timestamp" : 73
 }, {
   "command" : "printTransactions",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 74
+  },
   "timestamp" : 74
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 76
+  },
   "timestamp" : 76
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 78
+  },
   "timestamp" : 78
 }, {
   "command" : "printTransactions",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 79
+  },
   "timestamp" : 79
 }, {
   "command" : "deleteAccount",

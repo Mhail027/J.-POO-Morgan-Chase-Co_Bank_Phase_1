@@ -10,7 +10,7 @@ public final class SimpleOutput {
     private Object output;
     private int timestamp;
 
-    private SimpleOutput () {
+    private SimpleOutput() {
     }
 
     /**
@@ -32,7 +32,8 @@ public final class SimpleOutput {
      * @return null, if output is null
      *         the created simple output, in contrary case
      */
-    public static SimpleOutput init(final String command, final Object output, final int timestamp) {
+    public static SimpleOutput init(final String command, final Object output,
+                                    final int timestamp) {
         if (output == null) {
             return null;
         }

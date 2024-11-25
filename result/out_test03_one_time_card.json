@@ -35,6 +35,13 @@
   } ],
   "timestamp" : 5
 }, {
+  "command" : "deleteCard",
+  "output" : {
+    "description" : "User not found",
+    "timestamp" : 7
+  },
+  "timestamp" : 7
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Julie",
@@ -52,7 +59,7 @@
         "status" : "active"
       }, {
         "cardNumber" : "7004757825892043",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]

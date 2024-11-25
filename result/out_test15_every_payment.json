@@ -52,27 +52,45 @@
   "timestamp" : 7
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 11
+  },
   "timestamp" : 11
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 13
+  },
   "timestamp" : 13
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 14
+  },
   "timestamp" : 14
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 15
+  },
   "timestamp" : 15
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 16
+  },
   "timestamp" : 16
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 17
+  },
   "timestamp" : 17
 }, {
   "command" : "printUsers",
@@ -131,22 +149,37 @@
   "timestamp" : 18
 }, {
   "command" : "splitPayment",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 28
+  },
   "timestamp" : 28
 }, {
   "command" : "splitPayment",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 29
+  },
   "timestamp" : 29
 }, {
   "command" : "printTransactions",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 30
+  },
   "timestamp" : 30
 }, {
   "command" : "splitPayment",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 33
+  },
   "timestamp" : 33
 }, {
   "command" : "printTransactions",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 34
+  },
   "timestamp" : 34
 } ]

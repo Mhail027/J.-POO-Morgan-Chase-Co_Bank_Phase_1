@@ -79,13 +79,25 @@ public final class Command {
             }
 
             case "deleteCard" -> {
-                String err =dataBase.deleteCard(cardNumber, email);
+                String err = dataBase.deleteCard(cardNumber, email);
+                yield  objectMapper.valueToTree(
+                        ErrorOutput.init(command, err, dataBase.getTimestamp()));
+            }
+
+            case "setMinimumBalance" -> {
+                String err = dataBase.setMinimumBalance(account, amount);
+                yield  objectMapper.valueToTree(
+                        ErrorOutput.init(command, err, dataBase.getTimestamp()));
+            }
+
+            case "payOnline" -> {
+                String err = dataBase.payOnline(cardNumber, amount, currency, email);
                 yield  objectMapper.valueToTree(
                         ErrorOutput.init(command, err, dataBase.getTimestamp()));
             }
 
             default -> objectMapper.valueToTree(
-                       SimpleOutput.init(command, INVALID_COMMAND, dataBase.getTimestamp()));
+                       ErrorOutput.init(command, INVALID_COMMAND, dataBase.getTimestamp()));
         };
     }
 }

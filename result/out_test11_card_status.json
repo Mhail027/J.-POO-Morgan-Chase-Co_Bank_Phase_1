@@ -1,14 +1,23 @@
 [ {
   "command" : "checkCardStatus",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 18
+  },
   "timestamp" : 18
 }, {
   "command" : "checkCardStatus",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 19
+  },
   "timestamp" : 19
 }, {
   "command" : "checkCardStatus",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 20
+  },
   "timestamp" : 20
 }, {
   "command" : "printUsers",
@@ -130,64 +139,102 @@
   "timestamp" : 21
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 22
+  },
   "timestamp" : 22
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 23
+  },
   "timestamp" : 23
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 24
+  },
   "timestamp" : 24
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 25
+  },
   "timestamp" : 25
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 26
+  },
   "timestamp" : 26
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 27
+  },
   "timestamp" : 27
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 28
+  },
   "timestamp" : 28
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 29
+  },
   "timestamp" : 29
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 30
+  },
   "timestamp" : 30
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 31
+  },
   "timestamp" : 31
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 32
+  },
   "timestamp" : 32
 }, {
   "command" : "printTransactions",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 33
+  },
   "timestamp" : 33
 }, {
   "command" : "checkCardStatus",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 36
+  },
   "timestamp" : 36
 }, {
   "command" : "checkCardStatus",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 37
+  },
   "timestamp" : 37
-}, {
-  "command" : "payOnline",
-  "output" : "Command is not valid",
-  "timestamp" : 38
 }, {
   "command" : "printUsers",
   "output" : [ {

@@ -66,29 +66,13 @@
   } ],
   "timestamp" : 11
 }, {
-  "command" : "payOnline",
-  "output" : "Command is not valid",
-  "timestamp" : 12
-}, {
-  "command" : "payOnline",
-  "output" : "Command is not valid",
-  "timestamp" : 13
-}, {
-  "command" : "payOnline",
-  "output" : "Command is not valid",
-  "timestamp" : 14
-}, {
-  "command" : "payOnline",
-  "output" : "Command is not valid",
-  "timestamp" : 16
-}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Olimpiu",
     "lastName" : "Stan",
     "email" : "Olimpiu_Stan@outlook.ro",
     "accounts" : [ {
-      "balance" : 1432.0,
+      "balance" : 714.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ {

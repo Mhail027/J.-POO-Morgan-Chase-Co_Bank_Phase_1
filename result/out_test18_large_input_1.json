@@ -109,27 +109,45 @@
   "timestamp" : 6
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 22
+  },
   "timestamp" : 22
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 23
+  },
   "timestamp" : 23
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 24
+  },
   "timestamp" : 24
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 25
+  },
   "timestamp" : 25
 }, {
   "command" : "report",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 26
+  },
   "timestamp" : 26
 }, {
   "command" : "report",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 27
+  },
   "timestamp" : 27
 }, {
   "command" : "printUsers",
@@ -242,35 +260,52 @@
   "timestamp" : 28
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 39
+  },
   "timestamp" : 39
 }, {
   "command" : "checkCardStatus",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 42
+  },
   "timestamp" : 42
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
-  "timestamp" : 43
-}, {
-  "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Currency not found",
+    "timestamp" : 44
+  },
   "timestamp" : 44
 }, {
   "command" : "splitPayment",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 48
+  },
   "timestamp" : 48
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Currency not found",
+    "timestamp" : 49
+  },
   "timestamp" : 49
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Currency not found",
+    "timestamp" : 51
+  },
   "timestamp" : 51
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 52
+  },
   "timestamp" : 52
 }, {
   "command" : "printUsers",
@@ -279,7 +314,7 @@
     "lastName" : "Thompson-Byrne",
     "email" : "Norman_Thompson-Byrne@icloud.gb",
     "accounts" : [ {
-      "balance" : 4799.0,
+      "balance" : 4527.0,
       "currency" : "GBP",
       "type" : "classic",
       "cards" : [ {
@@ -416,23 +451,38 @@
   "timestamp" : 53
 }, {
   "command" : "report",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 54
+  },
   "timestamp" : 54
 }, {
   "command" : "report",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 55
+  },
   "timestamp" : 55
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 68
+  },
   "timestamp" : 68
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 69
+  },
   "timestamp" : 69
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 70
+  },
   "timestamp" : 70
 }, {
   "command" : "printUsers",
@@ -441,7 +491,7 @@
     "lastName" : "Thompson-Byrne",
     "email" : "Norman_Thompson-Byrne@icloud.gb",
     "accounts" : [ {
-      "balance" : 4799.0,
+      "balance" : 4527.0,
       "currency" : "GBP",
       "type" : "classic",
       "cards" : [ {
@@ -643,16 +693,18 @@
   "timestamp" : 71
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Currency not found",
+    "timestamp" : 74
+  },
   "timestamp" : 74
 }, {
   "command" : "report",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 75
+  },
   "timestamp" : 75
-}, {
-  "command" : "payOnline",
-  "output" : "Command is not valid",
-  "timestamp" : 77
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -660,7 +712,7 @@
     "lastName" : "Thompson-Byrne",
     "email" : "Norman_Thompson-Byrne@icloud.gb",
     "accounts" : [ {
-      "balance" : 4799.0,
+      "balance" : 4527.0,
       "currency" : "GBP",
       "type" : "classic",
       "cards" : [ {
@@ -705,7 +757,7 @@
     "lastName" : "Subramaniam",
     "email" : "Christopher_Subramaniam@protonmail.in",
     "accounts" : [ {
-      "balance" : 2094.0,
+      "balance" : 1718.0,
       "currency" : "INR",
       "type" : "classic",
       "cards" : [ {
@@ -874,11 +926,17 @@
   "timestamp" : 78
 }, {
   "command" : "changeInterestRate",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 79
+  },
   "timestamp" : 79
 }, {
   "command" : "addInterest",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 80
+  },
   "timestamp" : 80
 }, {
   "command" : "printUsers",
@@ -887,7 +945,7 @@
     "lastName" : "Thompson-Byrne",
     "email" : "Norman_Thompson-Byrne@icloud.gb",
     "accounts" : [ {
-      "balance" : 4799.0,
+      "balance" : 4527.0,
       "currency" : "GBP",
       "type" : "classic",
       "cards" : [ {
@@ -932,7 +990,7 @@
     "lastName" : "Subramaniam",
     "email" : "Christopher_Subramaniam@protonmail.in",
     "accounts" : [ {
-      "balance" : 2094.0,
+      "balance" : 1718.0,
       "currency" : "INR",
       "type" : "classic",
       "cards" : [ {
@@ -1101,214 +1159,298 @@
   "timestamp" : 81
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 103
+  },
   "timestamp" : 103
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 104
+  },
   "timestamp" : 104
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 105
+  },
   "timestamp" : 105
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 106
+  },
   "timestamp" : 106
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 107
+  },
   "timestamp" : 107
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 108
+  },
   "timestamp" : 108
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 109
+  },
   "timestamp" : 109
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 110
+  },
   "timestamp" : 110
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 111
+  },
   "timestamp" : 111
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 112
+  },
   "timestamp" : 112
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 113
+  },
   "timestamp" : 113
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 114
+  },
   "timestamp" : 114
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 115
+  },
   "timestamp" : 115
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 116
+  },
   "timestamp" : 116
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 117
+  },
   "timestamp" : 117
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 118
+  },
   "timestamp" : 118
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 119
+  },
   "timestamp" : 119
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 120
+  },
   "timestamp" : 120
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 121
+  },
   "timestamp" : 121
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 122
+  },
   "timestamp" : 122
 }, {
   "command" : "printTransactions",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 123
+  },
   "timestamp" : 123
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
+    "timestamp" : 135
+  },
+  "timestamp" : 135
+}, {
+  "command" : "deleteCard",
+  "output" : {
+    "description" : "User not found",
     "timestamp" : 136
   },
   "timestamp" : 136
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 137
   },
   "timestamp" : 137
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
+    "timestamp" : 138
+  },
+  "timestamp" : 138
+}, {
+  "command" : "deleteCard",
+  "output" : {
+    "description" : "User not found",
     "timestamp" : 139
   },
   "timestamp" : 139
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 140
   },
   "timestamp" : 140
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 141
   },
   "timestamp" : 141
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 142
   },
   "timestamp" : 142
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 143
   },
   "timestamp" : 143
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 144
   },
   "timestamp" : 144
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 145
   },
   "timestamp" : 145
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 146
   },
   "timestamp" : 146
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 147
   },
   "timestamp" : 147
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 148
   },
   "timestamp" : 148
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 149
   },
   "timestamp" : 149
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 150
   },
   "timestamp" : 150
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 151
   },
   "timestamp" : 151
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 152
   },
   "timestamp" : 152
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 153
   },
   "timestamp" : 153
 }, {
   "command" : "deleteCard",
   "output" : {
-    "description" : "Card not found",
+    "description" : "User not found",
     "timestamp" : 154
   },
   "timestamp" : 154
+}, {
+  "command" : "deleteCard",
+  "output" : {
+    "description" : "User not found",
+    "timestamp" : 155
+  },
+  "timestamp" : 155
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -1316,12 +1458,12 @@
     "lastName" : "Thompson-Byrne",
     "email" : "Norman_Thompson-Byrne@icloud.gb",
     "accounts" : [ {
-      "balance" : 4828.0,
+      "balance" : 4556.0,
       "currency" : "GBP",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
@@ -1352,7 +1494,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO53POOB7122855990652257"
     } ]
@@ -1361,12 +1503,12 @@
     "lastName" : "Subramaniam",
     "email" : "Christopher_Subramaniam@protonmail.in",
     "accounts" : [ {
-      "balance" : 2306.0,
+      "balance" : 1930.0,
       "currency" : "INR",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
@@ -1530,59 +1672,101 @@
   "timestamp" : 156
 }, {
   "command" : "setAlias",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 157
+  },
   "timestamp" : 157
 }, {
   "command" : "setAlias",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 158
+  },
   "timestamp" : 158
 }, {
   "command" : "setAlias",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 159
+  },
   "timestamp" : 159
 }, {
   "command" : "setAlias",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 160
+  },
   "timestamp" : 160
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 161
+  },
   "timestamp" : 161
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 162
+  },
   "timestamp" : 162
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 163
+  },
   "timestamp" : 163
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 164
+  },
   "timestamp" : 164
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 165
+  },
   "timestamp" : 165
 }, {
   "command" : "report",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 166
+  },
   "timestamp" : 166
 }, {
   "command" : "report",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 167
+  },
   "timestamp" : 167
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Currency not found",
+    "timestamp" : 169
+  },
   "timestamp" : 169
 }, {
   "command" : "report",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 170
+  },
   "timestamp" : 170
 }, {
   "command" : "report",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 171
+  },
   "timestamp" : 171
 }, {
   "command" : "printUsers",
@@ -1591,12 +1775,12 @@
     "lastName" : "Thompson-Byrne",
     "email" : "Norman_Thompson-Byrne@icloud.gb",
     "accounts" : [ {
-      "balance" : 4828.0,
+      "balance" : 4556.0,
       "currency" : "GBP",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
@@ -1627,7 +1811,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO53POOB7122855990652257"
     } ]
@@ -1636,12 +1820,12 @@
     "lastName" : "Subramaniam",
     "email" : "Christopher_Subramaniam@protonmail.in",
     "accounts" : [ {
-      "balance" : 2306.0,
+      "balance" : 1930.0,
       "currency" : "INR",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
@@ -1960,12 +2144,12 @@
     "lastName" : "Thompson-Byrne",
     "email" : "Norman_Thompson-Byrne@icloud.gb",
     "accounts" : [ {
-      "balance" : 4828.0,
+      "balance" : 4556.0,
       "currency" : "GBP",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
@@ -1996,7 +2180,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO53POOB7122855990652257"
     } ]
@@ -2005,12 +2189,12 @@
     "lastName" : "Subramaniam",
     "email" : "Christopher_Subramaniam@protonmail.in",
     "accounts" : [ {
-      "balance" : 2306.0,
+      "balance" : 1930.0,
       "currency" : "INR",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
-        "status" : "inactive"
+        "status" : "active"
       } ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
@@ -2177,6 +2361,9 @@
   "timestamp" : 194
 }, {
   "command" : "printTransactions",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 195
+  },
   "timestamp" : 195
 } ]

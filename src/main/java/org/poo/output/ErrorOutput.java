@@ -32,7 +32,8 @@ public final class ErrorOutput {
      * @return null, if output is null
      *         the created simple output, in contrary case
      */
-    public static ErrorOutput init(final String command, final Object description, final int timestamp) {
+    public static ErrorOutput init(final String command, final Object description,
+                                   final int timestamp) {
         if (description == null) {
             return null;
         }

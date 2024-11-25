@@ -2,6 +2,7 @@ package org.poo.bank.card;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.poo.bank.account.Account;
 import org.poo.bank.client.User;
 import java.util.Objects;
 import static org.poo.bank.Constants.*;
@@ -9,15 +10,18 @@ import static org.poo.bank.Constants.*;
 @Data
 public final class Card {
     private User owner;
+    private Account account;
     private final String cardNumber;
     private String status;
-    private final boolean OneTimeCard;
+    private final boolean oneTimeCard;
 
-    public Card (final User owner, final String cardNumber, boolean OneTimeCard) {
+    public Card(final User owner, final Account account,
+                 final String cardNumber, final boolean oneTimeCard) {
+        this.account = account;
         this.owner = owner;
         this.cardNumber = cardNumber;
         status = "active";
-        this.OneTimeCard = OneTimeCard;
+        this.oneTimeCard = oneTimeCard;
     }
 
     /**
@@ -28,7 +32,7 @@ public final class Card {
      *         null, if not
      */
     public String delete(final String email) {
-        if (Objects.equals(owner.getEmail(), email)) {
+        if (!Objects.equals(owner.getEmail(), email)) {
             return INVALID_USER;
         }
 
@@ -36,13 +40,34 @@ public final class Card {
         return null;
     }
 
+    /**
+     *  A user tries to pay using this card.
+     *
+     * @param amount sum of money which must be paid
+     * @param email euser's email
+     * @return String with an error, if something bad happens
+     *         null, if not
+     */
+    public String pay(final double amount, final String email) {
+        if (!Objects.equals(owner.getEmail(), email)) {
+            return INVALID_USER;
+        }
+
+        return account.pay(amount);
+    }
+
     @JsonIgnore
     public boolean isOneTimeCard() {
-        return OneTimeCard;
+        return oneTimeCard;
     }
 
     @JsonIgnore
     public User getOwner() {
         return owner;
+    }
+
+    @JsonIgnore
+    public Account getAccount() {
+        return account;
     }
 }

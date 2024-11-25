@@ -1,15 +1,11 @@
 [ {
-  "command" : "payOnline",
-  "output" : "Command is not valid",
-  "timestamp" : 13
-}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Fabian",
     "lastName" : "Puscasu",
     "email" : "Fabian_Puscasu@gmail.ro",
     "accounts" : [ {
-      "balance" : 1040.0,
+      "balance" : 749.0,
       "currency" : "RON",
       "type" : "SavingsAccount",
       "cards" : [ {
@@ -53,15 +49,24 @@
   "timestamp" : 14
 }, {
   "command" : "changeInterestRate",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 15
+  },
   "timestamp" : 15
 }, {
   "command" : "payOnline",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Currency not found",
+    "timestamp" : 16
+  },
   "timestamp" : 16
 }, {
   "command" : "sendMoney",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 17
+  },
   "timestamp" : 17
 }, {
   "command" : "printUsers",
@@ -70,7 +75,7 @@
     "lastName" : "Puscasu",
     "email" : "Fabian_Puscasu@gmail.ro",
     "accounts" : [ {
-      "balance" : 1040.0,
+      "balance" : 749.0,
       "currency" : "RON",
       "type" : "SavingsAccount",
       "cards" : [ {
@@ -121,7 +126,10 @@
   "timestamp" : 19
 }, {
   "command" : "changeInterestRate",
-  "output" : "Command is not valid",
+  "output" : {
+    "description" : "Command is not valid",
+    "timestamp" : 20
+  },
   "timestamp" : 20
 }, {
   "command" : "printUsers",
@@ -130,7 +138,7 @@
     "lastName" : "Puscasu",
     "email" : "Fabian_Puscasu@gmail.ro",
     "accounts" : [ {
-      "balance" : 1040.0,
+      "balance" : 749.0,
       "currency" : "RON",
       "type" : "SavingsAccount",
       "cards" : [ {

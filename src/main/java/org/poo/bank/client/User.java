@@ -17,11 +17,11 @@ public final class User {
     private final List<Account> accounts = new LinkedList<Account>();
 
     /**
-     * Add another account in the list of user.
+     * User receives access to an account
      *
      * @param account account's info
      */
-    public void addAccount(Account account) {
+    public void addAccount(final Account account) {
         if (account == null) {
             return;
         }
