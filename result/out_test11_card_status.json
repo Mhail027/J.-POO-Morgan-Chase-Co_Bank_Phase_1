@@ -1,1 +1,315 @@
-[ ]
+[ {
+  "command" : "checkCardStatus",
+  "output" : "Command is not valid",
+  "timestamp" : 18
+}, {
+  "command" : "checkCardStatus",
+  "output" : "Command is not valid",
+  "timestamp" : 19
+}, {
+  "command" : "checkCardStatus",
+  "output" : "Command is not valid",
+  "timestamp" : 20
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Iacob",
+    "lastName" : "Preda",
+    "email" : "Iacob_Preda@gmail.ro",
+    "accounts" : [ {
+      "balance" : 335.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      }, {
+        "cardNumber" : "7901879264253296",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    }, {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "SavingsAccount",
+      "cards" : [ ],
+      "interestRate" : 0.99,
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Saveta",
+    "lastName" : "Dobre",
+    "email" : "Saveta_Dobre@yahoo.ro",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    }, {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "SavingsAccount",
+      "cards" : [ ],
+      "interestRate" : 0.07,
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  }, {
+    "firstName" : "Gregory",
+    "lastName" : "Lucas",
+    "email" : "Gregory_Lucas@yahoo.us",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB2721178218599590"
+    }, {
+      "balance" : 0.0,
+      "currency" : "USD",
+      "type" : "SavingsAccount",
+      "cards" : [ ],
+      "interestRate" : 0.3,
+      "IBAN" : "RO76POOB4035116042454483"
+    } ]
+  }, {
+    "firstName" : "Vera",
+    "lastName" : "Georgescu",
+    "email" : "Vera_Georgescu@hotmail.ro",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO37POOB7013767509830666"
+    }, {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "SavingsAccount",
+      "cards" : [ ],
+      "interestRate" : 0.38,
+      "IBAN" : "RO19POOB4981055641668812"
+    } ]
+  }, {
+    "firstName" : "Jacques",
+    "lastName" : "du Denis",
+    "email" : "Jacques_du_Denis@outlook.fr",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO30POOB9523423715747796"
+    }, {
+      "balance" : 0.0,
+      "currency" : "EUR",
+      "type" : "SavingsAccount",
+      "cards" : [ ],
+      "interestRate" : 0.9,
+      "IBAN" : "RO79POOB3616857825600958"
+    } ]
+  }, {
+    "firstName" : "Aaron",
+    "lastName" : "Sharp",
+    "email" : "Aaron_Sharp@hotmail.us",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO00POOB5687892910835215"
+    }, {
+      "balance" : 0.0,
+      "currency" : "USD",
+      "type" : "SavingsAccount",
+      "cards" : [ ],
+      "interestRate" : 0.73,
+      "IBAN" : "RO96POOB6738272785416988"
+    } ]
+  } ],
+  "timestamp" : 21
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 22
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 23
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 24
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 25
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 26
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 27
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 28
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 29
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 30
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 31
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 32
+}, {
+  "command" : "printTransactions",
+  "output" : "Command is not valid",
+  "timestamp" : 33
+}, {
+  "command" : "checkCardStatus",
+  "output" : "Command is not valid",
+  "timestamp" : 36
+}, {
+  "command" : "checkCardStatus",
+  "output" : "Command is not valid",
+  "timestamp" : 37
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 38
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Iacob",
+    "lastName" : "Preda",
+    "email" : "Iacob_Preda@gmail.ro",
+    "accounts" : [ {
+      "balance" : 335.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      }, {
+        "cardNumber" : "7901879264253296",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    }, {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "SavingsAccount",
+      "cards" : [ {
+        "cardNumber" : "7004757825892043",
+        "status" : "active"
+      } ],
+      "interestRate" : 0.99,
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Saveta",
+    "lastName" : "Dobre",
+    "email" : "Saveta_Dobre@yahoo.ro",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "6796819982034243",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO90POOB5450777208072365"
+    }, {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "SavingsAccount",
+      "cards" : [ ],
+      "interestRate" : 0.07,
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  }, {
+    "firstName" : "Gregory",
+    "lastName" : "Lucas",
+    "email" : "Gregory_Lucas@yahoo.us",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB2721178218599590"
+    }, {
+      "balance" : 0.0,
+      "currency" : "USD",
+      "type" : "SavingsAccount",
+      "cards" : [ ],
+      "interestRate" : 0.3,
+      "IBAN" : "RO76POOB4035116042454483"
+    } ]
+  }, {
+    "firstName" : "Vera",
+    "lastName" : "Georgescu",
+    "email" : "Vera_Georgescu@hotmail.ro",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO37POOB7013767509830666"
+    }, {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "SavingsAccount",
+      "cards" : [ ],
+      "interestRate" : 0.38,
+      "IBAN" : "RO19POOB4981055641668812"
+    } ]
+  }, {
+    "firstName" : "Jacques",
+    "lastName" : "du Denis",
+    "email" : "Jacques_du_Denis@outlook.fr",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO30POOB9523423715747796"
+    }, {
+      "balance" : 0.0,
+      "currency" : "EUR",
+      "type" : "SavingsAccount",
+      "cards" : [ ],
+      "interestRate" : 0.9,
+      "IBAN" : "RO79POOB3616857825600958"
+    } ]
+  }, {
+    "firstName" : "Aaron",
+    "lastName" : "Sharp",
+    "email" : "Aaron_Sharp@hotmail.us",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO00POOB5687892910835215"
+    }, {
+      "balance" : 0.0,
+      "currency" : "USD",
+      "type" : "SavingsAccount",
+      "cards" : [ ],
+      "interestRate" : 0.73,
+      "IBAN" : "RO96POOB6738272785416988"
+    } ]
+  } ],
+  "timestamp" : 39
+} ]

@@ -4,8 +4,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.poo.bank.Command;
 import org.poo.bank.Exchange;
-import org.poo.client.Commerciant;
-import org.poo.client.User;
+import org.poo.bank.client.Commerciant;
+import org.poo.bank.client.User;
 
 @Data
 @NoArgsConstructor

@@ -1,1 +1,124 @@
-[ ]
+[ {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Meghan",
+    "lastName" : "Richardson",
+    "email" : "Meghan_Richardson@gmail.us",
+    "accounts" : [ {
+      "balance" : 229.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB7344468893732422"
+    }, {
+      "balance" : 541.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Matthew",
+    "lastName" : "Santiago",
+    "email" : "Matthew_Santiago@hotmail.us",
+    "accounts" : [ {
+      "balance" : 631.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    }, {
+      "balance" : 311.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  } ],
+  "timestamp" : 9
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 11
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 12
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 13
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Meghan",
+    "lastName" : "Richardson",
+    "email" : "Meghan_Richardson@gmail.us",
+    "accounts" : [ {
+      "balance" : 229.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    }, {
+      "balance" : 541.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Matthew",
+    "lastName" : "Santiago",
+    "email" : "Matthew_Santiago@hotmail.us",
+    "accounts" : [ {
+      "balance" : 631.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    }, {
+      "balance" : 311.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  } ],
+  "timestamp" : 14
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 17
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 18
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 23
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 24
+}, {
+  "command" : "report",
+  "output" : "Command is not valid",
+  "timestamp" : 25
+}, {
+  "command" : "report",
+  "output" : "Command is not valid",
+  "timestamp" : 26
+}, {
+  "command" : "report",
+  "output" : "Command is not valid",
+  "timestamp" : 27
+}, {
+  "command" : "report",
+  "output" : "Command is not valid",
+  "timestamp" : 28
+} ]

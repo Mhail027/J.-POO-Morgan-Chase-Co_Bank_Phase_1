@@ -1,4 +1,4 @@
-package org.poo.client;
+package org.poo.bank.client;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

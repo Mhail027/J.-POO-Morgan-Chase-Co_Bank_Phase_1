@@ -1,1 +1,182 @@
-[ ]
+[ {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Severin",
+    "lastName" : "Stanescu",
+    "email" : "Severin_Stanescu@outlook.ro",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "inactive"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Plesu",
+    "lastName" : "Aane",
+    "email" : "Plesu_Aane@outlook.ro",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "7901879264253296",
+        "status" : "inactive"
+      } ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  } ],
+  "timestamp" : 7
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 9
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 11
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Severin",
+    "lastName" : "Stanescu",
+    "email" : "Severin_Stanescu@outlook.ro",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "inactive"
+      }, {
+        "cardNumber" : "7004757825892043",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    }, {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  }, {
+    "firstName" : "Plesu",
+    "lastName" : "Aane",
+    "email" : "Plesu_Aane@outlook.ro",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "7901879264253296",
+        "status" : "inactive"
+      } ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  } ],
+  "timestamp" : 12
+}, {
+  "command" : "deleteCard",
+  "output" : {
+    "description" : "Card not found",
+    "timestamp" : 13
+  },
+  "timestamp" : 13
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 14
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Severin",
+    "lastName" : "Stanescu",
+    "email" : "Severin_Stanescu@outlook.ro",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "inactive"
+      }, {
+        "cardNumber" : "7004757825892043",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    }, {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  }, {
+    "firstName" : "Plesu",
+    "lastName" : "Aane",
+    "email" : "Plesu_Aane@outlook.ro",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "7901879264253296",
+        "status" : "inactive"
+      } ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  } ],
+  "timestamp" : 15
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Severin",
+    "lastName" : "Stanescu",
+    "email" : "Severin_Stanescu@outlook.ro",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "inactive"
+      }, {
+        "cardNumber" : "7004757825892043",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    }, {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  }, {
+    "firstName" : "Plesu",
+    "lastName" : "Aane",
+    "email" : "Plesu_Aane@outlook.ro",
+    "accounts" : [ {
+      "balance" : 1321.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "7901879264253296",
+        "status" : "inactive"
+      }, {
+        "cardNumber" : "6796819982034243",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  } ],
+  "timestamp" : 19
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 20
+} ]

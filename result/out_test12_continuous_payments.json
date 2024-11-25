@@ -1,1 +1,545 @@
-[ ]
+[ {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 6
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Daniel",
+    "lastName" : "Tabacu",
+    "email" : "Daniel_Tabacu@yahoo.ro",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Mihaela",
+    "lastName" : "Mocanu",
+    "email" : "Mihaela_Mocanu@outlook.ro",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Nicole",
+    "lastName" : "Marty du Perez",
+    "email" : "Nicole_Marty_du_Perez@outlook.fr",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  }, {
+    "firstName" : "Camille",
+    "lastName" : "Huet",
+    "email" : "Camille_Huet@yahoo.fr",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  }, {
+    "firstName" : "Jennifer",
+    "lastName" : "Burgess",
+    "email" : "Jennifer_Burgess@outlook.us",
+    "accounts" : [ {
+      "balance" : 0.0,
+      "currency" : "USD",
+      "type" : "SavingsAccount",
+      "cards" : [ ],
+      "interestRate" : 0.79,
+      "IBAN" : "RO58POOB2721178218599590"
+    } ]
+  }, {
+    "firstName" : "Marc",
+    "lastName" : "Blot",
+    "email" : "Marc_Blot@hotmail.fr",
+    "accounts" : [ ]
+  }, {
+    "firstName" : "Valerie-Colette",
+    "lastName" : "Weiss",
+    "email" : "Valerie-Colette_Weiss@yahoo.fr",
+    "accounts" : [ ]
+  }, {
+    "firstName" : "Stephen",
+    "lastName" : "Martin",
+    "email" : "Stephen_Martin@gmail.us",
+    "accounts" : [ ]
+  } ],
+  "timestamp" : 7
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 23
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 24
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 25
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 26
+}, {
+  "command" : "setAlias",
+  "output" : "Command is not valid",
+  "timestamp" : 27
+}, {
+  "command" : "setAlias",
+  "output" : "Command is not valid",
+  "timestamp" : 28
+}, {
+  "command" : "setAlias",
+  "output" : "Command is not valid",
+  "timestamp" : 29
+}, {
+  "command" : "setAlias",
+  "output" : "Command is not valid",
+  "timestamp" : 30
+}, {
+  "command" : "setAlias",
+  "output" : "Command is not valid",
+  "timestamp" : 31
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 40
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 41
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Daniel",
+    "lastName" : "Tabacu",
+    "email" : "Daniel_Tabacu@yahoo.ro",
+    "accounts" : [ {
+      "balance" : 1291.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      }, {
+        "cardNumber" : "1322658752653937",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Mihaela",
+    "lastName" : "Mocanu",
+    "email" : "Mihaela_Mocanu@outlook.ro",
+    "accounts" : [ {
+      "balance" : 1558.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "7901879264253296",
+        "status" : "active"
+      }, {
+        "cardNumber" : "0466992784477761",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Nicole",
+    "lastName" : "Marty du Perez",
+    "email" : "Nicole_Marty_du_Perez@outlook.fr",
+    "accounts" : [ {
+      "balance" : 808.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "7004757825892043",
+        "status" : "active"
+      }, {
+        "cardNumber" : "5088727507344799",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  }, {
+    "firstName" : "Camille",
+    "lastName" : "Huet",
+    "email" : "Camille_Huet@yahoo.fr",
+    "accounts" : [ {
+      "balance" : 1264.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "6796819982034243",
+        "status" : "active"
+      }, {
+        "cardNumber" : "7317745095154687",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  }, {
+    "firstName" : "Jennifer",
+    "lastName" : "Burgess",
+    "email" : "Jennifer_Burgess@outlook.us",
+    "accounts" : [ {
+      "balance" : 1150.0,
+      "currency" : "USD",
+      "type" : "SavingsAccount",
+      "cards" : [ {
+        "cardNumber" : "4686471658318359",
+        "status" : "active"
+      }, {
+        "cardNumber" : "3951521356076921",
+        "status" : "active"
+      } ],
+      "interestRate" : 0.79,
+      "IBAN" : "RO58POOB2721178218599590"
+    } ]
+  }, {
+    "firstName" : "Marc",
+    "lastName" : "Blot",
+    "email" : "Marc_Blot@hotmail.fr",
+    "accounts" : [ ]
+  }, {
+    "firstName" : "Valerie-Colette",
+    "lastName" : "Weiss",
+    "email" : "Valerie-Colette_Weiss@yahoo.fr",
+    "accounts" : [ ]
+  }, {
+    "firstName" : "Stephen",
+    "lastName" : "Martin",
+    "email" : "Stephen_Martin@gmail.us",
+    "accounts" : [ ]
+  } ],
+  "timestamp" : 42
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 65
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 66
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 67
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 68
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 69
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 70
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 71
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 72
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Daniel",
+    "lastName" : "Tabacu",
+    "email" : "Daniel_Tabacu@yahoo.ro",
+    "accounts" : [ {
+      "balance" : 1846.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      }, {
+        "cardNumber" : "1322658752653937",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Mihaela",
+    "lastName" : "Mocanu",
+    "email" : "Mihaela_Mocanu@outlook.ro",
+    "accounts" : [ {
+      "balance" : 3189.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "7901879264253296",
+        "status" : "active"
+      }, {
+        "cardNumber" : "0466992784477761",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Nicole",
+    "lastName" : "Marty du Perez",
+    "email" : "Nicole_Marty_du_Perez@outlook.fr",
+    "accounts" : [ {
+      "balance" : 1055.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "7004757825892043",
+        "status" : "active"
+      }, {
+        "cardNumber" : "5088727507344799",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  }, {
+    "firstName" : "Camille",
+    "lastName" : "Huet",
+    "email" : "Camille_Huet@yahoo.fr",
+    "accounts" : [ {
+      "balance" : 2309.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "6796819982034243",
+        "status" : "active"
+      }, {
+        "cardNumber" : "7317745095154687",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  }, {
+    "firstName" : "Jennifer",
+    "lastName" : "Burgess",
+    "email" : "Jennifer_Burgess@outlook.us",
+    "accounts" : [ {
+      "balance" : 1894.0,
+      "currency" : "USD",
+      "type" : "SavingsAccount",
+      "cards" : [ {
+        "cardNumber" : "4686471658318359",
+        "status" : "active"
+      }, {
+        "cardNumber" : "3951521356076921",
+        "status" : "active"
+      } ],
+      "interestRate" : 0.79,
+      "IBAN" : "RO58POOB2721178218599590"
+    }, {
+      "balance" : 603.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO76POOB4035116042454483"
+    } ]
+  }, {
+    "firstName" : "Marc",
+    "lastName" : "Blot",
+    "email" : "Marc_Blot@hotmail.fr",
+    "accounts" : [ {
+      "balance" : 886.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO37POOB7013767509830666"
+    } ]
+  }, {
+    "firstName" : "Valerie-Colette",
+    "lastName" : "Weiss",
+    "email" : "Valerie-Colette_Weiss@yahoo.fr",
+    "accounts" : [ {
+      "balance" : 1221.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO19POOB4981055641668812"
+    } ]
+  }, {
+    "firstName" : "Stephen",
+    "lastName" : "Martin",
+    "email" : "Stephen_Martin@gmail.us",
+    "accounts" : [ {
+      "balance" : 1134.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO30POOB9523423715747796"
+    } ]
+  } ],
+  "timestamp" : 73
+}, {
+  "command" : "printTransactions",
+  "output" : "Command is not valid",
+  "timestamp" : 74
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 76
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 78
+}, {
+  "command" : "printTransactions",
+  "output" : "Command is not valid",
+  "timestamp" : 79
+}, {
+  "command" : "deleteAccount",
+  "output" : {
+    "description" : "User not found",
+    "timestamp" : 80
+  },
+  "timestamp" : 80
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Daniel",
+    "lastName" : "Tabacu",
+    "email" : "Daniel_Tabacu@yahoo.ro",
+    "accounts" : [ {
+      "balance" : 1846.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      }, {
+        "cardNumber" : "1322658752653937",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Mihaela",
+    "lastName" : "Mocanu",
+    "email" : "Mihaela_Mocanu@outlook.ro",
+    "accounts" : [ {
+      "balance" : 3189.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "7901879264253296",
+        "status" : "active"
+      }, {
+        "cardNumber" : "0466992784477761",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Nicole",
+    "lastName" : "Marty du Perez",
+    "email" : "Nicole_Marty_du_Perez@outlook.fr",
+    "accounts" : [ {
+      "balance" : 1055.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "7004757825892043",
+        "status" : "active"
+      }, {
+        "cardNumber" : "5088727507344799",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  }, {
+    "firstName" : "Camille",
+    "lastName" : "Huet",
+    "email" : "Camille_Huet@yahoo.fr",
+    "accounts" : [ {
+      "balance" : 2309.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "6796819982034243",
+        "status" : "active"
+      }, {
+        "cardNumber" : "7317745095154687",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  }, {
+    "firstName" : "Jennifer",
+    "lastName" : "Burgess",
+    "email" : "Jennifer_Burgess@outlook.us",
+    "accounts" : [ {
+      "balance" : 1894.0,
+      "currency" : "USD",
+      "type" : "SavingsAccount",
+      "cards" : [ {
+        "cardNumber" : "4686471658318359",
+        "status" : "active"
+      }, {
+        "cardNumber" : "3951521356076921",
+        "status" : "active"
+      } ],
+      "interestRate" : 0.79,
+      "IBAN" : "RO58POOB2721178218599590"
+    }, {
+      "balance" : 603.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO76POOB4035116042454483"
+    } ]
+  }, {
+    "firstName" : "Marc",
+    "lastName" : "Blot",
+    "email" : "Marc_Blot@hotmail.fr",
+    "accounts" : [ {
+      "balance" : 886.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO37POOB7013767509830666"
+    } ]
+  }, {
+    "firstName" : "Valerie-Colette",
+    "lastName" : "Weiss",
+    "email" : "Valerie-Colette_Weiss@yahoo.fr",
+    "accounts" : [ {
+      "balance" : 1221.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO19POOB4981055641668812"
+    } ]
+  }, {
+    "firstName" : "Stephen",
+    "lastName" : "Martin",
+    "email" : "Stephen_Martin@gmail.us",
+    "accounts" : [ {
+      "balance" : 1983.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8431794639822740",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO30POOB9523423715747796"
+    } ]
+  } ],
+  "timestamp" : 81
+} ]

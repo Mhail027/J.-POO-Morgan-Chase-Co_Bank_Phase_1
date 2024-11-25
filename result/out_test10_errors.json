@@ -1,1 +1,202 @@
-[ ]
+[ {
+  "command" : "setAlias",
+  "output" : "Command is not valid",
+  "timestamp" : 5
+}, {
+  "command" : "setAlias",
+  "output" : "Command is not valid",
+  "timestamp" : 6
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 7
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 8
+}, {
+  "command" : "printTransactions",
+  "output" : "Command is not valid",
+  "timestamp" : 9
+}, {
+  "command" : "deleteAccount",
+  "output" : {
+    "description" : "User not found",
+    "timestamp" : 12
+  },
+  "timestamp" : 12
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 16
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 17
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Michelle",
+    "lastName" : "Mayer",
+    "email" : "Michelle_Mayer@yahoo.us",
+    "accounts" : [ {
+      "balance" : 939.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "David",
+    "lastName" : "Turner",
+    "email" : "David_Turner@gmail.us",
+    "accounts" : [ {
+      "balance" : 259.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Albertina",
+    "lastName" : "Nistor",
+    "email" : "Albertina_Nistor@gmail.ro",
+    "accounts" : [ {
+      "balance" : 1795.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    }, {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  }, {
+    "firstName" : "Amanda",
+    "lastName" : "Nemes",
+    "email" : "Amanda_Nemes@yahoo.ro",
+    "accounts" : [ ]
+  }, {
+    "firstName" : "Bogdana",
+    "lastName" : "Toma",
+    "email" : "Bogdana_Toma@hotmail.ro",
+    "accounts" : [ ]
+  } ],
+  "timestamp" : 19
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 30
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Michelle",
+    "lastName" : "Mayer",
+    "email" : "Michelle_Mayer@yahoo.us",
+    "accounts" : [ {
+      "balance" : 939.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "David",
+    "lastName" : "Turner",
+    "email" : "David_Turner@gmail.us",
+    "accounts" : [ {
+      "balance" : 1711.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Albertina",
+    "lastName" : "Nistor",
+    "email" : "Albertina_Nistor@gmail.ro",
+    "accounts" : [ {
+      "balance" : 2174.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    }, {
+      "balance" : 211.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  }, {
+    "firstName" : "Amanda",
+    "lastName" : "Nemes",
+    "email" : "Amanda_Nemes@yahoo.ro",
+    "accounts" : [ {
+      "balance" : 248.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB2721178218599590"
+    }, {
+      "balance" : 378.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO76POOB4035116042454483"
+    }, {
+      "balance" : 684.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO37POOB7013767509830666"
+    } ]
+  }, {
+    "firstName" : "Bogdana",
+    "lastName" : "Toma",
+    "email" : "Bogdana_Toma@hotmail.ro",
+    "accounts" : [ ]
+  } ],
+  "timestamp" : 31
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 32
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 33
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 34
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 35
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 36
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 37
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 38
+}, {
+  "command" : "printTransactions",
+  "output" : "Command is not valid",
+  "timestamp" : 39
+} ]

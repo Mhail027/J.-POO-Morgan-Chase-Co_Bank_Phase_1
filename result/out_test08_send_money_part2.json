@@ -1,1 +1,141 @@
-[ ]
+[ {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Ioan",
+    "lastName" : "Nemes",
+    "email" : "Ioan_Nemes@hotmail.ro",
+    "accounts" : [ {
+      "balance" : 660.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Carla",
+    "lastName" : "Dobre",
+    "email" : "Carla_Dobre@outlook.ro",
+    "accounts" : [ {
+      "balance" : 634.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Alice-Madeleine",
+    "lastName" : "Valette",
+    "email" : "Alice-Madeleine_Valette@yahoo.fr",
+    "accounts" : [ {
+      "balance" : 541.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  } ],
+  "timestamp" : 8
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 9
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 10
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 11
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Ioan",
+    "lastName" : "Nemes",
+    "email" : "Ioan_Nemes@hotmail.ro",
+    "accounts" : [ {
+      "balance" : 660.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Carla",
+    "lastName" : "Dobre",
+    "email" : "Carla_Dobre@outlook.ro",
+    "accounts" : [ {
+      "balance" : 634.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Alice-Madeleine",
+    "lastName" : "Valette",
+    "email" : "Alice-Madeleine_Valette@yahoo.fr",
+    "accounts" : [ {
+      "balance" : 541.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  } ],
+  "timestamp" : 12
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 14
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 15
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Ioan",
+    "lastName" : "Nemes",
+    "email" : "Ioan_Nemes@hotmail.ro",
+    "accounts" : [ {
+      "balance" : 660.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Carla",
+    "lastName" : "Dobre",
+    "email" : "Carla_Dobre@outlook.ro",
+    "accounts" : [ {
+      "balance" : 1200.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Alice-Madeleine",
+    "lastName" : "Valette",
+    "email" : "Alice-Madeleine_Valette@yahoo.fr",
+    "accounts" : [ {
+      "balance" : 541.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  } ],
+  "timestamp" : 16
+} ]

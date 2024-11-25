@@ -1,1 +1,131 @@
-[ ]
+[ {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Marioara",
+    "lastName" : "Gheorghiu",
+    "email" : "Marioara_Gheorghiu@yahoo.ro",
+    "accounts" : [ {
+      "balance" : 148.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB7344468893732422"
+    }, {
+      "balance" : 0.0,
+      "currency" : "RON",
+      "type" : "SavingsAccount",
+      "cards" : [ ],
+      "interestRate" : 0.33,
+      "IBAN" : "RO76POOB4035116042454483"
+    } ]
+  }, {
+    "firstName" : "Aurelia",
+    "lastName" : "Popa",
+    "email" : "Aurelia_Popa@yahoo.ro",
+    "accounts" : [ {
+      "balance" : 174.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Adelaide",
+    "lastName" : "Lefevre",
+    "email" : "Adelaide_Lefevre@yahoo.fr",
+    "accounts" : [ {
+      "balance" : 91.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  }, {
+    "firstName" : "Amber",
+    "lastName" : "Williams",
+    "email" : "Amber_Williams@outlook.us",
+    "accounts" : [ {
+      "balance" : 842.0,
+      "currency" : "USD",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO65POOB8944016386845896"
+    } ]
+  }, {
+    "firstName" : "Alexandria",
+    "lastName" : "Mendes",
+    "email" : "Alexandria_Mendes@yahoo.fr",
+    "accounts" : [ {
+      "balance" : 636.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB2721178218599590"
+    } ]
+  } ],
+  "timestamp" : 12
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 13
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 14
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 15
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 16
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 17
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 18
+}, {
+  "command" : "printTransactions",
+  "output" : "Command is not valid",
+  "timestamp" : 19
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 20
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 21
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 22
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 23
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 24
+}, {
+  "command" : "printTransactions",
+  "output" : "Command is not valid",
+  "timestamp" : 25
+}, {
+  "command" : "setAlias",
+  "output" : "Command is not valid",
+  "timestamp" : 26
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 27
+}, {
+  "command" : "printTransactions",
+  "output" : "Command is not valid",
+  "timestamp" : 28
+} ]

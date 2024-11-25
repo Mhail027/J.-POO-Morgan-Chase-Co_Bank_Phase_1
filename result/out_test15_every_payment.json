@@ -1,1 +1,152 @@
-[ ]
+[ {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Olivier",
+    "lastName" : "Mace",
+    "email" : "Olivier_Mace@yahoo.fr",
+    "accounts" : [ {
+      "balance" : 74.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Anghel",
+    "lastName" : "Albu",
+    "email" : "Anghel_Albu@outlook.ro",
+    "accounts" : [ ]
+  }, {
+    "firstName" : "Henriette",
+    "lastName" : "Huet",
+    "email" : "Henriette_Huet@outlook.fr",
+    "accounts" : [ {
+      "balance" : 161.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Franck",
+    "lastName" : "Adam",
+    "email" : "Franck_Adam@outlook.fr",
+    "accounts" : [ ]
+  }, {
+    "firstName" : "Iuliana",
+    "lastName" : "Georgescu",
+    "email" : "Iuliana_Georgescu@yahoo.ro",
+    "accounts" : [ {
+      "balance" : 515.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  }, {
+    "firstName" : "Iris",
+    "lastName" : "Tabacu",
+    "email" : "Iris_Tabacu@gmail.ro",
+    "accounts" : [ ]
+  } ],
+  "timestamp" : 7
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 11
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 13
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 14
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 15
+}, {
+  "command" : "payOnline",
+  "output" : "Command is not valid",
+  "timestamp" : 16
+}, {
+  "command" : "sendMoney",
+  "output" : "Command is not valid",
+  "timestamp" : 17
+}, {
+  "command" : "printUsers",
+  "output" : [ {
+    "firstName" : "Olivier",
+    "lastName" : "Mace",
+    "email" : "Olivier_Mace@yahoo.fr",
+    "accounts" : [ {
+      "balance" : 1977.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ {
+        "cardNumber" : "8207906978464446",
+        "status" : "active"
+      } ],
+      "IBAN" : "RO58POOB7344468893732422"
+    } ]
+  }, {
+    "firstName" : "Anghel",
+    "lastName" : "Albu",
+    "email" : "Anghel_Albu@outlook.ro",
+    "accounts" : [ ]
+  }, {
+    "firstName" : "Henriette",
+    "lastName" : "Huet",
+    "email" : "Henriette_Huet@outlook.fr",
+    "accounts" : [ {
+      "balance" : 161.0,
+      "currency" : "EUR",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Franck",
+    "lastName" : "Adam",
+    "email" : "Franck_Adam@outlook.fr",
+    "accounts" : [ ]
+  }, {
+    "firstName" : "Iuliana",
+    "lastName" : "Georgescu",
+    "email" : "Iuliana_Georgescu@yahoo.ro",
+    "accounts" : [ {
+      "balance" : 515.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  }, {
+    "firstName" : "Iris",
+    "lastName" : "Tabacu",
+    "email" : "Iris_Tabacu@gmail.ro",
+    "accounts" : [ ]
+  } ],
+  "timestamp" : 18
+}, {
+  "command" : "splitPayment",
+  "output" : "Command is not valid",
+  "timestamp" : 28
+}, {
+  "command" : "splitPayment",
+  "output" : "Command is not valid",
+  "timestamp" : 29
+}, {
+  "command" : "printTransactions",
+  "output" : "Command is not valid",
+  "timestamp" : 30
+}, {
+  "command" : "splitPayment",
+  "output" : "Command is not valid",
+  "timestamp" : 33
+}, {
+  "command" : "printTransactions",
+  "output" : "Command is not valid",
+  "timestamp" : 34
+} ]
