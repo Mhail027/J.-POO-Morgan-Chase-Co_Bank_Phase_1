@@ -32,11 +32,11 @@ public final class Card {
      *         null, if not
      */
     public String delete(final String email) {
-        if (!Objects.equals(owner.getEmail(), email)) {
+        if (email == null  || !email.equals(owner.getEmail())) {
             return INVALID_USER;
         }
 
-        status = "inactive";
+        account.removeCard(cardNumber);
         return null;
     }
 
@@ -49,7 +49,7 @@ public final class Card {
      *         null, if not
      */
     public String pay(final double amount, final String email) {
-        if (!Objects.equals(owner.getEmail(), email)) {
+        if (email == null || !email.equals(owner.getEmail())) {
             return INVALID_USER;
         }
 

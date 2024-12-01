@@ -83,9 +83,9 @@ public final class Main {
 
         System.out.println(filePath1);
         for (Command command : inputData.getCommands()) {
-            JsonNode outputMessage = command.execute(dataBase);
-            if (!outputMessage.isNull()) {
-                output.add(outputMessage);
+            JsonNode outputNode = command.execute(dataBase);
+            if (outputNode != null && !outputNode.isNull()) {
+                output.add(outputNode);
             }
         }
 

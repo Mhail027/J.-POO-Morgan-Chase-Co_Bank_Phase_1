@@ -6,6 +6,7 @@ import org.poo.bank.account.ClassicAccount;
 import org.poo.bank.account.SavingsAccount;
 import org.poo.bank.card.Card;
 import org.poo.bank.client.User;
+import org.poo.bank.transaction.Transaction;
 import org.poo.utils.Utils;
 
 import java.util.*;
@@ -24,10 +25,10 @@ public final class DataBase {
     private final Map<String, Account> accounts = new HashMap<String, Account>();
     /// key = card number
     private final Map<String, Card> cards = new HashMap<String, Card>();
-    /// key =  X -> Y
-    private final Map<String, Double> exchangeRates = new HashMap<String, Double>();
+    /// key =  X -> Y, where X and y are currencies
+    private static final Map<String, Double> exchangeRates = new HashMap<String, Double>();
 
-    @Getter  private int timestamp;
+    @Getter  private static int timestamp;
 
     private DataBase() {
     }
@@ -54,7 +55,7 @@ public final class DataBase {
         instance.clear();
         instance.addUsers(users);
         instance.addExchanges(exchanges);
-        instance.timestamp = 0;
+        timestamp = 0;
 
         return instance;
     }
@@ -86,22 +87,28 @@ public final class DataBase {
      * @param exchanges initial exchange rates
      */
     private void addExchanges(final Exchange[] exchanges) {
-        Set<String> initialCurrencies = getInitialCurrencies(exchanges);
-        Set<String> finalCurrencies = getFinalCurrencies(exchanges);
-        Set<String> intermediateCurrencies = getIntermediateCurrencies(exchanges);
-
         /// Add initial exchange rates.
         for (Exchange exchange : exchanges) {
             String currencyConversion = exchange.getFrom() + " -> " + exchange.getTo();
             exchangeRates.put(currencyConversion, exchange.getRate());
+
+            currencyConversion = exchange.getTo() + " -> " + exchange.getFrom();
+            exchangeRates.put(currencyConversion, 1 / exchange.getRate());
+        }
+
+        Set<String> currencies = new HashSet<String>();
+        for (Exchange exchange : exchanges) {
+            currencies.add(exchange.getFrom());
+            currencies.add(exchange.getTo());
         }
 
         /// Add all exchanges which can be done using the initial ones.
         /// To do that, we use an adaptation of Floyd Warshall Algorithm.
         /// We want just to discover all pair of nodes between which exist a path.
-        for (Object intermediateCurrency : intermediateCurrencies.toArray()) {
-            for (Object initialCurrency : initialCurrencies.toArray()) {
-                for (Object finalCurrency : finalCurrencies.toArray()) {
+        String[] currenciesArray =  currencies.toArray(new String[0]);
+        for (Object intermediateCurrency : currencies.toArray()) {
+            for (Object initialCurrency : currencies.toArray()) {
+                for (Object finalCurrency : currencies.toArray()) {
                     String exchange = initialCurrency + " -> " + finalCurrency;
                     if (exchangeRates.get(exchange) != null) {
                         continue;
@@ -116,52 +123,15 @@ public final class DataBase {
                     if (firstExchangeRate != null && secondExchangeRate != null) {
                         double exchangeRate = firstExchangeRate * secondExchangeRate;
                         exchangeRates.put(exchange, exchangeRate);
+
+                        String reverseExchange = finalCurrency + " -> " + initialCurrency;
+                        double reverseExchangeRate = 1  / exchangeRate;
+                        exchangeRates.put(reverseExchange, reverseExchangeRate);
+
                     }
                 }
             }
         }
-    }
-
-    /**
-     * @param exchanges array of currency exchanges and their rates
-     * @return Set with all the currency which can be exchanged
-     */
-    private Set<String> getInitialCurrencies(final Exchange[] exchanges) {
-        Set<String> initialCurrencies = new HashSet<String>();
-        for (Exchange exchange : exchanges) {
-            initialCurrencies.add(exchange.getFrom());
-        }
-        return initialCurrencies;
-    }
-
-    /**
-     * @param exchanges array of currency exchanges and their rates
-     * @return Set with all the currency which can be obtained through an exchange
-     */
-    private Set<String> getFinalCurrencies(final Exchange[] exchanges) {
-        Set<String> finalCurrencies = new HashSet<String>();
-        for (Exchange exchange : exchanges) {
-            finalCurrencies.add(exchange.getTo());
-        }
-        return finalCurrencies;
-    }
-
-    /**
-     * @param exchanges array of currency exchanges and their rates
-     * @return Set with all the currency which can be exchanged
-     *         and which can be obtained through an exchange
-     */
-    private Set<String> getIntermediateCurrencies(final Exchange[] exchanges) {
-        Set<String> initialCurrencies = getInitialCurrencies(exchanges);
-        Set<String> finalCurrencies = getFinalCurrencies(exchanges);
-        Set<String> intermediateCurrencies = new HashSet<String>();
-
-        for (Object currency : initialCurrencies.toArray()) {
-            if (finalCurrencies.contains((String) currency)) {
-                intermediateCurrencies.add((String) currency);
-            }
-        }
-        return intermediateCurrencies;
     }
 
     /**
@@ -320,8 +290,8 @@ public final class DataBase {
     }
 
     /**
-     * Delete an account (deactivate the account and the cards associated with it),
-     * if the user is the owner of it.
+     * Delete an account and the cards associated with it,
+     * if the user is the owner of the account.
      *
      * @param iban number of account
      * @param email email of user
@@ -339,12 +309,15 @@ public final class DataBase {
             return err;
         }
 
+        for (Card card : acct.getCards()) {
+            cards.remove(card.getCardNumber());
+        }
         accounts.remove(iban);
         return null;
     }
 
     /**
-     * Deactivate a card.
+     * Delete a card, if the user is the owner of it.
      *
      * @param cardNumber number of card (which is unique)
      * @param email email of user
@@ -354,7 +327,7 @@ public final class DataBase {
     public String deleteCard(final String cardNumber, final String email) {
         Card card = cards.get(cardNumber);
         if (card == null) {
-            return INVALID_USER; // should be INVALID_CARD
+            return INVALID_CARD;
         }
 
         String err = card.delete(email);
@@ -409,9 +382,18 @@ public final class DataBase {
         return card.pay(convertedAmount, email);
     }
 
-    private double exchangeMoney(final double amount, final String initialCurrency,
+    /**
+     * Exchange a sum of money from a currency to another one.
+     *
+     * @param amount initial sum of money
+     * @param initialCurrency initial currency of money
+     * @param finalCurrency currency which we want it
+     * @return sum of money converted in the new currency
+     *         -1, if it can not be converted
+     */
+    public static double exchangeMoney(final double amount, final String initialCurrency,
                                  final String finalCurrency) {
-        if (initialCurrency.equals(finalCurrency)) {
+        if (initialCurrency == null || initialCurrency.equals(finalCurrency)) {
             return amount;
         }
 
@@ -423,6 +405,42 @@ public final class DataBase {
         return amount * exchangeRate;
     }
 
+    public String sendMoney(final double amount, final String description,
+                            final String senderIBAN, final String senderEmail,
+                            final String receiver) {
+        User user = users.get(senderEmail);
+        if (user == null) {
+            return INVALID_USER;
+        }
+
+        String receiverIBAN = user.getAccountByAlias(receiver);
+        if (receiverIBAN == null) {
+            receiverIBAN = receiver;
+        }
+
+        Account senderAcct = accounts.get(senderIBAN);
+        Account receiverAcct = accounts.get(receiverIBAN);
+        if (senderAcct == null || receiverAcct == null) {
+            return null; // should be INVALID_ACCOUNT
+        }
+
+        return senderAcct.sendMoney(amount, description, senderEmail, receiverAcct);
+    }
+
+    public String setAlias(final String email, final String alias, final String iban) {
+        User user = users.get(email);
+        if (user == null) {
+            return INVALID_USER;
+        }
+
+        Account acct = accounts.get(iban);
+        if (acct == null) {
+            return INVALID_ACCOUNT;
+        }
+
+        user.setAlias(alias, iban);
+        return null;
+    }
 
     /**
      *  The current timestamp finished, so we increment it.
@@ -436,5 +454,14 @@ public final class DataBase {
      */
     public Collection<User> getUsers() {
         return users.values();
+    }
+
+    public List<Transaction> getTransactions(final String email) {
+        User user = users.get(email);
+        if (user == null) {
+            return null;
+        }
+
+        return user.getTransactions();
     }
 }

@@ -3,21 +3,21 @@ package org.poo.output;
 import lombok.Getter;
 
 @Getter
-public final class OutputMessage {
-    private static OutputMessage instance;
+public final class OutputSuccess {
+    private static OutputSuccess instance;
 
-    private Object description;
+    private Object success;
     private int timestamp;
 
-    private OutputMessage() {
+    private OutputSuccess() {
     }
 
     /**
      * @return only instance of this class
      */
-    private static OutputMessage getInstance() {
+    private static OutputSuccess getInstance() {
         if (instance == null) {
-            instance = new OutputMessage();
+            instance = new OutputSuccess();
         }
         return instance;
     }
@@ -25,19 +25,19 @@ public final class OutputMessage {
     /**
      * Alternative to constructor, without to break Singleton pattern.
      *
-     * @param output output
-     * @param timestamp the time from where the output comes
+     * @param success a message
+     * @param timestamp receiving time of command
      * @return null, if output is null
      *         the created simple output, in contrary case
      */
-    public static OutputMessage init(final Object output, final int timestamp) {
-        if (output == null) {
+    public static OutputSuccess init(final Object success, final int timestamp) {
+        if (success == null) {
             return null;
         }
 
         instance = getInstance();
 
-        instance.description = output;
+        instance.success = success;
         instance.timestamp = timestamp;
 
         return instance;

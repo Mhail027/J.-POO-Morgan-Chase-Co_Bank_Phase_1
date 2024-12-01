@@ -7,7 +7,7 @@ public final class ErrorOutput {
     private static ErrorOutput instance;
 
     private String command;
-    private OutputMessage output;
+    private OutputError output;
     private int timestamp;
 
     private ErrorOutput() {
@@ -41,7 +41,7 @@ public final class ErrorOutput {
         instance = getInstance();
 
         instance.command = command;
-        instance.output = OutputMessage.init(description, timestamp);
+        instance.output = OutputError.init(description, timestamp);
         instance.timestamp = timestamp;
 
         return instance;

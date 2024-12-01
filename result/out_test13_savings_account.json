@@ -1,48 +1,45 @@
 [ {
   "command" : "printUsers",
   "output" : [ {
-    "firstName" : "Fabian",
-    "lastName" : "Puscasu",
-    "email" : "Fabian_Puscasu@gmail.ro",
+    "firstName" : "Beniamin",
+    "lastName" : "Popa",
+    "email" : "Beniamin_Popa@outlook.ro",
     "accounts" : [ {
-      "balance" : 749.0,
+      "balance" : 1160.0,
       "currency" : "RON",
-      "type" : "SavingsAccount",
+      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
-      "interestRate" : 0.19,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
-    "firstName" : "Norbert",
-    "lastName" : "Dochioiu",
-    "email" : "Norbert_Dochioiu@outlook.ro",
+    "firstName" : "Christine",
+    "lastName" : "Carpenter",
+    "email" : "Christine_Carpenter@yahoo.us",
     "accounts" : [ {
-      "balance" : 1742.0,
-      "currency" : "RON",
-      "type" : "SavingsAccount",
+      "balance" : 1107.0,
+      "currency" : "USD",
+      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
-      "interestRate" : 0.56,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
-    "firstName" : "Gregoire",
-    "lastName" : "Chretien",
-    "email" : "Gregoire_Chretien@hotmail.fr",
+    "firstName" : "Eugen",
+    "lastName" : "Barbu",
+    "email" : "Eugen_Barbu@gmail.ro",
     "accounts" : [ {
-      "balance" : 833.0,
-      "currency" : "EUR",
-      "type" : "SavingsAccount",
+      "balance" : 1371.0,
+      "currency" : "RON",
+      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
         "status" : "active"
       } ],
-      "interestRate" : 0.48,
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   } ],
@@ -55,64 +52,47 @@
   },
   "timestamp" : 15
 }, {
-  "command" : "payOnline",
-  "output" : {
-    "description" : "Currency not found",
-    "timestamp" : 16
-  },
-  "timestamp" : 16
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 17
-  },
-  "timestamp" : 17
-}, {
   "command" : "printUsers",
   "output" : [ {
-    "firstName" : "Fabian",
-    "lastName" : "Puscasu",
-    "email" : "Fabian_Puscasu@gmail.ro",
+    "firstName" : "Beniamin",
+    "lastName" : "Popa",
+    "email" : "Beniamin_Popa@outlook.ro",
     "accounts" : [ {
-      "balance" : 749.0,
+      "balance" : 1160.0,
       "currency" : "RON",
-      "type" : "SavingsAccount",
+      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
-      "interestRate" : 0.19,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
-    "firstName" : "Norbert",
-    "lastName" : "Dochioiu",
-    "email" : "Norbert_Dochioiu@outlook.ro",
+    "firstName" : "Christine",
+    "lastName" : "Carpenter",
+    "email" : "Christine_Carpenter@yahoo.us",
     "accounts" : [ {
-      "balance" : 1742.0,
-      "currency" : "RON",
-      "type" : "SavingsAccount",
+      "balance" : 678.0,
+      "currency" : "USD",
+      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
-      "interestRate" : 0.56,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
-    "firstName" : "Gregoire",
-    "lastName" : "Chretien",
-    "email" : "Gregoire_Chretien@hotmail.fr",
+    "firstName" : "Eugen",
+    "lastName" : "Barbu",
+    "email" : "Eugen_Barbu@gmail.ro",
     "accounts" : [ {
-      "balance" : 833.0,
-      "currency" : "EUR",
-      "type" : "SavingsAccount",
+      "balance" : 1371.0,
+      "currency" : "RON",
+      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
         "status" : "active"
       } ],
-      "interestRate" : 0.48,
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   } ],
@@ -120,7 +100,7 @@
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "User not found",
+    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 19
   },
   "timestamp" : 19
@@ -134,48 +114,45 @@
 }, {
   "command" : "printUsers",
   "output" : [ {
-    "firstName" : "Fabian",
-    "lastName" : "Puscasu",
-    "email" : "Fabian_Puscasu@gmail.ro",
+    "firstName" : "Beniamin",
+    "lastName" : "Popa",
+    "email" : "Beniamin_Popa@outlook.ro",
     "accounts" : [ {
-      "balance" : 749.0,
+      "balance" : 1160.0,
       "currency" : "RON",
-      "type" : "SavingsAccount",
+      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
-      "interestRate" : 0.19,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
-    "firstName" : "Norbert",
-    "lastName" : "Dochioiu",
-    "email" : "Norbert_Dochioiu@outlook.ro",
+    "firstName" : "Christine",
+    "lastName" : "Carpenter",
+    "email" : "Christine_Carpenter@yahoo.us",
     "accounts" : [ {
-      "balance" : 1742.0,
-      "currency" : "RON",
-      "type" : "SavingsAccount",
+      "balance" : 678.0,
+      "currency" : "USD",
+      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
-      "interestRate" : 0.56,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
-    "firstName" : "Gregoire",
-    "lastName" : "Chretien",
-    "email" : "Gregoire_Chretien@hotmail.fr",
+    "firstName" : "Eugen",
+    "lastName" : "Barbu",
+    "email" : "Eugen_Barbu@gmail.ro",
     "accounts" : [ {
-      "balance" : 833.0,
-      "currency" : "EUR",
-      "type" : "SavingsAccount",
+      "balance" : 1371.0,
+      "currency" : "RON",
+      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
         "status" : "active"
       } ],
-      "interestRate" : 0.48,
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   } ],

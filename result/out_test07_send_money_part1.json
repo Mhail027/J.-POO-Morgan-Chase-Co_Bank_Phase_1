@@ -1,29 +1,22 @@
 [ {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 5
-  },
-  "timestamp" : 5
-}, {
   "command" : "printUsers",
   "output" : [ {
-    "firstName" : "Therese",
-    "lastName" : "Chauvin-Riou",
-    "email" : "Therese_Chauvin-Riou@hotmail.fr",
+    "firstName" : "Madalin",
+    "lastName" : "Diaconu",
+    "email" : "Madalin_Diaconu@hotmail.ro",
     "accounts" : [ {
-      "balance" : 269.0,
-      "currency" : "EUR",
+      "balance" : 173.0,
+      "currency" : "RON",
       "type" : "classic",
       "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
-    "firstName" : "Manuela",
-    "lastName" : "Toma",
-    "email" : "Manuela_Toma@hotmail.ro",
+    "firstName" : "Iulia",
+    "lastName" : "Stoica",
+    "email" : "Iulia_Stoica@hotmail.ro",
     "accounts" : [ {
-      "balance" : 683.0,
+      "balance" : 623.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ],
@@ -32,31 +25,24 @@
   } ],
   "timestamp" : 6
 }, {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 7
-  },
-  "timestamp" : 7
-}, {
   "command" : "printUsers",
   "output" : [ {
-    "firstName" : "Therese",
-    "lastName" : "Chauvin-Riou",
-    "email" : "Therese_Chauvin-Riou@hotmail.fr",
+    "firstName" : "Madalin",
+    "lastName" : "Diaconu",
+    "email" : "Madalin_Diaconu@hotmail.ro",
     "accounts" : [ {
-      "balance" : 269.0,
-      "currency" : "EUR",
+      "balance" : 173.0,
+      "currency" : "RON",
       "type" : "classic",
       "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
-    "firstName" : "Manuela",
-    "lastName" : "Toma",
-    "email" : "Manuela_Toma@hotmail.ro",
+    "firstName" : "Iulia",
+    "lastName" : "Stoica",
+    "email" : "Iulia_Stoica@hotmail.ro",
     "accounts" : [ {
-      "balance" : 683.0,
+      "balance" : 623.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ],

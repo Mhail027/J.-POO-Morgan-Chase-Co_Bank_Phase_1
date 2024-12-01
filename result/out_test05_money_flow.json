@@ -1,23 +1,23 @@
 [ {
   "command" : "printUsers",
   "output" : [ {
-    "firstName" : "Olimpiu",
-    "lastName" : "Stan",
-    "email" : "Olimpiu_Stan@outlook.ro",
+    "firstName" : "Decebal",
+    "lastName" : "Popa",
+    "email" : "Decebal_Popa@gmail.ro",
     "accounts" : [ {
-      "balance" : 625.0,
+      "balance" : 762.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
-    "firstName" : "Viviana",
-    "lastName" : "Suciu",
-    "email" : "Viviana_Suciu@gmail.ro",
+    "firstName" : "Emmanuel",
+    "lastName" : "Munoz de Gautier",
+    "email" : "Emmanuel_Munoz_de_Gautier@gmail.fr",
     "accounts" : [ {
-      "balance" : 158.0,
-      "currency" : "RON",
+      "balance" : 5976.0,
+      "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
@@ -27,11 +27,11 @@
 }, {
   "command" : "printUsers",
   "output" : [ {
-    "firstName" : "Olimpiu",
-    "lastName" : "Stan",
-    "email" : "Olimpiu_Stan@outlook.ro",
+    "firstName" : "Decebal",
+    "lastName" : "Popa",
+    "email" : "Decebal_Popa@gmail.ro",
     "accounts" : [ {
-      "balance" : 625.0,
+      "balance" : 762.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ {
@@ -40,7 +40,7 @@
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     }, {
-      "balance" : 286.0,
+      "balance" : 7050.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ {
@@ -50,12 +50,12 @@
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   }, {
-    "firstName" : "Viviana",
-    "lastName" : "Suciu",
-    "email" : "Viviana_Suciu@gmail.ro",
+    "firstName" : "Emmanuel",
+    "lastName" : "Munoz de Gautier",
+    "email" : "Emmanuel_Munoz_de_Gautier@gmail.fr",
     "accounts" : [ {
-      "balance" : 158.0,
-      "currency" : "RON",
+      "balance" : 5976.0,
+      "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
@@ -68,11 +68,11 @@
 }, {
   "command" : "printUsers",
   "output" : [ {
-    "firstName" : "Olimpiu",
-    "lastName" : "Stan",
-    "email" : "Olimpiu_Stan@outlook.ro",
+    "firstName" : "Decebal",
+    "lastName" : "Popa",
+    "email" : "Decebal_Popa@gmail.ro",
     "accounts" : [ {
-      "balance" : 714.0,
+      "balance" : 385.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ {
@@ -81,7 +81,7 @@
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     }, {
-      "balance" : 286.0,
+      "balance" : 6694.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ {
@@ -91,12 +91,12 @@
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   }, {
-    "firstName" : "Viviana",
-    "lastName" : "Suciu",
-    "email" : "Viviana_Suciu@gmail.ro",
+    "firstName" : "Emmanuel",
+    "lastName" : "Munoz de Gautier",
+    "email" : "Emmanuel_Munoz_de_Gautier@gmail.fr",
     "accounts" : [ {
-      "balance" : 158.0,
-      "currency" : "RON",
+      "balance" : 5875.0,
+      "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",

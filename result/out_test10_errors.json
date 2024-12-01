@@ -1,243 +1,122 @@
 [ {
-  "command" : "setAlias",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 5
-  },
-  "timestamp" : 5
-}, {
-  "command" : "setAlias",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 6
-  },
-  "timestamp" : 6
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 7
-  },
-  "timestamp" : 7
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 8
-  },
-  "timestamp" : 8
-}, {
   "command" : "printTransactions",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 9
-  },
-  "timestamp" : 9
+  "output" : [ {
+    "description" : "New account created",
+    "timestamp" : 1
+  }, {
+    "description" : "Medical checkup at Regina Maria",
+    "timestamp" : 5,
+    "amount" : "870.0 RON",
+    "receiverIBAN" : "RO69POOB6209498372540635",
+    "senderIBAN" : "RO58POOB7344468893732422",
+    "transferType" : "sent"
+  } ],
+  "timestamp" : 8
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "User not found",
-    "timestamp" : 12
+    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "timestamp" : 10
   },
-  "timestamp" : 12
+  "timestamp" : 10
 }, {
-  "command" : "sendMoney",
+  "command" : "deleteAccount",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 16
+    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "timestamp" : 15
   },
-  "timestamp" : 16
+  "timestamp" : 15
 }, {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 17
-  },
+  "command" : "printTransactions",
+  "output" : [ {
+    "description" : "New account created",
+    "timestamp" : 1
+  }, {
+    "description" : "Medical checkup at Regina Maria",
+    "timestamp" : 5,
+    "amount" : "870.0 RON",
+    "receiverIBAN" : "RO69POOB6209498372540635",
+    "senderIBAN" : "RO58POOB7344468893732422",
+    "transferType" : "sent"
+  }, {
+    "description" : "Miscellaneous cash expenses",
+    "timestamp" : 11,
+    "amount" : "86.0 RON",
+    "receiverIBAN" : "RO69POOB6209498372540635",
+    "senderIBAN" : "RO58POOB7344468893732422",
+    "transferType" : "sent"
+  }, {
+    "description" : "Electricity and gas bills",
+    "timestamp" : 16,
+    "amount" : "83.0 RON",
+    "receiverIBAN" : "RO90POOB5450777208072365",
+    "senderIBAN" : "RO58POOB7344468893732422",
+    "transferType" : "sent"
+  } ],
   "timestamp" : 17
 }, {
   "command" : "printUsers",
   "output" : [ {
-    "firstName" : "Michelle",
-    "lastName" : "Mayer",
-    "email" : "Michelle_Mayer@yahoo.us",
+    "firstName" : "Marinela",
+    "lastName" : "Puscasu",
+    "email" : "Marinela_Puscasu@hotmail.ro",
     "accounts" : [ {
-      "balance" : 939.0,
-      "currency" : "USD",
+      "balance" : 1350.0,
+      "currency" : "RON",
       "type" : "classic",
       "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
-    "firstName" : "David",
-    "lastName" : "Turner",
-    "email" : "David_Turner@gmail.us",
+    "firstName" : "Alice",
+    "lastName" : "Dima",
+    "email" : "Alice_Dima@hotmail.ro",
     "accounts" : [ {
-      "balance" : 259.0,
-      "currency" : "USD",
+      "balance" : 956.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO69POOB6209498372540635"
+    } ]
+  }, {
+    "firstName" : "Jan",
+    "lastName" : "Ababe",
+    "email" : "Jan_Ababe@outlook.ro",
+    "accounts" : [ {
+      "balance" : 753.0,
+      "currency" : "RON",
+      "type" : "classic",
+      "cards" : [ ],
+      "IBAN" : "RO90POOB5450777208072365"
+    } ]
+  }, {
+    "firstName" : "Andre",
+    "lastName" : "Martin",
+    "email" : "Andre_Martin@gmail.fr",
+    "accounts" : [ {
+      "balance" : 495.3333333333333,
+      "currency" : "EUR",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
-      "IBAN" : "RO69POOB6209498372540635"
-    } ]
-  }, {
-    "firstName" : "Albertina",
-    "lastName" : "Nistor",
-    "email" : "Albertina_Nistor@gmail.ro",
-    "accounts" : [ {
-      "balance" : 1795.0,
-      "currency" : "RON",
-      "type" : "classic",
-      "cards" : [ ],
-      "IBAN" : "RO90POOB5450777208072365"
-    }, {
-      "balance" : 0.0,
-      "currency" : "RON",
-      "type" : "classic",
-      "cards" : [ ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
-  }, {
-    "firstName" : "Amanda",
-    "lastName" : "Nemes",
-    "email" : "Amanda_Nemes@yahoo.ro",
-    "accounts" : [ ]
-  }, {
-    "firstName" : "Bogdana",
-    "lastName" : "Toma",
-    "email" : "Bogdana_Toma@hotmail.ro",
-    "accounts" : [ ]
   } ],
-  "timestamp" : 19
+  "timestamp" : 22
 }, {
-  "command" : "printUsers",
-  "output" : [ {
-    "firstName" : "Michelle",
-    "lastName" : "Mayer",
-    "email" : "Michelle_Mayer@yahoo.us",
-    "accounts" : [ {
-      "balance" : 939.0,
-      "currency" : "USD",
-      "type" : "classic",
-      "cards" : [ ],
-      "IBAN" : "RO58POOB7344468893732422"
-    } ]
-  }, {
-    "firstName" : "David",
-    "lastName" : "Turner",
-    "email" : "David_Turner@gmail.us",
-    "accounts" : [ {
-      "balance" : 1314.0,
-      "currency" : "USD",
-      "type" : "classic",
-      "cards" : [ {
-        "cardNumber" : "8207906978464446",
-        "status" : "active"
-      } ],
-      "IBAN" : "RO69POOB6209498372540635"
-    } ]
-  }, {
-    "firstName" : "Albertina",
-    "lastName" : "Nistor",
-    "email" : "Albertina_Nistor@gmail.ro",
-    "accounts" : [ {
-      "balance" : 2174.0,
-      "currency" : "RON",
-      "type" : "classic",
-      "cards" : [ ],
-      "IBAN" : "RO90POOB5450777208072365"
-    }, {
-      "balance" : 211.0,
-      "currency" : "RON",
-      "type" : "classic",
-      "cards" : [ ],
-      "IBAN" : "RO65POOB8944016386845896"
-    } ]
-  }, {
-    "firstName" : "Amanda",
-    "lastName" : "Nemes",
-    "email" : "Amanda_Nemes@yahoo.ro",
-    "accounts" : [ {
-      "balance" : 248.0,
-      "currency" : "RON",
-      "type" : "classic",
-      "cards" : [ ],
-      "IBAN" : "RO58POOB2721178218599590"
-    }, {
-      "balance" : 378.0,
-      "currency" : "RON",
-      "type" : "classic",
-      "cards" : [ ],
-      "IBAN" : "RO76POOB4035116042454483"
-    }, {
-      "balance" : 684.0,
-      "currency" : "RON",
-      "type" : "classic",
-      "cards" : [ ],
-      "IBAN" : "RO37POOB7013767509830666"
-    } ]
-  }, {
-    "firstName" : "Bogdana",
-    "lastName" : "Toma",
-    "email" : "Bogdana_Toma@hotmail.ro",
-    "accounts" : [ ]
-  } ],
-  "timestamp" : 31
-}, {
-  "command" : "sendMoney",
+  "command" : "payOnline",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 32
+    "description" : "Card not found",
+    "timestamp" : 26
   },
-  "timestamp" : 32
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 33
-  },
-  "timestamp" : 33
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 34
-  },
-  "timestamp" : 34
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 35
-  },
-  "timestamp" : 35
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 36
-  },
-  "timestamp" : 36
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 37
-  },
-  "timestamp" : 37
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 38
-  },
-  "timestamp" : 38
+  "timestamp" : 26
 }, {
   "command" : "printTransactions",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 39
-  },
-  "timestamp" : 39
+  "output" : [ {
+    "description" : "New account created",
+    "timestamp" : 18
+  } ],
+  "timestamp" : 27
 } ]

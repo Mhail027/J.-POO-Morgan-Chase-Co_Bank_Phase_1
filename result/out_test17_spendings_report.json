@@ -1,34 +1,34 @@
 [ {
   "command" : "printUsers",
   "output" : [ {
-    "firstName" : "Meghan",
-    "lastName" : "Richardson",
-    "email" : "Meghan_Richardson@gmail.us",
+    "firstName" : "Simion",
+    "lastName" : "Mazilescu",
+    "email" : "Simion_Mazilescu@yahoo.ro",
     "accounts" : [ {
-      "balance" : 229.0,
-      "currency" : "USD",
+      "balance" : 2613.0,
+      "currency" : "RON",
       "type" : "classic",
       "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     }, {
-      "balance" : 541.0,
-      "currency" : "USD",
+      "balance" : 1120.0,
+      "currency" : "RON",
       "type" : "classic",
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
-    "firstName" : "Matthew",
-    "lastName" : "Santiago",
-    "email" : "Matthew_Santiago@hotmail.us",
+    "firstName" : "Anthony",
+    "lastName" : "Graham",
+    "email" : "Anthony_Graham@yahoo.us",
     "accounts" : [ {
-      "balance" : 631.0,
+      "balance" : 423.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ],
       "IBAN" : "RO90POOB5450777208072365"
     }, {
-      "balance" : 311.0,
+      "balance" : 334.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ],
@@ -37,21 +37,14 @@
   } ],
   "timestamp" : 9
 }, {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 13
-  },
-  "timestamp" : 13
-}, {
   "command" : "printUsers",
   "output" : [ {
-    "firstName" : "Meghan",
-    "lastName" : "Richardson",
-    "email" : "Meghan_Richardson@gmail.us",
+    "firstName" : "Simion",
+    "lastName" : "Mazilescu",
+    "email" : "Simion_Mazilescu@yahoo.ro",
     "accounts" : [ {
-      "balance" : 142.7,
-      "currency" : "USD",
+      "balance" : 254.79999999999995,
+      "currency" : "RON",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
@@ -59,24 +52,24 @@
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     }, {
-      "balance" : 541.0,
-      "currency" : "USD",
+      "balance" : 1185.0,
+      "currency" : "RON",
       "type" : "classic",
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
-    "firstName" : "Matthew",
-    "lastName" : "Santiago",
-    "email" : "Matthew_Santiago@hotmail.us",
+    "firstName" : "Anthony",
+    "lastName" : "Graham",
+    "email" : "Anthony_Graham@yahoo.us",
     "accounts" : [ {
-      "balance" : 631.0,
+      "balance" : 423.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ],
       "IBAN" : "RO90POOB5450777208072365"
     }, {
-      "balance" : 311.0,
+      "balance" : 334.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ ],
@@ -84,13 +77,6 @@
     } ]
   } ],
   "timestamp" : 14
-}, {
-  "command" : "sendMoney",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 17
-  },
-  "timestamp" : 17
 }, {
   "command" : "payOnline",
   "output" : {
@@ -106,28 +92,28 @@
   },
   "timestamp" : 24
 }, {
-  "command" : "report",
+  "command" : "spendingsReport",
   "output" : {
     "description" : "Command is not valid",
     "timestamp" : 25
   },
   "timestamp" : 25
 }, {
-  "command" : "report",
+  "command" : "spendingsReport",
   "output" : {
     "description" : "Command is not valid",
     "timestamp" : 26
   },
   "timestamp" : 26
 }, {
-  "command" : "report",
+  "command" : "spendingsReport",
   "output" : {
     "description" : "Command is not valid",
     "timestamp" : 27
   },
   "timestamp" : 27
 }, {
-  "command" : "report",
+  "command" : "spendingsReport",
   "output" : {
     "description" : "Command is not valid",
     "timestamp" : 28

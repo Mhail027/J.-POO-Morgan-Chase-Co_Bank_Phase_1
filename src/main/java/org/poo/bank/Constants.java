@@ -11,10 +11,18 @@ public final class Constants {
             "Account not found";
     public static final String INVALID_CARD =
             "Card not found";
-    public static final String BALANCE_MUST_BE_0 =
-            "Can not delete an account which have money in it";
+
+    public static final String NO_TO_SAVINGS_ACCOUNT =
+            "Can not transfer money to a savings account";
+    public static final String CAN_NOT_DELETE_ACCOUNT =
+            "Account couldn't be deleted - see org.poo.transactions for details";
     public static final String TOO_LITTLE_MONEY =
             "Not enough founds";
+
+    public static final String NEW_ACCOUNT =
+            "New account created";
+    public static final String ACCOUNT_DELETED =
+            "Account deleted";
 
     private Constants() {
     }
