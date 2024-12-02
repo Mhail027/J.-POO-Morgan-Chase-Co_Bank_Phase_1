@@ -4,10 +4,10 @@ import lombok.Getter;
 
 @Getter
 public class Transaction {
-    private String description;
-    private int timestamp;
+    private final int timestamp;
+    private final String description;
 
-    public Transaction(final String description, final int timestamp) {
+    public Transaction(final int timestamp, final String description) {
         this.description = description;
         this.timestamp = timestamp;
     }

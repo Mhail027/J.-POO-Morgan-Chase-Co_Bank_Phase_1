@@ -91,32 +91,4 @@
     "timestamp" : 24
   },
   "timestamp" : 24
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 25
-  },
-  "timestamp" : 25
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 26
-  },
-  "timestamp" : 26
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 27
-  },
-  "timestamp" : 27
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 28
-  },
-  "timestamp" : 28
 } ]

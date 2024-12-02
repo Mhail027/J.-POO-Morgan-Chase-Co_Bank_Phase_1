@@ -6,6 +6,7 @@ import org.poo.bank.account.ClassicAccount;
 import org.poo.bank.account.SavingsAccount;
 import org.poo.bank.card.Card;
 import org.poo.bank.client.User;
+import org.poo.bank.transaction.SplitPaymentTransaction;
 import org.poo.bank.transaction.Transaction;
 import org.poo.utils.Utils;
 
@@ -47,6 +48,7 @@ public final class DataBase {
      * Alternative to constructor, without to break Singleton pattern.
      *
      * @param users array of users
+     * @param exchanges exchange rates
      * @return created database
      */
     public static DataBase init(final User[] users, final Exchange[] exchanges) {
@@ -96,6 +98,7 @@ public final class DataBase {
             exchangeRates.put(currencyConversion, 1 / exchange.getRate());
         }
 
+        /// Add all currencies which can be exchanged in a set.
         Set<String> currencies = new HashSet<String>();
         for (Exchange exchange : exchanges) {
             currencies.add(exchange.getFrom());
@@ -105,7 +108,6 @@ public final class DataBase {
         /// Add all exchanges which can be done using the initial ones.
         /// To do that, we use an adaptation of Floyd Warshall Algorithm.
         /// We want just to discover all pair of nodes between which exist a path.
-        String[] currenciesArray =  currencies.toArray(new String[0]);
         for (Object intermediateCurrency : currencies.toArray()) {
             for (Object initialCurrency : currencies.toArray()) {
                 for (Object finalCurrency : currencies.toArray()) {
@@ -127,7 +129,6 @@ public final class DataBase {
                         String reverseExchange = finalCurrency + " -> " + initialCurrency;
                         double reverseExchangeRate = 1  / exchangeRate;
                         exchangeRates.put(reverseExchange, reverseExchangeRate);
-
                     }
                 }
             }
@@ -162,7 +163,6 @@ public final class DataBase {
         } else {
             newAccount = new SavingsAccount(owner, iban, currency, interestRate);
         }
-
 
         String err = assignAccount(newAccount, email);
         if (err != null) {
@@ -312,6 +312,7 @@ public final class DataBase {
         for (Card card : acct.getCards()) {
             cards.remove(card.getCardNumber());
         }
+
         accounts.remove(iban);
         return null;
     }
@@ -364,11 +365,14 @@ public final class DataBase {
      * @param amount sum of transaction
      * @param currency currency of money
      * @param email user's email
+     * @param description string with supplementary details about payment
+     * @param commerciant name of receiver
      * @return String with an error, if something bad happens
      *         null, if not
      */
     public String payOnline(final String cardNumber, final double amount,
-                            final String currency, final String email) {
+                            final String currency, final String email,
+                            final String description, final String commerciant) {
         Card card = cards.get(cardNumber);
         if (card == null) {
             return INVALID_CARD;
@@ -379,7 +383,7 @@ public final class DataBase {
             return INVALID_CURRENCY;
         }
 
-        return card.pay(convertedAmount, email);
+        return card.pay(convertedAmount, email, description, commerciant);
     }
 
     /**
@@ -392,7 +396,7 @@ public final class DataBase {
      *         -1, if it can not be converted
      */
     public static double exchangeMoney(final double amount, final String initialCurrency,
-                                 final String finalCurrency) {
+                                       final String finalCurrency) {
         if (initialCurrency == null || initialCurrency.equals(finalCurrency)) {
             return amount;
         }
@@ -405,6 +409,17 @@ public final class DataBase {
         return amount * exchangeRate;
     }
 
+    /**
+     * A user send money from an account to other.
+     *
+     * @param amount sum of money
+     * @param description supplementary details about transaction
+     * @param senderIBAN  account number of sender
+     * @param senderEmail email off sender
+     * @param receiver account number of alias of receiver
+     * @return String with an error, if something bad happens
+     *         null, if not
+     */
     public String sendMoney(final double amount, final String description,
                             final String senderIBAN, final String senderEmail,
                             final String receiver) {
@@ -427,6 +442,15 @@ public final class DataBase {
         return senderAcct.sendMoney(amount, description, senderEmail, receiverAcct);
     }
 
+    /**
+     * A user set an alias to an account.
+     *
+     * @param email email of user
+     * @param alias "nickname" of account
+     * @param iban account number
+     * @return String with an error, if something bad happens
+     *         null, if not
+     */
     public String setAlias(final String email, final String alias, final String iban) {
         User user = users.get(email);
         if (user == null) {
@@ -440,6 +464,101 @@ public final class DataBase {
 
         user.setAlias(alias, iban);
         return null;
+    }
+
+    /**
+     * Verify the status of a card and save this interrogation in the owner's transactions.
+     *
+     * @param cardNumber number of card
+     * @return String with an error, if something bad happens
+     *         null, if not
+     */
+    public String checkCardStatus(final String cardNumber) {
+        Card card = cards.get(cardNumber);
+        if (card == null) {
+            return INVALID_CARD;
+        }
+
+        card.checkStatus();
+        return null;
+    }
+
+    public String splitPayment(final List<String> accountIBANsForSplit, final double amount,
+                               final String currency) {
+        /// Verify if every IBAN is valid.
+        List<Account> accountsWhichSplit = new LinkedList<Account>();
+        for (String iban : accountIBANsForSplit) {
+            Account account = accounts.get(iban);
+            if (account == null) {
+                return INVALID_ACCOUNT;
+            }
+            accountsWhichSplit.add(account);
+        }
+
+        ///  Verify if every account has enough funds.
+        double amountPerAccount = amount / accountsWhichSplit.size();
+        Account accountWithNotEnoughFunds = null;
+        for (Account account : accountsWhichSplit) {
+            double convertedAmountPerAccount = exchangeMoney(amountPerAccount, currency,
+                    account.getCurrency());
+            if (!account.canPay(convertedAmountPerAccount)) {
+                accountWithNotEnoughFunds = account;
+                break;
+            }
+        }
+
+        
+        if (accountWithNotEnoughFunds != null) {
+            return null;// should be an error
+        }
+
+        SplitPaymentTransaction transaction = new SplitPaymentTransaction(getTimestamp(),
+                String.format("Split payment of %.2f %s",amount, currency), amountPerAccount, currency,
+                accountIBANsForSplit, null);
+
+        for (Account account : accountsWhichSplit) {
+            double convertedAmountPerAccount = exchangeMoney(amountPerAccount, currency,
+                    account.getCurrency());
+            account.pay(convertedAmountPerAccount);
+            account.getOwner().addTransaction(transaction);
+        }
+
+        return null;
+    }
+
+    public String changeInterestRate(final String iban, final double interestRate) {
+        Account account = accounts.get(iban);
+        if (account == null) {
+            return  INVALID_ACCOUNT;
+        }
+        if (!account.getType().equals("savings")) {
+            return NO_SAVINGS_ACCOUNT;
+        }
+
+        ((SavingsAccount) account).setInterestRate(interestRate);
+        return null;
+    }
+
+    public String addInterestRate(final String iban) {
+        Account account = accounts.get(iban);
+        if (account == null) {
+            return  INVALID_ACCOUNT;
+        }
+        if (!account.getType().equals("savings")) {
+            return NO_SAVINGS_ACCOUNT;
+        }
+
+        ((SavingsAccount) account).addInterestRate();
+        return null;
+    }
+
+    public Object getReport(final String iban, final int startTimestamp, final int finalTimestamp) {
+        Account account = accounts.get(iban);
+        if (account == null) {
+            return INVALID_ACCOUNT;
+        }
+
+        return Report.init(account, startTimestamp, finalTimestamp);
     }
 
     /**

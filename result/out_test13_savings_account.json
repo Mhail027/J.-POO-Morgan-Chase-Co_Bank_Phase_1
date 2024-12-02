@@ -45,13 +45,6 @@
   } ],
   "timestamp" : 14
 }, {
-  "command" : "changeInterestRate",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 15
-  },
-  "timestamp" : 15
-}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Beniamin",
@@ -100,17 +93,10 @@
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 19
   },
   "timestamp" : 19
-}, {
-  "command" : "changeInterestRate",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 20
-  },
-  "timestamp" : 20
 }, {
   "command" : "printUsers",
   "output" : [ {

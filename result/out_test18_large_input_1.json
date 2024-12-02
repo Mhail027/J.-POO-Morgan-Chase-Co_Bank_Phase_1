@@ -110,16 +110,15 @@
 }, {
   "command" : "report",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 26
+    "balance" : 51504.25,
+    "currency" : "INR",
+    "transactions" : [ ],
+    "IBAN" : "RO58POOB7344468893732422"
   },
   "timestamp" : 26
 }, {
   "command" : "report",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 27
-  },
+  "output" : "Account not found",
   "timestamp" : 27
 }, {
   "command" : "printUsers",
@@ -230,20 +229,6 @@
     "accounts" : [ ]
   } ],
   "timestamp" : 28
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 42
-  },
-  "timestamp" : 42
-}, {
-  "command" : "splitPayment",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 48
-  },
-  "timestamp" : 48
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -386,20 +371,6 @@
     "accounts" : [ ]
   } ],
   "timestamp" : 53
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 54
-  },
-  "timestamp" : 54
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 55
-  },
-  "timestamp" : 55
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -602,13 +573,6 @@
     } ]
   } ],
   "timestamp" : 71
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 75
-  },
-  "timestamp" : 75
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -826,14 +790,14 @@
 }, {
   "command" : "changeInterestRate",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "This is not a savings account",
     "timestamp" : 79
   },
   "timestamp" : 79
 }, {
   "command" : "addInterest",
   "output" : {
-    "description" : "Command is not valid",
+    "error" : "Command is not valid",
     "timestamp" : 80
   },
   "timestamp" : 80
@@ -1054,200 +1018,226 @@
 }, {
   "command" : "printTransactions",
   "output" : [ {
-    "description" : "New account created",
-    "timestamp" : 1
+    "timestamp" : 1,
+    "description" : "New account created"
   }, {
-    "description" : "Local snacks and street food",
     "timestamp" : 22,
+    "description" : "Local snacks and street food",
     "amount" : "1720.0 INR",
     "receiverIBAN" : "RO90POOB5450777208072365",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Weekly groceries from Big Bazaar",
     "timestamp" : 23,
+    "description" : "Weekly groceries from Big Bazaar",
     "amount" : "480.0 INR",
     "receiverIBAN" : "RO58POOB2721178218599590",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Deposit to a Kiwibank savings account",
     "timestamp" : 24,
+    "description" : "Deposit to a Kiwibank savings account",
     "amount" : "843.0 NZD",
     "receiverIBAN" : "RO58POOB7344468893732422",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "received"
   }, {
-    "description" : "Ola rides for commuting",
     "timestamp" : 39,
+    "description" : "Ola rides for commuting",
     "amount" : "314.0 INR",
     "receiverIBAN" : "RO79POOB3616857825600958",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "EMI payment for a home loan",
+    "timestamp" : 41,
+    "description" : "New card created",
+    "account" : "RO58POOB7344468893732422",
+    "card" : "8207906978464446",
+    "cardHolder" : "Sachi_Brahmbhatt@protonmail.in"
+  }, {
+    "timestamp" : 43,
+    "description" : "Card payment",
+    "amount" : 83.0,
+    "commerciant" : "Adidas"
+  }, {
+    "timestamp" : 44,
+    "description" : "Card payment",
+    "amount" : 21280.0,
+    "commerciant" : "KFC"
+  }, {
+    "timestamp" : 49,
+    "description" : "Card payment",
+    "amount" : 125.0,
+    "commerciant" : "Under Armour"
+  }, {
+    "timestamp" : 51,
+    "description" : "Card payment",
+    "amount" : 4820.0,
+    "commerciant" : "HP"
+  }, {
     "timestamp" : 52,
+    "description" : "EMI payment for a home loan",
     "amount" : "2183.0 INR",
     "receiverIBAN" : "RO69POOB6209498372540635",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Monthly rent payment for a flat in Mumbai",
     "timestamp" : 68,
+    "description" : "Monthly rent payment for a flat in Mumbai",
     "amount" : "1947.0 INR",
     "receiverIBAN" : "RO33POOB9999273999620457",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Booking a trip to Goa",
     "timestamp" : 69,
+    "description" : "Booking a trip to Goa",
     "amount" : "2167.0 INR",
     "receiverIBAN" : "RO38POOB0964823730995794",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Purchasing outdoor gear from Kathmandu",
     "timestamp" : 70,
+    "description" : "Purchasing outdoor gear from Kathmandu",
     "amount" : "1918.0 NZD",
     "receiverIBAN" : "RO58POOB7344468893732422",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "received"
   }, {
-    "description" : "Fee for a coding bootcamp",
     "timestamp" : 103,
+    "description" : "Fee for a coding bootcamp",
     "amount" : "3144.0 INR",
     "receiverIBAN" : "RO69POOB6209498372540635",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Donation to a local NGO",
     "timestamp" : 104,
+    "description" : "Donation to a local NGO",
     "amount" : "3574.0 INR",
     "receiverIBAN" : "RO90POOB5450777208072365",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Purchasing clothing at FabIndia",
     "timestamp" : 105,
+    "description" : "Purchasing clothing at FabIndia",
     "amount" : "1688.0 INR",
     "receiverIBAN" : "RO65POOB8944016386845896",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Doctor consultation at Apollo Hospital",
     "timestamp" : 106,
+    "description" : "Doctor consultation at Apollo Hospital",
     "amount" : "535.0 INR",
     "receiverIBAN" : "RO58POOB2721178218599590",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Local snacks and street food",
     "timestamp" : 107,
+    "description" : "Local snacks and street food",
     "amount" : "1950.0 INR",
     "receiverIBAN" : "RO76POOB4035116042454483",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Local snacks and street food",
     "timestamp" : 108,
+    "description" : "Local snacks and street food",
     "amount" : "171.0 INR",
     "receiverIBAN" : "RO37POOB7013767509830666",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Booking a trip to Goa",
     "timestamp" : 109,
+    "description" : "Booking a trip to Goa",
     "amount" : "3225.0 INR",
     "receiverIBAN" : "RO19POOB4981055641668812",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Ola rides for commuting",
     "timestamp" : 110,
+    "description" : "Ola rides for commuting",
     "amount" : "3611.0 INR",
     "receiverIBAN" : "RO30POOB9523423715747796",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Tickets for a Bollywood movie",
     "timestamp" : 111,
+    "description" : "Tickets for a Bollywood movie",
     "amount" : "444.0 INR",
     "receiverIBAN" : "RO79POOB3616857825600958",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Monthly rent payment for a flat in Mumbai",
     "timestamp" : 112,
+    "description" : "Monthly rent payment for a flat in Mumbai",
     "amount" : "4320.0 INR",
     "receiverIBAN" : "RO00POOB5687892910835215",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Fee for a coding bootcamp",
     "timestamp" : 113,
+    "description" : "Fee for a coding bootcamp",
     "amount" : "364.0 INR",
     "receiverIBAN" : "RO96POOB6738272785416988",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Fee for a coding bootcamp",
     "timestamp" : 114,
+    "description" : "Fee for a coding bootcamp",
     "amount" : "2282.0 INR",
     "receiverIBAN" : "RO33POOB4049920806186500",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Local snacks and street food",
     "timestamp" : 115,
+    "description" : "Local snacks and street food",
     "amount" : "1088.0 INR",
     "receiverIBAN" : "RO69POOB9846198978826791",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Fee for a coding bootcamp",
     "timestamp" : 116,
+    "description" : "Fee for a coding bootcamp",
     "amount" : "3067.0 INR",
     "receiverIBAN" : "RO98POOB8412955460158769",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Electricity and gas bills",
     "timestamp" : 117,
+    "description" : "Electricity and gas bills",
     "amount" : "2801.0 INR",
     "receiverIBAN" : "RO32POOB0130532963818359",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Booking a trip to Goa",
     "timestamp" : 118,
+    "description" : "Booking a trip to Goa",
     "amount" : "4148.0 INR",
     "receiverIBAN" : "RO68POOB1848616931405475",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Donation to a local NGO",
     "timestamp" : 119,
+    "description" : "Donation to a local NGO",
     "amount" : "1059.0 INR",
     "receiverIBAN" : "RO10POOB4354933866366881",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Donation to a local NGO",
     "timestamp" : 120,
+    "description" : "Donation to a local NGO",
     "amount" : "493.0 INR",
     "receiverIBAN" : "RO33POOB9999273999620457",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Local snacks and street food",
     "timestamp" : 121,
+    "description" : "Local snacks and street food",
     "amount" : "961.0 INR",
     "receiverIBAN" : "RO38POOB0964823730995794",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Fee for a coding bootcamp",
     "timestamp" : 122,
+    "description" : "Fee for a coding bootcamp",
     "amount" : "1021.0 INR",
     "receiverIBAN" : "RO53POOB7122855990652257",
     "senderIBAN" : "RO58POOB7344468893732422",
@@ -1256,129 +1246,75 @@
   "timestamp" : 123
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 136
-  },
+  "output" : "Card not found",
   "timestamp" : 136
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 137
-  },
+  "output" : "Card not found",
   "timestamp" : 137
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 139
-  },
+  "output" : "Card not found",
   "timestamp" : 139
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 140
-  },
+  "output" : "Card not found",
   "timestamp" : 140
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 141
-  },
+  "output" : "Card not found",
   "timestamp" : 141
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 142
-  },
+  "output" : "Card not found",
   "timestamp" : 142
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 143
-  },
+  "output" : "Card not found",
   "timestamp" : 143
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 144
-  },
+  "output" : "Card not found",
   "timestamp" : 144
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 145
-  },
+  "output" : "Card not found",
   "timestamp" : 145
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 146
-  },
+  "output" : "Card not found",
   "timestamp" : 146
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 147
-  },
+  "output" : "Card not found",
   "timestamp" : 147
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 148
-  },
+  "output" : "Card not found",
   "timestamp" : 148
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 149
-  },
+  "output" : "Card not found",
   "timestamp" : 149
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 150
-  },
+  "output" : "Card not found",
   "timestamp" : 150
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 151
-  },
+  "output" : "Card not found",
   "timestamp" : 151
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 152
-  },
+  "output" : "Card not found",
   "timestamp" : 152
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 153
-  },
+  "output" : "Card not found",
   "timestamp" : 153
 }, {
   "command" : "deleteCard",
-  "output" : {
-    "description" : "Card not found",
-    "timestamp" : 154
-  },
+  "output" : "Card not found",
   "timestamp" : 154
 }, {
   "command" : "printUsers",
@@ -1588,31 +1524,35 @@
 }, {
   "command" : "report",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 166
+    "balance" : 16301.759999999998,
+    "currency" : "NZD",
+    "transactions" : [ {
+      "timestamp" : 52,
+      "description" : "EMI payment for a home loan",
+      "amount" : "2183.0 INR",
+      "receiverIBAN" : "RO69POOB6209498372540635",
+      "senderIBAN" : "RO58POOB7344468893732422",
+      "transferType" : "received"
+    } ],
+    "IBAN" : "RO69POOB6209498372540635"
   },
   "timestamp" : 166
 }, {
   "command" : "report",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 167
+    "balance" : 14669.339999999998,
+    "currency" : "EUR",
+    "transactions" : [ {
+      "timestamp" : 105,
+      "description" : "Purchasing clothing at FabIndia",
+      "amount" : "1688.0 INR",
+      "receiverIBAN" : "RO65POOB8944016386845896",
+      "senderIBAN" : "RO58POOB7344468893732422",
+      "transferType" : "received"
+    } ],
+    "IBAN" : "RO65POOB8944016386845896"
   },
   "timestamp" : 167
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 170
-  },
-  "timestamp" : 170
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 171
-  },
-  "timestamp" : 171
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -1686,7 +1626,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "6796819982034243",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO76POOB4035116042454483"
     } ]
@@ -1824,147 +1764,147 @@
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 173
   },
   "timestamp" : 173
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 174
   },
   "timestamp" : 174
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 175
   },
   "timestamp" : 175
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 176
   },
   "timestamp" : 176
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 177
   },
   "timestamp" : 177
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 178
   },
   "timestamp" : 178
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 179
   },
   "timestamp" : 179
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 180
   },
   "timestamp" : 180
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 181
   },
   "timestamp" : 181
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 182
   },
   "timestamp" : 182
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 183
   },
   "timestamp" : 183
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 184
   },
   "timestamp" : 184
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 185
   },
   "timestamp" : 185
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 186
   },
   "timestamp" : 186
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 187
   },
   "timestamp" : 187
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 188
   },
   "timestamp" : 188
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 189
   },
   "timestamp" : 189
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 190
   },
   "timestamp" : 190
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 191
   },
   "timestamp" : 191
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 192
   },
   "timestamp" : 192
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 193
   },
   "timestamp" : 193
@@ -2041,7 +1981,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "6796819982034243",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO76POOB4035116042454483"
     } ]
@@ -2179,204 +2119,236 @@
 }, {
   "command" : "printTransactions",
   "output" : [ {
-    "description" : "New account created",
-    "timestamp" : 1
+    "timestamp" : 1,
+    "description" : "New account created"
   }, {
-    "description" : "Local snacks and street food",
     "timestamp" : 22,
+    "description" : "Local snacks and street food",
     "amount" : "1720.0 INR",
     "receiverIBAN" : "RO90POOB5450777208072365",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Weekly groceries from Big Bazaar",
     "timestamp" : 23,
+    "description" : "Weekly groceries from Big Bazaar",
     "amount" : "480.0 INR",
     "receiverIBAN" : "RO58POOB2721178218599590",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Deposit to a Kiwibank savings account",
     "timestamp" : 24,
+    "description" : "Deposit to a Kiwibank savings account",
     "amount" : "843.0 NZD",
     "receiverIBAN" : "RO58POOB7344468893732422",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "received"
   }, {
-    "description" : "Ola rides for commuting",
     "timestamp" : 39,
+    "description" : "Ola rides for commuting",
     "amount" : "314.0 INR",
     "receiverIBAN" : "RO79POOB3616857825600958",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "EMI payment for a home loan",
+    "timestamp" : 41,
+    "description" : "New card created",
+    "account" : "RO58POOB7344468893732422",
+    "card" : "8207906978464446",
+    "cardHolder" : "Sachi_Brahmbhatt@protonmail.in"
+  }, {
+    "timestamp" : 43,
+    "description" : "Card payment",
+    "amount" : 83.0,
+    "commerciant" : "Adidas"
+  }, {
+    "timestamp" : 44,
+    "description" : "Card payment",
+    "amount" : 21280.0,
+    "commerciant" : "KFC"
+  }, {
+    "timestamp" : 49,
+    "description" : "Card payment",
+    "amount" : 125.0,
+    "commerciant" : "Under Armour"
+  }, {
+    "timestamp" : 51,
+    "description" : "Card payment",
+    "amount" : 4820.0,
+    "commerciant" : "HP"
+  }, {
     "timestamp" : 52,
+    "description" : "EMI payment for a home loan",
     "amount" : "2183.0 INR",
     "receiverIBAN" : "RO69POOB6209498372540635",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Monthly rent payment for a flat in Mumbai",
     "timestamp" : 68,
+    "description" : "Monthly rent payment for a flat in Mumbai",
     "amount" : "1947.0 INR",
     "receiverIBAN" : "RO33POOB9999273999620457",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Booking a trip to Goa",
     "timestamp" : 69,
+    "description" : "Booking a trip to Goa",
     "amount" : "2167.0 INR",
     "receiverIBAN" : "RO38POOB0964823730995794",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Purchasing outdoor gear from Kathmandu",
     "timestamp" : 70,
+    "description" : "Purchasing outdoor gear from Kathmandu",
     "amount" : "1918.0 NZD",
     "receiverIBAN" : "RO58POOB7344468893732422",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "received"
   }, {
-    "description" : "Fee for a coding bootcamp",
     "timestamp" : 103,
+    "description" : "Fee for a coding bootcamp",
     "amount" : "3144.0 INR",
     "receiverIBAN" : "RO69POOB6209498372540635",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Donation to a local NGO",
     "timestamp" : 104,
+    "description" : "Donation to a local NGO",
     "amount" : "3574.0 INR",
     "receiverIBAN" : "RO90POOB5450777208072365",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Purchasing clothing at FabIndia",
     "timestamp" : 105,
+    "description" : "Purchasing clothing at FabIndia",
     "amount" : "1688.0 INR",
     "receiverIBAN" : "RO65POOB8944016386845896",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Doctor consultation at Apollo Hospital",
     "timestamp" : 106,
+    "description" : "Doctor consultation at Apollo Hospital",
     "amount" : "535.0 INR",
     "receiverIBAN" : "RO58POOB2721178218599590",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Local snacks and street food",
     "timestamp" : 107,
+    "description" : "Local snacks and street food",
     "amount" : "1950.0 INR",
     "receiverIBAN" : "RO76POOB4035116042454483",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Local snacks and street food",
     "timestamp" : 108,
+    "description" : "Local snacks and street food",
     "amount" : "171.0 INR",
     "receiverIBAN" : "RO37POOB7013767509830666",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Booking a trip to Goa",
     "timestamp" : 109,
+    "description" : "Booking a trip to Goa",
     "amount" : "3225.0 INR",
     "receiverIBAN" : "RO19POOB4981055641668812",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Ola rides for commuting",
     "timestamp" : 110,
+    "description" : "Ola rides for commuting",
     "amount" : "3611.0 INR",
     "receiverIBAN" : "RO30POOB9523423715747796",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Tickets for a Bollywood movie",
     "timestamp" : 111,
+    "description" : "Tickets for a Bollywood movie",
     "amount" : "444.0 INR",
     "receiverIBAN" : "RO79POOB3616857825600958",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Monthly rent payment for a flat in Mumbai",
     "timestamp" : 112,
+    "description" : "Monthly rent payment for a flat in Mumbai",
     "amount" : "4320.0 INR",
     "receiverIBAN" : "RO00POOB5687892910835215",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Fee for a coding bootcamp",
     "timestamp" : 113,
+    "description" : "Fee for a coding bootcamp",
     "amount" : "364.0 INR",
     "receiverIBAN" : "RO96POOB6738272785416988",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Fee for a coding bootcamp",
     "timestamp" : 114,
+    "description" : "Fee for a coding bootcamp",
     "amount" : "2282.0 INR",
     "receiverIBAN" : "RO33POOB4049920806186500",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Local snacks and street food",
     "timestamp" : 115,
+    "description" : "Local snacks and street food",
     "amount" : "1088.0 INR",
     "receiverIBAN" : "RO69POOB9846198978826791",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Fee for a coding bootcamp",
     "timestamp" : 116,
+    "description" : "Fee for a coding bootcamp",
     "amount" : "3067.0 INR",
     "receiverIBAN" : "RO98POOB8412955460158769",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Electricity and gas bills",
     "timestamp" : 117,
+    "description" : "Electricity and gas bills",
     "amount" : "2801.0 INR",
     "receiverIBAN" : "RO32POOB0130532963818359",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Booking a trip to Goa",
     "timestamp" : 118,
+    "description" : "Booking a trip to Goa",
     "amount" : "4148.0 INR",
     "receiverIBAN" : "RO68POOB1848616931405475",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Donation to a local NGO",
     "timestamp" : 119,
+    "description" : "Donation to a local NGO",
     "amount" : "1059.0 INR",
     "receiverIBAN" : "RO10POOB4354933866366881",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Donation to a local NGO",
     "timestamp" : 120,
+    "description" : "Donation to a local NGO",
     "amount" : "493.0 INR",
     "receiverIBAN" : "RO33POOB9999273999620457",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Local snacks and street food",
     "timestamp" : 121,
+    "description" : "Local snacks and street food",
     "amount" : "961.0 INR",
     "receiverIBAN" : "RO38POOB0964823730995794",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Fee for a coding bootcamp",
     "timestamp" : 122,
+    "description" : "Fee for a coding bootcamp",
     "amount" : "1021.0 INR",
     "receiverIBAN" : "RO53POOB7122855990652257",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
+  }, {
+    "timestamp" : 135,
+    "description" : "The card has been destroyed",
+    "account" : "RO58POOB7344468893732422",
+    "card" : "8207906978464446",
+    "cardHolder" : "Sachi_Brahmbhatt@protonmail.in"
   } ],
   "timestamp" : 195
 } ]

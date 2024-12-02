@@ -1,18 +1,11 @@
 [ {
-  "command" : "splitPayment",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 9
-  },
-  "timestamp" : 9
-}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Margaux",
     "lastName" : "Nicolas",
     "email" : "Margaux_Nicolas@gmail.fr",
     "accounts" : [ {
-      "balance" : 4782.0,
+      "balance" : 4464.75,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ],
@@ -23,7 +16,7 @@
     "lastName" : "Garnier",
     "email" : "Lucas_Garnier@outlook.fr",
     "accounts" : [ {
-      "balance" : 5845.0,
+      "balance" : 5527.75,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ],
@@ -34,7 +27,7 @@
     "lastName" : "Nistor",
     "email" : "Georgeta_Nistor@outlook.ro",
     "accounts" : [ {
-      "balance" : 3359.0,
+      "balance" : 2026.55,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ],
@@ -45,7 +38,7 @@
     "lastName" : "Barbu",
     "email" : "Emanoil_Barbu@hotmail.ro",
     "accounts" : [ {
-      "balance" : 3461.0,
+      "balance" : 2128.55,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ],
@@ -67,7 +60,7 @@
     "lastName" : "Nicolas",
     "email" : "Margaux_Nicolas@gmail.fr",
     "accounts" : [ {
-      "balance" : 5707.0,
+      "balance" : 5389.75,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ],
@@ -78,7 +71,7 @@
     "lastName" : "Garnier",
     "email" : "Lucas_Garnier@outlook.fr",
     "accounts" : [ {
-      "balance" : 6204.0,
+      "balance" : 5886.75,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ],
@@ -89,7 +82,7 @@
     "lastName" : "Nistor",
     "email" : "Georgeta_Nistor@outlook.ro",
     "accounts" : [ {
-      "balance" : 4144.0,
+      "balance" : 2811.55,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ],
@@ -100,7 +93,7 @@
     "lastName" : "Barbu",
     "email" : "Emanoil_Barbu@hotmail.ro",
     "accounts" : [ {
-      "balance" : 4198.0,
+      "balance" : 2865.55,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ ],
@@ -109,24 +102,28 @@
   } ],
   "timestamp" : 16
 }, {
-  "command" : "splitPayment",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 17
-  },
-  "timestamp" : 17
-}, {
-  "command" : "splitPayment",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 18
-  },
-  "timestamp" : 18
-}, {
   "command" : "printTransactions",
   "output" : [ {
-    "description" : "New account created",
-    "timestamp" : 1
+    "timestamp" : 1,
+    "description" : "New account created"
+  }, {
+    "timestamp" : 9,
+    "description" : "Split payment of 1269.00 EUR",
+    "amount" : 317.25,
+    "currency" : "EUR",
+    "involvedAccounts" : [ "RO69POOB6209498372540635", "RO90POOB5450777208072365", "RO58POOB7344468893732422", "RO65POOB8944016386845896" ]
+  }, {
+    "timestamp" : 17,
+    "description" : "Split payment of 186.00 EUR",
+    "amount" : 46.5,
+    "currency" : "EUR",
+    "involvedAccounts" : [ "RO58POOB7344468893732422", "RO90POOB5450777208072365", "RO65POOB8944016386845896", "RO69POOB6209498372540635" ]
+  }, {
+    "timestamp" : 18,
+    "description" : "Split payment of 3197.00 EUR",
+    "amount" : 1598.5,
+    "currency" : "EUR",
+    "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB7344468893732422" ]
   } ],
   "timestamp" : 19
 } ]

@@ -1,42 +1,32 @@
 [ {
-  "command" : "checkCardStatus",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 3
-  },
-  "timestamp" : 3
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 6
-  },
-  "timestamp" : 6
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 10
-  },
-  "timestamp" : 10
-}, {
   "command" : "printTransactions",
   "output" : [ {
-    "description" : "New account created",
-    "timestamp" : 1
+    "timestamp" : 1,
+    "description" : "New account created"
+  }, {
+    "timestamp" : 2,
+    "description" : "New card created",
+    "account" : "RO58POOB7344468893732422",
+    "card" : "8207906978464446",
+    "cardHolder" : "David_Rogers@gmail.us"
+  }, {
+    "timestamp" : 3,
+    "description" : "You have reached the minimum amount of funds, the card will be frozen"
+  }, {
+    "timestamp" : 7,
+    "description" : "The card is frozen"
+  }, {
+    "timestamp" : 8,
+    "description" : "The card is frozen"
+  }, {
+    "timestamp" : 9,
+    "description" : "The card is frozen"
   } ],
   "timestamp" : 11
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 19
-  },
-  "timestamp" : 19
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 20
   },
   "timestamp" : 20
@@ -47,12 +37,12 @@
     "lastName" : "Rogers",
     "email" : "David_Rogers@gmail.us",
     "accounts" : [ {
-      "balance" : 1140.5,
+      "balance" : 1775.0,
       "currency" : "USD",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "active"
+        "status" : "frozen"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
@@ -83,11 +73,11 @@
 }, {
   "command" : "printTransactions",
   "output" : [ {
-    "description" : "New account created",
-    "timestamp" : 13
+    "timestamp" : 13,
+    "description" : "New account created"
   }, {
-    "description" : "Electricity and gas bills",
     "timestamp" : 21,
+    "description" : "Electricity and gas bills",
     "amount" : "55.0 RON",
     "receiverIBAN" : "RO90POOB5450777208072365",
     "senderIBAN" : "RO69POOB6209498372540635",

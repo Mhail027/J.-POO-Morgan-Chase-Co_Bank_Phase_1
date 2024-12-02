@@ -34,7 +34,7 @@ public final class User {
 
         if (!hasAccount(account.getIban())) {
             accounts.add(account);
-            addTransaction(new Transaction(NEW_ACCOUNT, DataBase.getTimestamp()));
+            addTransaction(new Transaction(DataBase.getTimestamp(), NEW_ACCOUNT));
         }
     }
 

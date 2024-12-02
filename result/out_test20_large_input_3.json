@@ -428,51 +428,44 @@
   } ],
   "timestamp" : 269
 }, {
-  "command" : "splitPayment",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 370
-  },
-  "timestamp" : 370
-}, {
   "command" : "printTransactions",
   "output" : [ {
-    "description" : "New account created",
-    "timestamp" : 1
+    "timestamp" : 1,
+    "description" : "New account created"
   }, {
-    "description" : "New account created",
-    "timestamp" : 26
+    "timestamp" : 26,
+    "description" : "New account created"
   }, {
-    "description" : "Electricity and water bills",
     "timestamp" : 251,
+    "description" : "Electricity and water bills",
     "amount" : "1726.0 CHF",
     "receiverIBAN" : "RO69POOB6209498372540635",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Transfer to a savings account at UBS",
     "timestamp" : 252,
+    "description" : "Transfer to a savings account at UBS",
     "amount" : "1740.0 CHF",
     "receiverIBAN" : "RO75POOB8279679254660818",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "ZVV pass for public transport",
     "timestamp" : 253,
+    "description" : "ZVV pass for public transport",
     "amount" : "474.0 CHF",
     "receiverIBAN" : "RO66POOB5231566576817248",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Weekly shopping from Coop",
     "timestamp" : 254,
+    "description" : "Weekly shopping from Coop",
     "amount" : "717.0 CHF",
     "receiverIBAN" : "RO69POOB6209498372540635",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
   }, {
-    "description" : "Repayment for a mortgage",
     "timestamp" : 255,
+    "description" : "Repayment for a mortgage",
     "amount" : "368.0 CHF",
     "receiverIBAN" : "RO49POOB4985907300499418",
     "senderIBAN" : "RO58POOB7344468893732422",
@@ -482,56 +475,56 @@
 }, {
   "command" : "printTransactions",
   "output" : [ {
-    "description" : "New account created",
-    "timestamp" : 2
+    "timestamp" : 2,
+    "description" : "New account created"
   }, {
-    "description" : "New account created",
-    "timestamp" : 27
+    "timestamp" : 27,
+    "description" : "New account created"
   }, {
-    "description" : "Electricity and water bills",
     "timestamp" : 251,
+    "description" : "Electricity and water bills",
     "amount" : "1726.0 CHF",
     "receiverIBAN" : "RO69POOB6209498372540635",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "received"
   }, {
-    "description" : "Weekly shopping from Coop",
     "timestamp" : 254,
+    "description" : "Weekly shopping from Coop",
     "amount" : "717.0 CHF",
     "receiverIBAN" : "RO69POOB6209498372540635",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "received"
   }, {
-    "description" : "Medical checkup at a private clinic",
     "timestamp" : 256,
+    "description" : "Medical checkup at a private clinic",
     "amount" : "474.0 CHF",
     "receiverIBAN" : "RO19POOB4981055641668812",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "sent"
   }, {
-    "description" : "Tickets for a Swiss football match",
     "timestamp" : 257,
+    "description" : "Tickets for a Swiss football match",
     "amount" : "155.0 CHF",
     "receiverIBAN" : "RO98POOB7190609943699593",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "sent"
   }, {
-    "description" : "Repayment for a mortgage",
     "timestamp" : 258,
+    "description" : "Repayment for a mortgage",
     "amount" : "572.0 CHF",
     "receiverIBAN" : "RO45POOB6505529013808948",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "sent"
   }, {
-    "description" : "Tickets for a Swiss football match",
     "timestamp" : 259,
+    "description" : "Tickets for a Swiss football match",
     "amount" : "748.0 CHF",
     "receiverIBAN" : "RO19POOB5993192794373940",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "sent"
   }, {
-    "description" : "Renewal of a Swisscom subscription",
     "timestamp" : 260,
+    "description" : "Renewal of a Swisscom subscription",
     "amount" : "90.0 CHF",
     "receiverIBAN" : "RO98POOB8412955460158769",
     "senderIBAN" : "RO69POOB6209498372540635",
@@ -541,11 +534,11 @@
 }, {
   "command" : "printTransactions",
   "output" : [ {
-    "description" : "New account created",
-    "timestamp" : 25
+    "timestamp" : 25,
+    "description" : "New account created"
   }, {
-    "description" : "New account created",
-    "timestamp" : 50
+    "timestamp" : 50,
+    "description" : "New account created"
   } ],
   "timestamp" : 373
 }, {
@@ -560,7 +553,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     }, {
@@ -592,7 +585,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "1952612794872207",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO46POOB9051076190383154"
     } ]
@@ -606,7 +599,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO90POOB5450777208072365"
     }, {
@@ -638,7 +631,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "0084627535411906",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO52POOB6271107854467609"
     } ]
@@ -652,7 +645,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO58POOB2721178218599590"
     }, {
@@ -684,7 +677,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8509650399173661",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO50POOB3359236199018963"
     } ]
@@ -698,7 +691,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "6796819982034243",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO37POOB7013767509830666"
     }, {
@@ -730,7 +723,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "4069340791718491",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO37POOB8653914479106806"
     } ]
@@ -744,7 +737,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "4686471658318359",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO30POOB9523423715747796"
     }, {
@@ -776,7 +769,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "6592968050400705",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO40POOB2135483650246268"
     } ]
@@ -790,7 +783,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "1322658752653937",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO00POOB5687892910835215"
     }, {
@@ -822,7 +815,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "6467982927008637",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO15POOB0048706387164463"
     } ]
@@ -836,7 +829,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "0466992784477761",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO33POOB4049920806186500"
     }, {
@@ -868,7 +861,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8686098479595515",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO93POOB6760303931698665"
     } ]
@@ -882,7 +875,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "5088727507344799",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO98POOB8412955460158769"
     }, {
@@ -914,7 +907,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8916302128573242",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO45POOB6505529013808948"
     } ]
@@ -928,7 +921,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7317745095154687",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO68POOB1848616931405475"
     }, {
@@ -960,7 +953,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8696843716078966",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO04POOB3492426980939341"
     } ]
@@ -974,7 +967,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "3951521356076921",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO33POOB9999273999620457"
     }, {
@@ -1006,7 +999,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "4097439592846732",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO19POOB5993192794373940"
     } ]
@@ -1020,7 +1013,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8431794639822740",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO53POOB7122855990652257"
     }, {
@@ -1052,7 +1045,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "2289183361654620",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO69POOB2312919212921100"
     } ]
@@ -1066,7 +1059,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7746115164990298",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO09POOB4346339013848470"
     }, {
@@ -1098,7 +1091,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "5069598921863529",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO66POOB5231566576817248"
     } ]
@@ -1112,7 +1105,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "5779026319169555",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO89POOB4455583483378897"
     }, {
@@ -1130,73 +1123,124 @@
 }, {
   "command" : "report",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 475
+    "balance" : 91084.795,
+    "currency" : "CHF",
+    "transactions" : [ ],
+    "IBAN" : "RO58POOB7344468893732422"
   },
   "timestamp" : 475
 }, {
   "command" : "report",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 476
+    "balance" : 7072.95,
+    "currency" : "CHF",
+    "transactions" : [ {
+      "timestamp" : 251,
+      "description" : "Electricity and water bills",
+      "amount" : "1726.0 CHF",
+      "receiverIBAN" : "RO69POOB6209498372540635",
+      "senderIBAN" : "RO58POOB7344468893732422",
+      "transferType" : "received"
+    }, {
+      "timestamp" : 254,
+      "description" : "Weekly shopping from Coop",
+      "amount" : "717.0 CHF",
+      "receiverIBAN" : "RO69POOB6209498372540635",
+      "senderIBAN" : "RO58POOB7344468893732422",
+      "transferType" : "received"
+    }, {
+      "timestamp" : 256,
+      "description" : "Medical checkup at a private clinic",
+      "amount" : "474.0 CHF",
+      "receiverIBAN" : "RO19POOB4981055641668812",
+      "senderIBAN" : "RO69POOB6209498372540635",
+      "transferType" : "sent"
+    }, {
+      "timestamp" : 257,
+      "description" : "Tickets for a Swiss football match",
+      "amount" : "155.0 CHF",
+      "receiverIBAN" : "RO98POOB7190609943699593",
+      "senderIBAN" : "RO69POOB6209498372540635",
+      "transferType" : "sent"
+    }, {
+      "timestamp" : 258,
+      "description" : "Repayment for a mortgage",
+      "amount" : "572.0 CHF",
+      "receiverIBAN" : "RO45POOB6505529013808948",
+      "senderIBAN" : "RO69POOB6209498372540635",
+      "transferType" : "sent"
+    }, {
+      "timestamp" : 259,
+      "description" : "Tickets for a Swiss football match",
+      "amount" : "748.0 CHF",
+      "receiverIBAN" : "RO19POOB5993192794373940",
+      "senderIBAN" : "RO69POOB6209498372540635",
+      "transferType" : "sent"
+    }, {
+      "timestamp" : 260,
+      "description" : "Renewal of a Swisscom subscription",
+      "amount" : "90.0 CHF",
+      "receiverIBAN" : "RO98POOB8412955460158769",
+      "senderIBAN" : "RO69POOB6209498372540635",
+      "transferType" : "sent"
+    } ],
+    "IBAN" : "RO69POOB6209498372540635"
   },
   "timestamp" : 476
 }, {
   "command" : "report",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 477
+    "balance" : 1168.375,
+    "currency" : "CHF",
+    "transactions" : [ {
+      "timestamp" : 261,
+      "description" : "Booking a holiday in the Swiss Alps",
+      "amount" : "909.0 CHF",
+      "receiverIBAN" : "RO01POOB3925326637526572",
+      "senderIBAN" : "RO90POOB5450777208072365",
+      "transferType" : "sent"
+    }, {
+      "timestamp" : 264,
+      "description" : "Buying clothes at Manor",
+      "amount" : "407.0 CHF",
+      "receiverIBAN" : "RO79POOB3616857825600958",
+      "senderIBAN" : "RO90POOB5450777208072365",
+      "transferType" : "sent"
+    }, {
+      "timestamp" : 375,
+      "description" : "New card created",
+      "account" : "RO90POOB5450777208072365",
+      "card" : "7901879264253296",
+      "cardHolder" : "Victoria_Rice@icloud.ch"
+    } ],
+    "IBAN" : "RO90POOB5450777208072365"
   },
   "timestamp" : 477
 }, {
   "command" : "report",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 478
+    "balance" : 141126.0,
+    "currency" : "AUD",
+    "transactions" : [ ],
+    "IBAN" : "RO65POOB8944016386845896"
   },
   "timestamp" : 478
 }, {
   "command" : "report",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 479
+    "balance" : 36674.666666666664,
+    "currency" : "USD",
+    "transactions" : [ ],
+    "IBAN" : "RO58POOB2721178218599590"
   },
   "timestamp" : 479
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 480
   },
   "timestamp" : 480
-}, {
-  "command" : "splitPayment",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 481
-  },
-  "timestamp" : 481
-}, {
-  "command" : "splitPayment",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 482
-  },
-  "timestamp" : 482
-}, {
-  "command" : "splitPayment",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 483
-  },
-  "timestamp" : 483
-}, {
-  "command" : "splitPayment",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 484
-  },
-  "timestamp" : 484
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -1209,7 +1253,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO58POOB7344468893732422"
     }, {
@@ -1241,7 +1285,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "1952612794872207",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO46POOB9051076190383154"
     } ]
@@ -1255,11 +1299,11 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO90POOB5450777208072365"
     }, {
-      "balance" : 65914.35714285714,
+      "balance" : 64399.6164021164,
       "currency" : "CHF",
       "type" : "savings",
       "cards" : [ {
@@ -1287,7 +1331,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "0084627535411906",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO52POOB6271107854467609"
     } ]
@@ -1301,7 +1345,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO58POOB2721178218599590"
     }, {
@@ -1328,12 +1372,12 @@
       } ],
       "IBAN" : "RO76POOB4035116042454483"
     }, {
-      "balance" : 80257.61538461539,
+      "balance" : 78054.35612535613,
       "currency" : "NZD",
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8509650399173661",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO50POOB3359236199018963"
     } ]
@@ -1347,11 +1391,11 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "6796819982034243",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO37POOB7013767509830666"
     }, {
-      "balance" : 4463.261363636364,
+      "balance" : 2838.6280303030308,
       "currency" : "EUR",
       "type" : "savings",
       "cards" : [ {
@@ -1379,7 +1423,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "4069340791718491",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO37POOB8653914479106806"
     } ]
@@ -1393,7 +1437,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "4686471658318359",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO30POOB9523423715747796"
     }, {
@@ -1411,7 +1455,7 @@
     "lastName" : "Mocanu",
     "email" : "Roberta_Mocanu@aol.ro",
     "accounts" : [ {
-      "balance" : 11847.0,
+      "balance" : 9920.5,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ {
@@ -1425,7 +1469,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "6592968050400705",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO40POOB2135483650246268"
     } ]
@@ -1439,7 +1483,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "1322658752653937",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO00POOB5687892910835215"
     }, {
@@ -1471,7 +1515,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "6467982927008637",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO15POOB0048706387164463"
     } ]
@@ -1485,7 +1529,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "0466992784477761",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO33POOB4049920806186500"
     }, {
@@ -1517,7 +1561,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8686098479595515",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO93POOB6760303931698665"
     } ]
@@ -1531,7 +1575,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "5088727507344799",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO98POOB8412955460158769"
     }, {
@@ -1563,7 +1607,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8916302128573242",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO45POOB6505529013808948"
     } ]
@@ -1577,7 +1621,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7317745095154687",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO68POOB1848616931405475"
     }, {
@@ -1609,7 +1653,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8696843716078966",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO04POOB3492426980939341"
     } ]
@@ -1623,7 +1667,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "3951521356076921",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO33POOB9999273999620457"
     }, {
@@ -1655,7 +1699,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "4097439592846732",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO19POOB5993192794373940"
     } ]
@@ -1669,7 +1713,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8431794639822740",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO53POOB7122855990652257"
     }, {
@@ -1701,7 +1745,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "2289183361654620",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO69POOB2312919212921100"
     } ]
@@ -1715,7 +1759,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7746115164990298",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO09POOB4346339013848470"
     }, {
@@ -1747,7 +1791,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "5069598921863529",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO66POOB5231566576817248"
     } ]
@@ -1761,7 +1805,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "5779026319169555",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO89POOB4455583483378897"
     }, {
@@ -1776,354 +1820,4 @@
     } ]
   } ],
   "timestamp" : 642
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 643
-  },
-  "timestamp" : 643
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 644
-  },
-  "timestamp" : 644
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 645
-  },
-  "timestamp" : 645
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 646
-  },
-  "timestamp" : 646
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 647
-  },
-  "timestamp" : 647
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 648
-  },
-  "timestamp" : 648
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 649
-  },
-  "timestamp" : 649
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 650
-  },
-  "timestamp" : 650
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 651
-  },
-  "timestamp" : 651
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 652
-  },
-  "timestamp" : 652
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 653
-  },
-  "timestamp" : 653
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 654
-  },
-  "timestamp" : 654
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 655
-  },
-  "timestamp" : 655
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 656
-  },
-  "timestamp" : 656
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 657
-  },
-  "timestamp" : 657
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 658
-  },
-  "timestamp" : 658
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 659
-  },
-  "timestamp" : 659
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 660
-  },
-  "timestamp" : 660
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 661
-  },
-  "timestamp" : 661
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 662
-  },
-  "timestamp" : 662
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 663
-  },
-  "timestamp" : 663
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 664
-  },
-  "timestamp" : 664
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 665
-  },
-  "timestamp" : 665
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 666
-  },
-  "timestamp" : 666
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 667
-  },
-  "timestamp" : 667
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 668
-  },
-  "timestamp" : 668
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 669
-  },
-  "timestamp" : 669
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 670
-  },
-  "timestamp" : 670
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 671
-  },
-  "timestamp" : 671
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 672
-  },
-  "timestamp" : 672
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 673
-  },
-  "timestamp" : 673
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 674
-  },
-  "timestamp" : 674
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 675
-  },
-  "timestamp" : 675
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 676
-  },
-  "timestamp" : 676
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 677
-  },
-  "timestamp" : 677
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 678
-  },
-  "timestamp" : 678
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 679
-  },
-  "timestamp" : 679
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 680
-  },
-  "timestamp" : 680
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 681
-  },
-  "timestamp" : 681
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 682
-  },
-  "timestamp" : 682
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 683
-  },
-  "timestamp" : 683
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 684
-  },
-  "timestamp" : 684
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 685
-  },
-  "timestamp" : 685
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 686
-  },
-  "timestamp" : 686
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 687
-  },
-  "timestamp" : 687
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 688
-  },
-  "timestamp" : 688
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 689
-  },
-  "timestamp" : 689
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 690
-  },
-  "timestamp" : 690
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 691
-  },
-  "timestamp" : 691
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 692
-  },
-  "timestamp" : 692
 } ]

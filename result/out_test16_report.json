@@ -94,29 +94,63 @@
 }, {
   "command" : "report",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 25
+    "balance" : 836.5,
+    "currency" : "RON",
+    "transactions" : [ {
+      "timestamp" : 10,
+      "description" : "New card created",
+      "account" : "RO58POOB7344468893732422",
+      "card" : "8207906978464446",
+      "cardHolder" : "Emanuel_Dumitrescu@gmail.ro"
+    }, {
+      "timestamp" : 11,
+      "description" : "Card payment",
+      "amount" : 256.0,
+      "commerciant" : "McDonalds"
+    }, {
+      "timestamp" : 12,
+      "description" : "Card payment",
+      "amount" : 28.5,
+      "commerciant" : "Burger King"
+    } ],
+    "IBAN" : "RO58POOB7344468893732422"
   },
   "timestamp" : 25
 }, {
   "command" : "report",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 26
+    "balance" : 902.5,
+    "currency" : "RON",
+    "transactions" : [ {
+      "timestamp" : 2,
+      "description" : "New account created"
+    } ],
+    "IBAN" : "RO69POOB6209498372540635"
   },
   "timestamp" : 26
 }, {
   "command" : "report",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 27
+    "balance" : 541.0,
+    "currency" : "EUR",
+    "transactions" : [ {
+      "timestamp" : 17,
+      "description" : "Water and electricity bills",
+      "amount" : "1012.0 EUR",
+      "receiverIBAN" : "RO69POOB6209498372540635",
+      "senderIBAN" : "RO90POOB5450777208072365",
+      "transferType" : "sent"
+    } ],
+    "IBAN" : "RO90POOB5450777208072365"
   },
   "timestamp" : 27
 }, {
   "command" : "report",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 28
+    "balance" : 1367.0,
+    "currency" : "EUR",
+    "transactions" : [ ],
+    "IBAN" : "RO65POOB8944016386845896"
   },
   "timestamp" : 28
 } ]

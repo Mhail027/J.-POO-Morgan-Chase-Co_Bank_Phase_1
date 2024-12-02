@@ -38,11 +38,11 @@
 }, {
   "command" : "printTransactions",
   "output" : [ {
-    "description" : "New account created",
-    "timestamp" : 1
+    "timestamp" : 1,
+    "description" : "New account created"
   }, {
-    "description" : "Miscellaneous online expenses",
     "timestamp" : 11,
+    "description" : "Miscellaneous online expenses",
     "amount" : "109.0 USD",
     "receiverIBAN" : "RO69POOB6209498372540635",
     "senderIBAN" : "RO58POOB7344468893732422",

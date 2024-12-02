@@ -1,21 +1,14 @@
 [ {
-  "command" : "changeInterestRate",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 2
-  },
-  "timestamp" : 2
-}, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 9
   },
   "timestamp" : 9
 }, {
   "command" : "deleteAccount",
   "output" : {
-    "description" : "Account couldn't be deleted - see org.poo.transactions for details",
+    "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 36
   },
   "timestamp" : 36
@@ -31,7 +24,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO69POOB6209498372540635"
     }, {
@@ -51,7 +44,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO90POOB5450777208072365"
     } ]
@@ -71,7 +64,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
@@ -85,7 +78,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "6796819982034243",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO58POOB2721178218599590"
     } ]
@@ -99,7 +92,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "4686471658318359",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO76POOB4035116042454483"
     } ]
@@ -113,7 +106,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "1322658752653937",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO37POOB7013767509830666"
     } ]
@@ -127,7 +120,7 @@
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "0466992784477761",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO19POOB4981055641668812"
     } ]
@@ -308,7 +301,7 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO69POOB6209498372540635"
     }, {
@@ -323,12 +316,12 @@
     "lastName" : "Scott-Davies",
     "email" : "Leanne_Scott-Davies@yandex.nz",
     "accounts" : [ {
-      "balance" : 1996.111111111111,
+      "balance" : 2149.0,
       "currency" : "NZD",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO90POOB5450777208072365"
     } ]
@@ -343,12 +336,12 @@
       "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     }, {
-      "balance" : 6655.0,
+      "balance" : 6845.0,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
@@ -357,12 +350,12 @@
     "lastName" : "Johnson",
     "email" : "Gina_Johnson@mail.com.ch",
     "accounts" : [ {
-      "balance" : 6691.538461538462,
+      "balance" : 6847.538461538462,
       "currency" : "CHF",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "6796819982034243",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO58POOB2721178218599590"
     } ]
@@ -371,12 +364,12 @@
     "lastName" : "Martin",
     "email" : "Zachary_Martin@aol.ca",
     "accounts" : [ {
-      "balance" : 1612.9738095238095,
+      "balance" : 1615.6666666666665,
       "currency" : "CAD",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "4686471658318359",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO76POOB4035116042454483"
     } ]
@@ -385,12 +378,12 @@
     "lastName" : "Nistor",
     "email" : "Estera_Nistor@gmx.ro",
     "accounts" : [ {
-      "balance" : 1125.0,
+      "balance" : 1895.0,
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "1322658752653937",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO37POOB7013767509830666"
     } ]
@@ -399,12 +392,12 @@
     "lastName" : "Arnold",
     "email" : "Sandra_Arnold@icloud.us",
     "accounts" : [ {
-      "balance" : 7886.515151515152,
+      "balance" : 8357.626262626263,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "0466992784477761",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO19POOB4981055641668812"
     } ]
@@ -556,197 +549,145 @@
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 93
-  },
-  "timestamp" : 93
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 94
-  },
-  "timestamp" : 94
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 95
-  },
-  "timestamp" : 95
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 96
-  },
-  "timestamp" : 96
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 97
-  },
-  "timestamp" : 97
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 98
-  },
-  "timestamp" : 98
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 99
   },
   "timestamp" : 99
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 100
   },
   "timestamp" : 100
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 101
   },
   "timestamp" : 101
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 102
   },
   "timestamp" : 102
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 103
   },
   "timestamp" : 103
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 104
   },
   "timestamp" : 104
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 105
   },
   "timestamp" : 105
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 106
   },
   "timestamp" : 106
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 107
   },
   "timestamp" : 107
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 108
   },
   "timestamp" : 108
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 109
   },
   "timestamp" : 109
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 110
   },
   "timestamp" : 110
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 111
   },
   "timestamp" : 111
 }, {
   "command" : "checkCardStatus",
   "output" : {
-    "description" : "Command is not valid",
+    "description" : "Card not found",
     "timestamp" : 112
   },
   "timestamp" : 112
 }, {
   "command" : "createCard",
-  "output" : {
-    "description" : "User not found",
-    "timestamp" : 114
-  },
+  "output" : "User not found",
   "timestamp" : 114
-}, {
-  "command" : "checkCardStatus",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 115
-  },
-  "timestamp" : 115
-}, {
-  "command" : "splitPayment",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 116
-  },
-  "timestamp" : 116
-}, {
-  "command" : "splitPayment",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 117
-  },
-  "timestamp" : 117
-}, {
-  "command" : "splitPayment",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 118
-  },
-  "timestamp" : 118
 }, {
   "command" : "printTransactions",
   "output" : [ {
-    "description" : "New account created",
-    "timestamp" : 5
+    "timestamp" : 5,
+    "description" : "New account created"
+  }, {
+    "timestamp" : 20,
+    "description" : "New card created",
+    "account" : "RO90POOB5450777208072365",
+    "card" : "7901879264253296",
+    "cardHolder" : "Leanne_Scott-Davies@yandex.nz"
+  }, {
+    "timestamp" : 27,
+    "description" : "Card payment",
+    "amount" : 16.0,
+    "commerciant" : "Microsoft"
+  }, {
+    "timestamp" : 72,
+    "description" : "The card is frozen"
+  }, {
+    "timestamp" : 113,
+    "description" : "New card created",
+    "account" : "RO90POOB5450777208072365",
+    "card" : "5088727507344799",
+    "cardHolder" : "Leanne_Scott-Davies@yandex.nz"
   } ],
   "timestamp" : 119
 }, {
-  "command" : "splitPayment",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 123
-  },
-  "timestamp" : 123
-}, {
   "command" : "report",
   "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 124
+    "balance" : 2149.0,
+    "currency" : "NZD",
+    "transactions" : [ {
+      "timestamp" : 113,
+      "description" : "New card created",
+      "account" : "RO90POOB5450777208072365",
+      "card" : "5088727507344799",
+      "cardHolder" : "Leanne_Scott-Davies@yandex.nz"
+    } ],
+    "IBAN" : "RO90POOB5450777208072365"
   },
   "timestamp" : 124
 }, {
@@ -850,14 +791,37 @@
 }, {
   "command" : "printTransactions",
   "output" : [ {
-    "description" : "New account created",
-    "timestamp" : 1
+    "timestamp" : 1,
+    "description" : "New account created"
   }, {
-    "description" : "New account created",
-    "timestamp" : 6
+    "timestamp" : 6,
+    "description" : "New account created"
   }, {
-    "description" : "Repayment for a personal loan",
+    "timestamp" : 21,
+    "description" : "New card created",
+    "account" : "RO65POOB8944016386845896",
+    "card" : "7004757825892043",
+    "cardHolder" : "Georgel_Nistor@yandex.ro"
+  }, {
+    "timestamp" : 28,
+    "description" : "Card payment",
+    "amount" : 1915.0,
+    "commerciant" : "Gucci"
+  }, {
+    "timestamp" : 73,
+    "description" : "The card is frozen"
+  }, {
+    "timestamp" : 123,
+    "description" : "Split payment of 1393.00 EUR",
+    "amount" : 348.25,
+    "currency" : "EUR",
+    "involvedAccounts" : [ "RO30POOB9523423715747796", "RO19POOB4981055641668812", "RO65POOB8944016386845896", "RO68POOB1848616931405475" ]
+  }, {
+    "timestamp" : 146,
+    "description" : "The card is frozen"
+  }, {
     "timestamp" : 171,
+    "description" : "Repayment for a personal loan",
     "amount" : "105.0 MXN",
     "receiverIBAN" : "RO65POOB8944016386845896",
     "senderIBAN" : "RO98POOB8412955460158769",
@@ -867,39 +831,59 @@
 }, {
   "command" : "printTransactions",
   "output" : [ {
-    "description" : "New account created",
-    "timestamp" : 4
+    "timestamp" : 4,
+    "description" : "New account created"
   }, {
-    "description" : "Transfer to a Commerzbank savings account",
+    "timestamp" : 19,
+    "description" : "New card created",
+    "account" : "RO69POOB6209498372540635",
+    "card" : "8207906978464446",
+    "cardHolder" : "Selma_Birnbaum@icloud.de"
+  }, {
+    "timestamp" : 26,
+    "description" : "Card payment",
+    "amount" : 49.0,
+    "commerciant" : "HP"
+  }, {
     "timestamp" : 33,
+    "description" : "Transfer to a Commerzbank savings account",
     "amount" : "13.0 EUR",
     "receiverIBAN" : "RO19POOB4981055641668812",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "sent"
   }, {
-    "description" : "New account created",
-    "timestamp" : 34
+    "timestamp" : 34,
+    "description" : "New account created"
   }, {
-    "description" : "Booking a trip to the Bavarian Alps",
     "timestamp" : 35,
+    "description" : "Booking a trip to the Bavarian Alps",
     "amount" : "74.0 EUR",
     "receiverIBAN" : "RO30POOB9523423715747796",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "sent"
   }, {
-    "description" : "Booking a trip to the Bavarian Alps",
     "timestamp" : 35,
+    "description" : "Booking a trip to the Bavarian Alps",
     "amount" : "74.0 EUR",
     "receiverIBAN" : "RO30POOB9523423715747796",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "received"
+  }, {
+    "timestamp" : 37,
+    "description" : "Insufficient funds"
+  }, {
+    "timestamp" : 123,
+    "description" : "Split payment of 1393.00 EUR",
+    "amount" : 348.25,
+    "currency" : "EUR",
+    "involvedAccounts" : [ "RO30POOB9523423715747796", "RO19POOB4981055641668812", "RO65POOB8944016386845896", "RO68POOB1848616931405475" ]
   } ],
   "timestamp" : 173
 }, {
   "command" : "printTransactions",
   "output" : [ {
-    "description" : "New account created",
-    "timestamp" : 41
+    "timestamp" : 41,
+    "description" : "New account created"
   } ],
   "timestamp" : 174
 }, {
@@ -914,11 +898,11 @@
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO69POOB6209498372540635"
     }, {
-      "balance" : 2639.0,
+      "balance" : 2290.75,
       "currency" : "EUR",
       "type" : "classic",
       "cards" : [ ],
@@ -929,12 +913,12 @@
     "lastName" : "Scott-Davies",
     "email" : "Leanne_Scott-Davies@yandex.nz",
     "accounts" : [ {
-      "balance" : 2101.311111111111,
+      "balance" : 2498.2,
       "currency" : "NZD",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
-        "status" : "active"
+        "status" : "blocked"
       }, {
         "cardNumber" : "5088727507344799",
         "status" : "active"
@@ -952,12 +936,12 @@
       "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     }, {
-      "balance" : 5869.875,
+      "balance" : 5927.375,
       "currency" : "RON",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
@@ -966,12 +950,12 @@
     "lastName" : "Johnson",
     "email" : "Gina_Johnson@mail.com.ch",
     "accounts" : [ {
-      "balance" : 6997.213461538462,
+      "balance" : 7336.913461538462,
       "currency" : "CHF",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "6796819982034243",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO58POOB2721178218599590"
     } ]
@@ -980,12 +964,12 @@
     "lastName" : "Martin",
     "email" : "Zachary_Martin@aol.ca",
     "accounts" : [ {
-      "balance" : 1885.9738095238095,
+      "balance" : 2363.6666666666665,
       "currency" : "CAD",
       "type" : "classic",
       "cards" : [ {
         "cardNumber" : "4686471658318359",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO76POOB4035116042454483"
     } ]
@@ -994,12 +978,12 @@
     "lastName" : "Nistor",
     "email" : "Estera_Nistor@gmx.ro",
     "accounts" : [ {
-      "balance" : 1390.8392857142858,
+      "balance" : 2571.464285714286,
       "currency" : "RON",
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "1322658752653937",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO37POOB7013767509830666"
     } ]
@@ -1008,12 +992,12 @@
     "lastName" : "Arnold",
     "email" : "Sandra_Arnold@icloud.us",
     "accounts" : [ {
-      "balance" : 10897.515151515152,
+      "balance" : 10996.68181818182,
       "currency" : "USD",
       "type" : "savings",
       "cards" : [ {
         "cardNumber" : "0466992784477761",
-        "status" : "active"
+        "status" : "blocked"
       } ],
       "IBAN" : "RO19POOB4981055641668812"
     } ]
@@ -1099,7 +1083,7 @@
     "lastName" : "Moore",
     "email" : "Tyler_Moore@yandex.ca",
     "accounts" : [ {
-      "balance" : 6581.0,
+      "balance" : 6077.972222222223,
       "currency" : "CAD",
       "type" : "classic",
       "cards" : [ {
@@ -1168,144 +1152,4 @@
     } ]
   } ],
   "timestamp" : 175
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 176
-  },
-  "timestamp" : 176
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 177
-  },
-  "timestamp" : 177
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 178
-  },
-  "timestamp" : 178
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 179
-  },
-  "timestamp" : 179
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 180
-  },
-  "timestamp" : 180
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 181
-  },
-  "timestamp" : 181
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 182
-  },
-  "timestamp" : 182
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 183
-  },
-  "timestamp" : 183
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 184
-  },
-  "timestamp" : 184
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 185
-  },
-  "timestamp" : 185
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 186
-  },
-  "timestamp" : 186
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 187
-  },
-  "timestamp" : 187
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 188
-  },
-  "timestamp" : 188
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 189
-  },
-  "timestamp" : 189
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 190
-  },
-  "timestamp" : 190
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 191
-  },
-  "timestamp" : 191
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 192
-  },
-  "timestamp" : 192
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 193
-  },
-  "timestamp" : 193
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 194
-  },
-  "timestamp" : 194
-}, {
-  "command" : "spendingsReport",
-  "output" : {
-    "description" : "Command is not valid",
-    "timestamp" : 195
-  },
-  "timestamp" : 195
 } ]

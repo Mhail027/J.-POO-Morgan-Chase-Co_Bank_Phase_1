@@ -7,7 +7,9 @@ import lombok.Setter;
 import org.poo.bank.DataBase;
 import org.poo.bank.card.Card;
 import org.poo.bank.client.User;
+import org.poo.bank.transaction.StatusCardTransaction;
 import org.poo.bank.transaction.SendMoneyTransaction;
+import org.poo.bank.transaction.Transaction;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -24,12 +26,16 @@ public abstract class Account {
     protected String type;
     @Setter protected double minimumBalance = 0;
     protected final List<Card> cards = new LinkedList<Card>(); // key == card number
+    protected final List<Transaction> transactions = new LinkedList<Transaction>();
 
     public Account(final User owner, final String iban, final String currency) {
         this.owner = owner;
         allowedUsers.add(owner);
         this.iban = iban;
         this.currency = currency;
+        transactions.add(
+                new Transaction(DataBase.getTimestamp(), NEW_ACCOUNT)
+        );
     }
 
     /**
@@ -50,6 +56,12 @@ public abstract class Account {
         if (card != null && !hasCard(card.getCardNumber())) {
             cards.add(card);
             addUser(card.getOwner());
+
+            User cardHolder = card.getOwner();
+            Transaction   transaction = new StatusCardTransaction(DataBase.getTimestamp(),
+                    NEW_CARD, iban, card.getCardNumber(), cardHolder.getEmail());
+            transactions.add(transaction);
+            cardHolder.addTransaction(transaction);
         }
     }
 
@@ -136,6 +148,11 @@ public abstract class Account {
         for (User user : allowedUsers) {
             user.removeAccount(iban);
         }
+
+        for (Card card : cards) {
+            card.delete(card.getOwner().getEmail());
+        }
+
         return null;
     }
 
@@ -143,34 +160,50 @@ public abstract class Account {
      * Someone take money from the account to pay something.
      *
      * @param amount sum of money
-     * @return null
+     * @return String with an error, if something bad happens
+     *         null, if not
      */
     public String pay(final double amount) {
         if (balance < amount) {
-            return null;
+            return INSUFFICIENT_FUNDS;
         }
 
         balance -= amount;
         return null;
     }
 
+    /**
+     * This account sends money to other account.
+     *
+     * @param amount sum of money
+     * @param description supplementary details about transaction
+     * @param senderEmail email of the sender
+     * @param receiver details of account which receives money
+     * @return String with an error, if something bad happens
+     *         null, if not
+     */
     public String sendMoney(final double amount, final String description,
                             final String senderEmail, final Account receiver) {
         if (senderEmail == null || !senderEmail.equals(owner.getEmail())) {
             return INVALID_USER;
         }
         if (balance < amount) {
-            return null; // should be TOO_LITTLE_MONEY
+            owner.addTransaction(
+                    new Transaction(DataBase.getTimestamp(), INSUFFICIENT_FUNDS)
+            );
+            return null;
         }
-      //  if (receiver.getType().equals("savings")) {
-         //   return null; // should be NO_TO_SAVING_ACCOUNT
-        //}
 
-        owner.addTransaction(new SendMoneyTransaction(amount + " " + currency,
-                description, receiver.getIban(), iban, DataBase.getTimestamp(), "sent"));
-        receiver.getOwner().addTransaction(new SendMoneyTransaction(amount + " " + currency,
-                description, receiver.getIban(), iban, DataBase.getTimestamp(), "received"));
+        Transaction sendTransaction = new SendMoneyTransaction(DataBase.getTimestamp(),
+                description, amount + " " + currency, receiver.getIban(), iban, "sent");
+        transactions.add(sendTransaction);
+        owner.addTransaction(sendTransaction);
 
+
+        Transaction receiveTransaction = new SendMoneyTransaction( DataBase.getTimestamp(),
+                description, amount + " " + currency, receiver.getIban(), iban, "received");
+        receiver.getTransactions().add(receiveTransaction);
+        receiver.getOwner().addTransaction(receiveTransaction);
 
         balance -= amount;
         double receivedAmount = DataBase.exchangeMoney(amount, currency, receiver.currency);
@@ -178,19 +211,31 @@ public abstract class Account {
         return null;
     }
 
+    public boolean canPay(final double amount) {
+        return (amount <= balance);
+    }
+
+    public void addTransaction(Transaction transaction) {
+        transactions.add(transaction);
+    }
     @JsonIgnore
     public List<User> getAllowedUsers() {
         return allowedUsers;
     }
 
     @JsonIgnore
-    private User getOwner() {
+    public User getOwner() {
         return owner;
     }
 
     @JsonIgnore
     public final double getMinimumBalance() {
         return minimumBalance;
+    }
+
+    @JsonIgnore
+    public List<Transaction> getTransactions() {
+        return transactions;
     }
 }
 
