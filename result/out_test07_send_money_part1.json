@@ -5,10 +5,10 @@
     "lastName" : "Diaconu",
     "email" : "Madalin_Diaconu@hotmail.ro",
     "accounts" : [ {
-      "balance" : 173.0,
-      "currency" : "RON",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 173.0,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -16,10 +16,10 @@
     "lastName" : "Stoica",
     "email" : "Iulia_Stoica@hotmail.ro",
     "accounts" : [ {
-      "balance" : 623.0,
-      "currency" : "RON",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 623.0,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   } ],
@@ -31,10 +31,10 @@
     "lastName" : "Diaconu",
     "email" : "Madalin_Diaconu@hotmail.ro",
     "accounts" : [ {
-      "balance" : 173.0,
-      "currency" : "RON",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 173.0,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -42,10 +42,10 @@
     "lastName" : "Stoica",
     "email" : "Iulia_Stoica@hotmail.ro",
     "accounts" : [ {
-      "balance" : 623.0,
-      "currency" : "RON",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 623.0,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   } ],

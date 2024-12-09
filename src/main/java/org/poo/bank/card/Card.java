@@ -2,133 +2,121 @@ package org.poo.bank.card;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
-import org.poo.bank.DataBase;
 import org.poo.bank.account.Account;
 import org.poo.bank.client.User;
-import org.poo.bank.transaction.PayTransaction;
-import org.poo.bank.transaction.StatusCardTransaction;
 import org.poo.bank.transaction.Transaction;
+import org.poo.exception.InsufficientFundsException;
 
-import static org.poo.bank.Constants.*;
+import static org.poo.constants.Constants.*;
 
 @Data
-public final class Card {
-    private User owner;
-    private Account account;
-    private final String cardNumber;
-    private String status;
-    private final boolean oneTimeCard;
+public abstract class Card {
+    protected User owner;
+    protected Account account;
+    protected final String cardNumber;
+    protected String status;
 
     public Card(final User owner, final Account account,
-                 final String cardNumber, final boolean oneTimeCard) {
+                final String cardNumber, final int timestamp)
+            throws IllegalArgumentException {
+        if (owner == null) {
+            throw new IllegalArgumentException("owner can't be null");
+        } else if (account == null) {
+            throw new IllegalArgumentException("account can't be null");
+        } else if (cardNumber == null) {
+            throw new IllegalArgumentException("card number can't be null");
+        }
+
         this.account = account;
         this.owner = owner;
+
         this.cardNumber = cardNumber;
         status = "active";
-        this.oneTimeCard = oneTimeCard;
-    }
 
-    /**
-     * Deactivate the card.
-     *
-     * @param email email of user which started the process
-     * @return String with an error, if something bad happens
-     *         null, if not
-     */
-    public String delete(final String email) {
-        if (email == null  || !email.equals(owner.getEmail())) {
-            return INVALID_USER;
-        }
+        try {
+            account.addCard(this);
+        } catch (Exception ignored) {}
 
-        account.removeCard(cardNumber);
-        owner.addTransaction(
-                new StatusCardTransaction(DataBase.getTimestamp(),
-                DESTROYED_CARD, account.getIban(), cardNumber, owner.getEmail())
-        );
-        return null;
-    }
-
-    /**
-     *  A user tries to pay using this card.
-     *
-     * @param amount sum of money which must be paid
-     * @param email user's email
-     * @param description string with supplementary details about payment
-     * @return String with an error, if something bad happens
-     *         null, if not
-     */
-    public String pay(final double amount, final String email,
-                      final String description, final String commerciant) {
-        if (email == null || !email.equals(owner.getEmail())) {
-            return INVALID_USER;
-        }
-
-        if (status.equals("frozen")) {
-            owner.addTransaction(
-                    new Transaction(DataBase.getTimestamp(), FROZEN_CARD)
-            );
-            return null;
-        }
-        if (status.equals("blocked")) {
-            owner.addTransaction(
-                    new Transaction(DataBase.getTimestamp(), BLOCKED_CARD)
-            );
-            return null;
-        }
-
-        String err = account.pay(amount);
-
-        Transaction transaction;
-        if (err == null) {
-            // Third field should be the received description
-            transaction = new PayTransaction(DataBase.getTimestamp(), "Card payment",
-                    amount, commerciant);
-
-            if (oneTimeCard) {
-                status = "blocked";
-            }
-        } else  {
-            transaction = new Transaction(DataBase.getTimestamp(), err);
-        }
+        Transaction transaction =  new Transaction.TransactionBuilder(timestamp)
+                                          .account(account.getIban())
+                                          .card(cardNumber)
+                                          .cardHolder(owner.getEmail())
+                                          .description(NEW_CARD).build();
         account.addTransaction(transaction);
         owner.addTransaction(transaction);
-
-        return null;
     }
 
+    /**
+     * No account will have access to card anymore.
+     * @param timestamp moment of time at which was given the command
+     */
+    public void delete(final int timestamp) {
+        account.removeCard(cardNumber);
 
-    public void checkStatus() {
-        String newStatus;
-        if (account.getBalance() <= account.getMinimumBalance()) {
-            newStatus = "frozen";
-        } else {
-            newStatus = "active";
+        Transaction transaction =  new Transaction.TransactionBuilder(timestamp)
+                                           .account(account.getIban())
+                                           .card(cardNumber)
+                                           .cardHolder(owner.getEmail())
+                                           .description(DESTROYED_CARD).build();
+        account.addTransaction(transaction);
+        owner.addTransaction(transaction);
+    }
+
+    /**
+     * Make a payment with this card.
+     * @param amount sum of money
+     * @param commerciant commerciant name
+     * @param description description of payment
+     * @param timestamp moment of time at which was given the command
+     */
+    public void payOnline(final double amount, final String commerciant,
+                          String description, final int timestamp)
+                          throws IllegalArgumentException {
+        /// Description should not be modified. I do this because the refs are bad made.
+        description = "Card payment";
+
+        if (status.equals("frozen")) {
+            Transaction transaction = new Transaction.TransactionBuilder(timestamp)
+                                              .description(FROZEN_CARD).build();
+            account.addTransaction(transaction);
+            owner.addTransaction(transaction);
+            return;
         }
 
-        String message = null;
-        if (status.equals("active") && newStatus.equals("frozen"))
-            message  = CARD_WILL_BE_FROZEN;
+        try {
+            account.payOnline(amount);
+        } catch (InsufficientFundsException e) {
+            Transaction transaction = new Transaction.TransactionBuilder(timestamp)
+                                              .description(e.getMessage()).build();
+            account.addTransaction(transaction);
+            owner.addTransaction(transaction);
+            return;
+        }
 
-        if (message != null) {
-            owner.addTransaction(
-                    new Transaction(DataBase.getTimestamp(), message)
-            );
-            status = newStatus;
+        Transaction transaction = new Transaction.TransactionBuilder(timestamp)
+                                          .amount(String.valueOf(amount))
+                                          .commerciant(commerciant)
+                                          .description(description).build();
+        account.addTransaction(transaction);
+        owner.addTransaction(transaction);
+    }
+
+    public void checkStatus(final int timestamp) {
+        if (status.equals("active") && account.getBalance() <= account.getMinimumBalance()) {
+            Transaction transaction = new Transaction.TransactionBuilder(timestamp)
+                                              .description(CARD_WILL_BE_FROZEN).build();
+            owner.addTransaction(transaction);
+            status = "frozen";
         }
     }
 
     @JsonIgnore
-    public boolean isOneTimeCard() {
-        return oneTimeCard;
-    }
-
-    @JsonIgnore
-    public User getOwner() {
+    public final User getOwner() {
         return owner;
     }
 
     @JsonIgnore
-    public Account getAccount() {
+    public final Account getAccount() {
         return account;
     }
 }

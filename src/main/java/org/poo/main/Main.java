@@ -1,13 +1,14 @@
 package org.poo.main;
 
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import org.poo.bank.Command;
-import org.poo.bank.DataBase;
+import org.poo.bank.Bank;
 import org.poo.checker.Checker;
 import org.poo.checker.CheckerConstants;
+import org.poo.command.Command;
+import org.poo.command.CommandFactory;
+import org.poo.input.CommandInput;
 import org.poo.input.ObjectInput;
 import org.poo.utils.Utils;
 
@@ -78,15 +79,15 @@ public final class Main {
 
         ArrayNode output = objectMapper.createArrayNode();
 
-        Utils.resetRandom();
-        DataBase dataBase = DataBase.init(inputData.getUsers(), inputData.getExchangeRates());
-
         System.out.println(filePath1);
-        for (Command command : inputData.getCommands()) {
-            JsonNode outputNode = command.execute(dataBase);
-            if (outputNode != null && !outputNode.isNull()) {
-                output.add(outputNode);
-            }
+        Utils.resetRandom();
+        Bank bank = Bank.init(inputData.getUsers(), inputData.getExchangeRates());
+
+        for (CommandInput commandInput : inputData.getCommands()) {
+            try {
+                Command command = CommandFactory.getCommand(commandInput, bank);
+                command.execute(output);
+            } catch (Exception ignored){}
         }
 
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();

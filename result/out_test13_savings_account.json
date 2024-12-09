@@ -5,13 +5,13 @@
     "lastName" : "Popa",
     "email" : "Beniamin_Popa@outlook.ro",
     "accounts" : [ {
-      "balance" : 1160.0,
-      "currency" : "RON",
-      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
+      "type" : "savings",
+      "currency" : "RON",
+      "balance" : 1160.0,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -19,13 +19,13 @@
     "lastName" : "Carpenter",
     "email" : "Christine_Carpenter@yahoo.us",
     "accounts" : [ {
-      "balance" : 1107.0,
-      "currency" : "USD",
-      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
+      "type" : "savings",
+      "currency" : "USD",
+      "balance" : 1107.0,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
@@ -33,13 +33,13 @@
     "lastName" : "Barbu",
     "email" : "Eugen_Barbu@gmail.ro",
     "accounts" : [ {
-      "balance" : 1371.0,
-      "currency" : "RON",
-      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
         "status" : "active"
       } ],
+      "type" : "savings",
+      "currency" : "RON",
+      "balance" : 1371.0,
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   } ],
@@ -51,13 +51,13 @@
     "lastName" : "Popa",
     "email" : "Beniamin_Popa@outlook.ro",
     "accounts" : [ {
-      "balance" : 1160.0,
-      "currency" : "RON",
-      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
+      "type" : "savings",
+      "currency" : "RON",
+      "balance" : 1160.0,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -65,13 +65,13 @@
     "lastName" : "Carpenter",
     "email" : "Christine_Carpenter@yahoo.us",
     "accounts" : [ {
-      "balance" : 678.0,
-      "currency" : "USD",
-      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
+      "type" : "savings",
+      "currency" : "USD",
+      "balance" : 678.0,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
@@ -79,13 +79,13 @@
     "lastName" : "Barbu",
     "email" : "Eugen_Barbu@gmail.ro",
     "accounts" : [ {
-      "balance" : 1371.0,
-      "currency" : "RON",
-      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
         "status" : "active"
       } ],
+      "type" : "savings",
+      "currency" : "RON",
+      "balance" : 1371.0,
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   } ],
@@ -104,13 +104,13 @@
     "lastName" : "Popa",
     "email" : "Beniamin_Popa@outlook.ro",
     "accounts" : [ {
-      "balance" : 1160.0,
-      "currency" : "RON",
-      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
+      "type" : "savings",
+      "currency" : "RON",
+      "balance" : 1160.0,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -118,13 +118,13 @@
     "lastName" : "Carpenter",
     "email" : "Christine_Carpenter@yahoo.us",
     "accounts" : [ {
-      "balance" : 678.0,
-      "currency" : "USD",
-      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
+      "type" : "savings",
+      "currency" : "USD",
+      "balance" : 678.0,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
@@ -132,13 +132,13 @@
     "lastName" : "Barbu",
     "email" : "Eugen_Barbu@gmail.ro",
     "accounts" : [ {
-      "balance" : 1371.0,
-      "currency" : "RON",
-      "type" : "savings",
       "cards" : [ {
         "cardNumber" : "7004757825892043",
         "status" : "active"
       } ],
+      "type" : "savings",
+      "currency" : "RON",
+      "balance" : 1371.0,
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   } ],

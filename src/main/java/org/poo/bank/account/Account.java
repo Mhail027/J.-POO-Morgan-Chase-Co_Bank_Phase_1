@@ -4,43 +4,60 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
-import org.poo.bank.DataBase;
 import org.poo.bank.card.Card;
 import org.poo.bank.client.User;
-import org.poo.bank.transaction.StatusCardTransaction;
-import org.poo.bank.transaction.SendMoneyTransaction;
+import org.poo.bank.currency.CurrencyConvertor;
 import org.poo.bank.transaction.Transaction;
+import org.poo.exception.InsufficientFundsException;
 
 import java.util.LinkedList;
 import java.util.List;
 
-import static org.poo.bank.Constants.*;
+import static org.poo.constants.Constants.*;
 
 @Getter
 public abstract class Account {
     protected User owner;
-    protected final List<User> allowedUsers = new LinkedList<User>();
-    @JsonProperty("IBAN") protected String iban;
-    protected double balance = 0;
-    protected String currency;
-    protected String type;
-    @Setter protected double minimumBalance = 0;
-    protected final List<Card> cards = new LinkedList<Card>(); // key == card number
-    protected final List<Transaction> transactions = new LinkedList<Transaction>();
+    protected final List<User> allowedUsers;
+    protected final List<Card> cards; // key == card number
+    protected final List<Transaction> transactions;
 
-    public Account(final User owner, final String iban, final String currency) {
+    @JsonProperty("IBAN") protected String iban;
+    protected String type;
+
+    protected String currency;
+    @Setter protected double minimumBalance;
+    protected double balance;
+
+    public Account(final User owner, final String iban, final String currency,
+                   final int timestamp) throws IllegalArgumentException {
+        if (owner == null) {
+            throw new IllegalArgumentException("owner can't be null");
+        } else if (iban == null) {
+            throw new IllegalArgumentException("iban can't be null");
+        } else if (currency == null) {
+            throw new IllegalArgumentException("currency can't be null");
+        }
+
         this.owner = owner;
-        allowedUsers.add(owner);
         this.iban = iban;
         this.currency = currency;
-        transactions.add(
-                new Transaction(DataBase.getTimestamp(), NEW_ACCOUNT)
-        );
+
+        minimumBalance = 0;
+        balance = 0;
+
+        allowedUsers = new LinkedList<>();
+        cards = new LinkedList<>();
+        transactions = new LinkedList<>();
+        addUser(owner);
+
+        Transaction transaction = new Transaction.TransactionBuilder(timestamp)
+                                          .description(NEW_ACCOUNT).build();
+        addTransaction(transaction);
+        owner.addTransaction(transaction);
     }
 
     /**
-     * Add money in account.
-     *
      * @param amount received sum
      */
     public void addMoney(final double amount) {
@@ -48,183 +65,226 @@ public abstract class Account {
     }
 
     /**
-     * Associate the account with a new card.
-     *
+     * A new card have access to account.
      * @param card details of the card
      */
-    public void addCard(final Card card) {
-        if (card != null && !hasCard(card.getCardNumber())) {
-            cards.add(card);
-            addUser(card.getOwner());
-
-            User cardHolder = card.getOwner();
-            Transaction   transaction = new StatusCardTransaction(DataBase.getTimestamp(),
-                    NEW_CARD, iban, card.getCardNumber(), cardHolder.getEmail());
-            transactions.add(transaction);
-            cardHolder.addTransaction(transaction);
+    public void addCard(final Card card) throws IllegalArgumentException {
+        if (card == null) {
+            throw new IllegalArgumentException("card can't be null");
+        } else if (hasCard(card.getCardNumber())) {
+            throw new IllegalArgumentException("Card has already access to account");
         }
+
+        cards.add(card);
+        addUser(card.getOwner());
     }
 
+
     /**
-     * Verify if a card is associate with the account.
-     *
-     * @param cardNumber unique number identifier of card
+     * Verify if a card has access to account.
+     * @param cardNumber number of card
      * @return true, if card is associated with the account
-     *         false, in contrary case
+     *         false, if not
      */
     public boolean hasCard(final String cardNumber) {
-        if (cardNumber == null) {
-            return false;
-        }
-
-        for (Card card : cards) {
-            if (cardNumber.equals(card.getCardNumber())) {
-                return true;
-            }
-        }
-        return false;
+        return cards.stream()
+                       .anyMatch(card -> card.getCardNumber().equals(cardNumber));
     }
 
     /**
-     * Dissociate a card of this account.
-     *
+     * Revoke the access permission of a card and its user to account.
      * @param cardNumber number of card
      */
-    public void removeCard(final String cardNumber) {
+    public void removeCard(final String cardNumber) throws IllegalArgumentException {
+        User cardOwner = getCard(cardNumber).getOwner();
+
+        cards.removeIf(card -> card.getCardNumber().equals(cardNumber));
+        allowedUsers.removeIf(user -> user.getEmail().equals(cardOwner.getEmail()));
+    }
+
+    private Card getCard(final String cardNumber) throws IllegalArgumentException {
         for (Card card : cards) {
-            if (cardNumber.equals(card.getCardNumber())) {
-                cards.remove(card);
-                return;
+            if (card.getCardNumber().equals(cardNumber)) {
+                return card;
             }
         }
+        throw new IllegalArgumentException(INVALID_CARD);
     }
 
     /**
-     * A user receives permission to access the account.
-     *
+     * A new user have access to account.
      * @param user details of user
      */
-    private void addUser(final User user) {
-        if (user != null && !hasUser(user.getEmail())) {
-            allowedUsers.add(user);
+    public void addUser(final User user) throws IllegalArgumentException {
+        if (user == null) {
+            throw new IllegalArgumentException("user can't be null");
+        } else if (hasUser(user.getEmail())) {
+            throw  new IllegalArgumentException("User has already access to account");
         }
+
+        allowedUsers.add(user);
+        user.addAccount(this);
     }
 
     /**
-     * Verify is a user can access the account.
-     *
      * @param email email of user
-     * @return true, if it has access to account
+     * @return true, if user has access to account
      *         false, if not
      */
     private boolean hasUser(final String email) {
-        if (email == null) {
-            return false;
-        }
-
-        for (User allowedUser : allowedUsers) {
-            if (allowedUser.getEmail().equals(email)) {
-                return true;
-            }
-        }
-        return false;
+        return allowedUsers.stream()
+                       .anyMatch(user -> user.getEmail().equals(email));
     }
 
     /**
-     * Delete the account and all the cards which are assigned to it.
-     *
-     * @param email email of the user which want to delete the account
-     * @return String with an error, if something bad happens
-     *          null, if not
+     * No user will have access to this account anymore.
      */
-    public String delete(final String email) {
-        if (email == null || !email.equals(owner.getEmail())) {
-            return INVALID_USER;
-        }
-        if (balance != 0) {
-            return CAN_NOT_DELETE_ACCOUNT;
-        }
-
+    public void delete() {
         for (User user : allowedUsers) {
             user.removeAccount(iban);
         }
-
-        for (Card card : cards) {
-            card.delete(card.getOwner().getEmail());
-        }
-
-        return null;
     }
 
     /**
-     * Someone take money from the account to pay something.
-     *
-     * @param amount sum of money
-     * @return String with an error, if something bad happens
-     *         null, if not
+     * Take out money from account to pay for something.
+     * @param amount sum of monet
      */
-    public String pay(final double amount) {
-        if (balance < amount) {
-            return INSUFFICIENT_FUNDS;
+    public void payOnline(final double amount) throws IllegalArgumentException,
+                                                              InsufficientFundsException {
+        if (amount < 0) {
+            throw new IllegalArgumentException("amount can't be negative");
+        } else if (balance < amount) {
+            throw new InsufficientFundsException();
         }
 
         balance -= amount;
-        return null;
     }
 
     /**
-     * This account sends money to other account.
-     *
+     * Send money to an account.
+     * @param receiver receiver account
      * @param amount sum of money
-     * @param description supplementary details about transaction
-     * @param senderEmail email of the sender
-     * @param receiver details of account which receives money
-     * @return String with an error, if something bad happens
-     *         null, if not
+     * @param currencyConvertor convertor which exchange money
+     * @param timestamp moment of time at which was given the command
+     * @param description description of transaction
      */
-    public String sendMoney(final double amount, final String description,
-                            final String senderEmail, final Account receiver) {
-        if (senderEmail == null || !senderEmail.equals(owner.getEmail())) {
-            return INVALID_USER;
+    public void sendMoney(final Account receiver, final double amount,
+                          final CurrencyConvertor currencyConvertor, final int timestamp,
+                          final String description) throws IllegalArgumentException {
+        if (receiver == null) {
+            throw new IllegalArgumentException("receiver can't be null");
+        } else if (amount < 0) {
+            throw new IllegalArgumentException("amount can't be negative");
+        } else if (balance < amount) {
+            Transaction transaction = new Transaction.TransactionBuilder(timestamp)
+                                              .description(INSUFFICIENT_FUNDS).build();
+            addTransaction(transaction);
+            owner.addTransaction(transaction);
+            return;
+        } else if (currencyConvertor == null) {
+            throw new IllegalArgumentException("currency convertor can't be null");
         }
-        if (balance < amount) {
-            owner.addTransaction(
-                    new Transaction(DataBase.getTimestamp(), INSUFFICIENT_FUNDS)
-            );
-            return null;
-        }
-
-        Transaction sendTransaction = new SendMoneyTransaction(DataBase.getTimestamp(),
-                description, amount + " " + currency, receiver.getIban(), iban, "sent");
-        transactions.add(sendTransaction);
-        owner.addTransaction(sendTransaction);
-
-
-        Transaction receiveTransaction = new SendMoneyTransaction( DataBase.getTimestamp(),
-                description, amount + " " + currency, receiver.getIban(), iban, "received");
-        receiver.getTransactions().add(receiveTransaction);
-        receiver.getOwner().addTransaction(receiveTransaction);
 
         balance -= amount;
-        double receivedAmount = DataBase.exchangeMoney(amount, currency, receiver.currency);
-        receiver.addMoney(receivedAmount);
-        return null;
+        receiver.receivesMoney(iban, amount, currency, currencyConvertor, timestamp, description);
+
+        Transaction transaction = new Transaction.TransactionBuilder(timestamp)
+                                          .description(description)
+                                          .amount(amount + " " + currency)
+                                          .senderIBAN(iban)
+                                          .receiverIBAN(receiver.getIban())
+                                          .transferType("sent").build();
+        addTransaction(transaction);
+        owner.addTransaction(transaction);
     }
 
-    public boolean canPay(final double amount) {
-        return (amount <= balance);
+    /**
+     * Receive money from an account.
+     * @param senderIban account number of sender
+     * @param amount sum of money
+     * @param moneyCurrency currency of money
+     * @param currencyConvertor convertor which exchange money
+     * @param timestamp moment of time at which was given the command of sending money
+     * @param description description of transaction
+     */
+    private void receivesMoney(final String senderIban, final double amount,
+                               final String moneyCurrency,
+                               final CurrencyConvertor currencyConvertor, final int timestamp,
+                               final String description) throws IllegalArgumentException {
+        if (senderIban == null) {
+            throw new IllegalArgumentException("sender iban can't be null");
+        } else if (amount < 0) {
+            throw new IllegalArgumentException("amount of money can't be negative");
+        } else if (moneyCurrency == null) {
+            throw new IllegalArgumentException("currency can't be null");
+        } else if (currencyConvertor == null) {
+            throw new IllegalArgumentException("currency convertor can't be null");
+        }
+
+        double convertedAmount = currencyConvertor.exchangeMoney(amount, moneyCurrency, currency);
+        balance += convertedAmount;
+
+        Transaction transaction = new Transaction.TransactionBuilder(timestamp)
+                                          .description(description)
+                                          .amount(amount + " " + currency)
+                                          .senderIBAN(senderIban)
+                                          .receiverIBAN(iban)
+                                          .transferType("received").build();
+        addTransaction(transaction);
+        owner.addTransaction(transaction);
     }
 
+    /**
+     * Save the info of a transaction.
+     * @param transaction details of transaction
+     */
     public void addTransaction(Transaction transaction) {
         transactions.add(transaction);
     }
+
+    public boolean haveEnoughMoney(final double amount, final String moneyCurrency,
+                                   final CurrencyConvertor currencyConvertor)
+                                   throws IllegalArgumentException {
+        if (amount < 0) {
+            throw new IllegalArgumentException("amount can't be negative");
+        } else if (moneyCurrency == null) {
+            throw new IllegalArgumentException("money currency can't be negative");
+        } else if (currencyConvertor == null) {
+            throw new IllegalArgumentException("currency convertor can't be null");
+        }
+
+        double convertedAmount = currencyConvertor.exchangeMoney(amount, moneyCurrency, currency);
+        return balance - convertedAmount >= 0;
+    }
+
+    public void splitPayment(final double amount, final String moneyCurrency,
+                           final CurrencyConvertor currencyConvertor,
+                           final Transaction transaction) throws IllegalArgumentException {
+        if (amount < 0) {
+            throw new IllegalArgumentException("amount can't be negative");
+        } else if (moneyCurrency == null) {
+            throw new IllegalArgumentException("money currency can't be null");
+        } else if (currencyConvertor == null) {
+            throw new IllegalArgumentException("currency convertor can't be null");
+        } else if (transaction == null) {
+            throw new IllegalArgumentException("transaction can't be null");
+        }
+
+        double convertedAmount = currencyConvertor.exchangeMoney(amount, moneyCurrency, currency);
+        balance -= convertedAmount;
+
+        addTransaction(transaction);
+        owner.addTransaction(transaction);
+    }
+
+
     @JsonIgnore
-    public List<User> getAllowedUsers() {
+    public final List<User> getAllowedUsers() {
         return allowedUsers;
     }
 
     @JsonIgnore
-    public User getOwner() {
+    public final User getOwner() {
         return owner;
     }
 
@@ -238,5 +298,3 @@ public abstract class Account {
         return transactions;
     }
 }
-
-

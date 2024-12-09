@@ -19,10 +19,10 @@
     "lastName" : "Couturier",
     "email" : "Antoine_Couturier@yahoo.fr",
     "accounts" : [ {
-      "balance" : 0.0,
-      "currency" : "EUR",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "EUR",
+      "balance" : 0.0,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -30,10 +30,10 @@
     "lastName" : "Mazilescu",
     "email" : "Dragos_Mazilescu@hotmail.ro",
     "accounts" : [ {
-      "balance" : 0.0,
-      "currency" : "RON",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 0.0,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   } ],
@@ -57,10 +57,10 @@
     "lastName" : "Mazilescu",
     "email" : "Dragos_Mazilescu@hotmail.ro",
     "accounts" : [ {
-      "balance" : 0.0,
-      "currency" : "RON",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 0.0,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   } ],

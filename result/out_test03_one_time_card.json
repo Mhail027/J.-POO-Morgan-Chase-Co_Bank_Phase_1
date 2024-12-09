@@ -5,10 +5,10 @@
     "lastName" : "Stanescu",
     "email" : "Ana_Stanescu@hotmail.ro",
     "accounts" : [ {
-      "balance" : 0.0,
-      "currency" : "RON",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 0.0,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   } ],
@@ -20,9 +20,6 @@
     "lastName" : "Stanescu",
     "email" : "Ana_Stanescu@hotmail.ro",
     "accounts" : [ {
-      "balance" : 0.0,
-      "currency" : "RON",
-      "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
@@ -30,6 +27,9 @@
         "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 0.0,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   } ],
@@ -41,9 +41,6 @@
     "lastName" : "Stanescu",
     "email" : "Ana_Stanescu@hotmail.ro",
     "accounts" : [ {
-      "balance" : 0.0,
-      "currency" : "RON",
-      "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
@@ -51,6 +48,9 @@
         "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 0.0,
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   } ],

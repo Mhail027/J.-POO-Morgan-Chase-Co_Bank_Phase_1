@@ -1,84 +1,77 @@
 package org.poo.bank.client;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.poo.bank.DataBase;
 import org.poo.bank.account.Account;
 import org.poo.bank.transaction.Transaction;
 
-import java.util.*;
-
-import static org.poo.bank.Constants.*;
+import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Map;
 
 @Data
-@NoArgsConstructor
 public final class User {
     private String firstName;
     private String lastName;
     private String email;
-    private final List<Account> accounts = new LinkedList<Account>();
-    ///  key = alias, value = iban
-    private final Map<String, String> accountsByAlias = new HashMap<String, String>();
-    private final List<Transaction> transactions = new LinkedList<Transaction>();
+
+    private final List<Account> accounts;
+    private final Map<String, String> accountsByAlias; //  key = alias, value = iban
+    private final List<Transaction> transactions;
+
+    public User() {
+        accounts = new LinkedList<>();
+        accountsByAlias = new HashMap<>();
+        transactions = new LinkedList<>();
+    }
 
     /**
-     * User receives access to an account
-     *
+     * User receives access to an account.
      * @param account account's info
      */
-    public void addAccount(final Account account) {
+    public void addAccount(final Account account) throws IllegalArgumentException {
         if (account == null) {
-            return;
+            throw new IllegalArgumentException("account can't be null");
+        } else if (hasAccount(account.getIban())) {
+            throw new IllegalArgumentException("User has already access to account");
         }
 
-        if (!hasAccount(account.getIban())) {
-            accounts.add(account);
-            addTransaction(new Transaction(DataBase.getTimestamp(), NEW_ACCOUNT));
-        }
+        accounts.add(account);
     }
 
     /**
      * Verify if the user have access to an account.
-     *
      * @param iban account number
-     * @return true, if it has access to account
-     *         false, in contrary case
+     * @return true, if he has access to account
+     *         false, if not
      */
-    private boolean hasAccount(final String iban) {
+    private boolean hasAccount(final String iban) throws IllegalArgumentException {
         if (iban == null) {
-            return false;
+            throw new IllegalArgumentException("iban can't be null");
         }
 
-        for (Account acct : accounts) {
-            if (iban.equals(acct.getIban())) {
-                return true;
-            }
-        }
-        return false;
+        return getAccount(iban) != null;
     }
 
     /**
-     * The user lost access to an account.
+     * @param iban account number OR alias
+     * @return details of the account with the given iban
+     */
+    private Account getAccount(final String iban) {
+        return accounts.stream()
+                      .filter(acct -> acct.getIban().equals(iban))
+                      .findFirst().orElse(null);
+    }
+
+    /**
+     * User lose access to an account.
      *
      * @param iban number of account
      */
     public void removeAccount(final String iban) {
-        for (Account account : accounts) {
-            if (account.getIban().equals(iban)) {
-                accounts.remove(account);
-                return;
-            }
-         }
-    }
-
-    /**
-     * Add a new transaction in history of account.
-     *
-     * @param transaction details of transaction
-     */
-    public void addTransaction(Transaction transaction) {
-        transactions.add(transaction);
+        accounts.removeIf(acct -> acct.getIban().equals(iban));
     }
 
     /**
@@ -99,6 +92,10 @@ public final class User {
      */
     public String getAccountByAlias(final String alias) {
         return accountsByAlias.get(alias);
+    }
+
+    public void addTransaction(Transaction transaction) {
+        transactions.add(transaction);
     }
 
     @JsonIgnore

@@ -5,16 +5,16 @@
     "lastName" : "Dumitrescu",
     "email" : "Emanuel_Dumitrescu@gmail.ro",
     "accounts" : [ {
-      "balance" : 838.0,
-      "currency" : "RON",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 838.0,
       "IBAN" : "RO58POOB7344468893732422"
     }, {
-      "balance" : 216.0,
-      "currency" : "RON",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 216.0,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
@@ -22,16 +22,16 @@
     "lastName" : "Loiseau",
     "email" : "Jacques_Loiseau@gmail.fr",
     "accounts" : [ {
-      "balance" : 791.0,
-      "currency" : "EUR",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "EUR",
+      "balance" : 791.0,
       "IBAN" : "RO90POOB5450777208072365"
     }, {
-      "balance" : 586.0,
-      "currency" : "EUR",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "EUR",
+      "balance" : 586.0,
       "IBAN" : "RO65POOB8944016386845896"
     } ]
   } ],
@@ -43,19 +43,19 @@
     "lastName" : "Dumitrescu",
     "email" : "Emanuel_Dumitrescu@gmail.ro",
     "accounts" : [ {
-      "balance" : 272.5,
-      "currency" : "RON",
-      "type" : "classic",
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 272.5,
       "IBAN" : "RO58POOB7344468893732422"
     }, {
-      "balance" : 497.0,
-      "currency" : "RON",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 497.0,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
@@ -63,16 +63,16 @@
     "lastName" : "Loiseau",
     "email" : "Jacques_Loiseau@gmail.fr",
     "accounts" : [ {
-      "balance" : 791.0,
-      "currency" : "EUR",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "EUR",
+      "balance" : 791.0,
       "IBAN" : "RO90POOB5450777208072365"
     }, {
-      "balance" : 586.0,
-      "currency" : "EUR",
-      "type" : "classic",
       "cards" : [ ],
+      "type" : "classic",
+      "currency" : "EUR",
+      "balance" : 586.0,
       "IBAN" : "RO65POOB8944016386845896"
     } ]
   } ],
