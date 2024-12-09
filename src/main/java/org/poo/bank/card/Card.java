@@ -5,7 +5,8 @@ import lombok.Data;
 import org.poo.bank.account.Account;
 import org.poo.bank.client.User;
 import org.poo.bank.transaction.Transaction;
-import org.poo.exception.InsufficientFundsException;
+import org.poo.throwable.DeleteOneTimeCard;
+import org.poo.throwable.InsufficientFundsException;
 
 import static org.poo.constants.Constants.*;
 
@@ -13,7 +14,7 @@ import static org.poo.constants.Constants.*;
 public abstract class Card {
     protected User owner;
     protected Account account;
-    protected final String cardNumber;
+    protected String cardNumber;
     protected String status;
 
     public Card(final User owner, final Account account,
@@ -71,7 +72,7 @@ public abstract class Card {
      */
     public void payOnline(final double amount, final String commerciant,
                           String description, final int timestamp)
-                          throws IllegalArgumentException {
+                          throws IllegalArgumentException, DeleteOneTimeCard {
         /// Description should not be modified. I do this because the refs are bad made.
         description = "Card payment";
 

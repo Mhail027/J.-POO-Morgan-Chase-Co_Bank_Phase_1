@@ -41,6 +41,8 @@ public abstract class Constants {
             "The card is frozen";
     public static final String BLOCKED_CARD =
             "The card is frozen";
-    public static final String NO_SAVINGS_ACCOUNT =
+    public static final String MUST_BE_SAVINGS_ACCOUNT =
             "This is not a savings account";
+    public static final String NO_SAVINGS_ACCOUNT_FOR_SPENDINGS_REPORT =
+            "This kind of report is not supported for a saving account";
 }

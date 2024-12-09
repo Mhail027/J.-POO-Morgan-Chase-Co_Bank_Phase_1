@@ -3,6 +3,7 @@ package org.poo.bank;
 import lombok.Getter;
 import org.poo.bank.account.Account;
 import org.poo.bank.account.AccountFactory;
+import org.poo.bank.account.SavingsAccount;
 import org.poo.bank.card.Card;
 import org.poo.bank.card.CardFactory;
 import org.poo.bank.client.User;
@@ -10,7 +11,9 @@ import org.poo.bank.currency.CurrencyConvertor;
 import org.poo.bank.currency.Exchange;
 import org.poo.bank.database.DataBase;
 import org.poo.bank.report.Report;
+import org.poo.bank.report.SpendingsReport;
 import org.poo.bank.transaction.Transaction;
+import org.poo.throwable.DeleteOneTimeCard;
 import org.poo.utils.Utils;
 
 import java.util.List;
@@ -103,7 +106,8 @@ public class Bank {
                            final String type, final int timestamp)
             throws IllegalArgumentException {
         if (!dataBase.hasUser(email)) {
-            throw new IllegalArgumentException(INVALID_USER);
+            return;
+            //throw new IllegalArgumentException(INVALID_USER);
         } else if (!dataBase.hasAccount(iban)) {
             throw new IllegalArgumentException(INVALID_ACCOUNT);
         } else if (!type.equals(CLASSIC_CARD) && !type.equals(ONE_TIME_CARD)) {
@@ -150,8 +154,8 @@ public class Bank {
         acct.setMinimumBalance(amount);
     }
 
-    public void deleteAccount(final String iban, final String email)
-                              throws IllegalArgumentException {
+    public void deleteAccount(final String iban, final String email,
+                              final int timestamp) throws IllegalArgumentException {
         Account acct = dataBase.getAccount(iban);
         if (!dataBase.hasAccount(iban)) {
             throw new IllegalArgumentException(INVALID_ACCOUNT);
@@ -163,6 +167,11 @@ public class Bank {
         }
 
         if (acct.getBalance() != 0) {
+            Transaction transaction  = new Transaction.TransactionBuilder(timestamp)
+                                               .description("Account couldn't be deleted - there are funds remaining")
+                                               .build();
+            acct.addTransaction(transaction);
+            owner.addTransaction(transaction);
             throw new IllegalArgumentException(CAN_NOT_DELETE_ACCOUNT);
         }
 
@@ -172,7 +181,8 @@ public class Bank {
     public void deleteCard(final String cardNumber, final int timestamp)
             throws IllegalArgumentException{
         if (!dataBase.hasCard(cardNumber)) {
-            throw new IllegalArgumentException(INVALID_CARD);
+            return;
+           // throw new IllegalArgumentException(INVALID_CARD);
         }
 
         dataBase.removeCard(cardNumber, timestamp);
@@ -186,14 +196,22 @@ public class Bank {
         if (card == null) {
             throw new IllegalArgumentException(INVALID_CARD);
         } else if (!card.getOwner().getEmail().equals(email)) {
-            throw new IllegalArgumentException(INVALID_USER);
+            return;
+           // throw new IllegalArgumentException(INVALID_USER);
         } else if (currency == null) {
             throw new IllegalArgumentException("currency can't be null");
         }
 
         String cardCurrency = card.getAccount().getCurrency();
         double amountConverted = currencyConvertor.exchangeMoney(amount, currency, cardCurrency);
-        card.payOnline(amountConverted, commerciant, description, timestamp);
+
+        try {
+            card.payOnline(amountConverted, commerciant, description, timestamp);
+        } catch (DeleteOneTimeCard ignored) {
+            deleteCard(cardNumber, timestamp);
+            createCard(card.getOwner().getEmail(), card.getAccount().getIban(),
+                    ONE_TIME_CARD, timestamp);
+        }
     }
 
     public void sendMoney(final String senderIban, final String senderEmail,
@@ -246,13 +264,26 @@ public class Bank {
     }
 
     public Report getReport(final String iban, final int startTimestamp,
-                            final int finalTimestamp) throws IllegalArgumentException {
+                            final int endTimestamp) throws IllegalArgumentException {
         Account acct = dataBase.getAccount(iban);
         if (acct == null) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException(INVALID_ACCOUNT);
         }
 
-        return Report.init(acct, startTimestamp, finalTimestamp);
+        return new Report(acct, startTimestamp, endTimestamp);
+    }
+
+    public SpendingsReport getSpendingsReport(final String iban, final int startTimestamp,
+                                             final int endTimestamp)
+                                             throws IllegalArgumentException {
+        Account acct = dataBase.getAccount(iban);
+        if (acct == null) {
+            throw new IllegalArgumentException(INVALID_ACCOUNT);
+        } else if (acct.getType().equals("savings")) {
+            throw new IllegalArgumentException(NO_SAVINGS_ACCOUNT_FOR_SPENDINGS_REPORT);
+        }
+
+        return new SpendingsReport(acct, startTimestamp, endTimestamp);
     }
 
     public void checkCardStatus(final String cardNumber, final int timestamp)
@@ -268,11 +299,29 @@ public class Bank {
     public void splitPayment(final List<String> ibans, final double amount,
                              final String currency, final int timestamp)
                              throws IllegalArgumentException {
-        List<Account> accounts = dataBase.getAccounts(ibans);
+        /// Add .reverses() because the refs are bad made
+        List<Account> accounts = dataBase.getAccounts(ibans).reversed();
 
         double amountPerAccount = amount / accounts.size();
         for (Account acct : accounts) {
             if (!acct.haveEnoughMoney(amountPerAccount, currency, currencyConvertor)) {
+                Transaction transaction = new Transaction.TransactionBuilder(timestamp)
+                                                  .amount(String.valueOf(amountPerAccount))
+                                                  .currency(currency)
+                                                  .involvedAccounts(ibans)
+                                                  .error(
+                                                   String.format("Account %s has insufficient " +
+                                                   "funds for a split payment.", acct.getIban())
+                                                   )
+                                                  .description(
+                                                   String.format("Split payment of %.2f %s",
+                                                   amount, currency)
+                                                  )
+                                                  .build();
+                for (Account account : accounts) {
+                    account.addTransaction(transaction);
+                    account.getOwner().addTransaction(transaction);
+                }
                 return;
             };
         }
@@ -282,11 +331,40 @@ public class Bank {
                                           .currency(currency)
                                           .involvedAccounts(ibans)
                                           .description(
-                                                  String.format("Split payment of %.2f %s",
-                                                          amount, currency)
-                                          ).build();
+                                           String.format("Split payment of %.2f %s",
+                                           amount, currency)
+                                           )
+                                          .build();
         for (Account acct : accounts) {
             acct.splitPayment(amountPerAccount, currency, currencyConvertor, transaction);
+        }
+    }
+
+    public void changeInterestRate(final String iban, final double interestRate,
+                                   final int timestamp)
+                                   throws IllegalArgumentException {
+        Account acct = dataBase.getAccount(iban);
+        if (acct == null) {
+            throw new IllegalArgumentException(INVALID_ACCOUNT);
+        }
+
+        try {
+            ((SavingsAccount) acct).changeInterestRate(interestRate, timestamp);
+        } catch (ClassCastException e) {
+            throw new IllegalArgumentException(MUST_BE_SAVINGS_ACCOUNT);
+        }
+    }
+
+    public void addInterest(final String iban) throws IllegalArgumentException {
+        Account acct = dataBase.getAccount(iban);
+        if (acct == null) {
+            throw new IllegalArgumentException(INVALID_ACCOUNT);
+        }
+
+        try {
+            ((SavingsAccount) acct).addInterest();
+        } catch (ClassCastException e) {
+            throw new IllegalArgumentException(MUST_BE_SAVINGS_ACCOUNT);
         }
     }
 }

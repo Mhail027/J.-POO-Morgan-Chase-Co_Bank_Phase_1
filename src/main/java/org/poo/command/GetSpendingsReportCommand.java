@@ -5,19 +5,22 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.bank.Bank;
 import org.poo.bank.report.Report;
+import org.poo.bank.report.SpendingsReport;
+import org.poo.output.Error;
 import org.poo.output.OutputMessage;
 import org.poo.output.SimpleOutput;
+import static org.poo.constants.Constants.NO_SAVINGS_ACCOUNT_FOR_SPENDINGS_REPORT;
 
-public class GetReportCommand implements Command{
+public class GetSpendingsReportCommand implements Command{
     private final Bank bank;
     private final String iban;
     private final int startTimestamp;
     private final int endTimestamp;
     private final int timestamp;
 
-    public GetReportCommand(final Bank bank, final String iban,
-                            final int startTimestamp, final int endTimestamp,
-                            final int timestamp) throws IllegalArgumentException {
+    public GetSpendingsReportCommand(final Bank bank, final String iban,
+                                     final int startTimestamp, final int endTimestamp,
+                                     final int timestamp) throws IllegalArgumentException {
         if (bank == null) {
             throw new IllegalArgumentException("bank can't be null");
         } else if (iban == null) {
@@ -35,11 +38,10 @@ public class GetReportCommand implements Command{
         ObjectMapper objectMapper = new ObjectMapper();
 
         try {
-            Report report = bank.getReport(iban, startTimestamp, endTimestamp);
-
+            SpendingsReport report = bank.getSpendingsReport(iban, startTimestamp, endTimestamp);
             JsonNode outputNode = objectMapper.valueToTree(
                     SimpleOutput.init(
-                            "report",
+                            "spendingsReport",
                             report,
                             timestamp
                     )
@@ -47,13 +49,25 @@ public class GetReportCommand implements Command{
 
             output.add(outputNode);
         } catch (Exception e) {
-            JsonNode outputNode = objectMapper.valueToTree(
+            JsonNode outputNode;
+            if (e.getMessage().equals(NO_SAVINGS_ACCOUNT_FOR_SPENDINGS_REPORT)) {
+                outputNode = objectMapper.valueToTree(
+                        SimpleOutput.init(
+                                "spendingsReport",
+                                Error.init(e.getMessage()),
+                                timestamp
+                        )
+                );
+            } else {
+                outputNode = objectMapper.valueToTree(
                     SimpleOutput.init(
-                            "report",
+                            "spendingsReport",
                             OutputMessage.init(e.getMessage(), timestamp),
                             timestamp
                     )
-            );
+                );
+            }
+
             output.add(outputNode);
         }
     }

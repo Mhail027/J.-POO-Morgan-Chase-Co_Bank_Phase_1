@@ -1,5 +1,6 @@
 package org.poo.bank.transaction;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;
 
@@ -20,6 +21,7 @@ public final class Transaction {
     private final String commerciant;
     private final String currency;
     private final List<String> involvedAccounts;
+    private String error;
 
 
     private Transaction (TransactionBuilder builder) {
@@ -35,6 +37,7 @@ public final class Transaction {
         commerciant = builder.commerciant;
         currency = builder.currency;
         involvedAccounts = builder.involvedAccounts;
+        error = builder.error;
     }
 
     public static class TransactionBuilder {
@@ -50,6 +53,7 @@ public final class Transaction {
         public String commerciant;
         public String currency;
         public List<String> involvedAccounts;
+        public String error;
 
         public TransactionBuilder(final int timestamp) {
             this.timestamp = timestamp;
@@ -110,6 +114,11 @@ public final class Transaction {
             return this;
         }
 
+        public TransactionBuilder error(String error) {
+            this.error = error;
+            return this;
+        }
+
         public Transaction build() {
             return new Transaction(this);
         }
@@ -121,5 +130,14 @@ public final class Transaction {
         } catch (Exception e) {
             return amount;
         }
+    }
+
+    @JsonIgnore
+    public double getAmountAsDouble() {
+        if (amount == null)
+            return 0;
+
+        String numericalPart = amount.replaceAll("[^0-9.]", "");
+        return Double.parseDouble(numericalPart);
     }
 }

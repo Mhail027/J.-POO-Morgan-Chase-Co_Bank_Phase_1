@@ -91,4 +91,60 @@
     "timestamp" : 24
   },
   "timestamp" : 24
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "balance" : 1535.8,
+    "currency" : "RON",
+    "transactions" : [ {
+      "timestamp" : 11,
+      "description" : "Card payment",
+      "amount" : 945.0,
+      "commerciant" : "KFC"
+    }, {
+      "timestamp" : 12,
+      "description" : "Card payment",
+      "amount" : 1348.2,
+      "commerciant" : "Apple"
+    } ],
+    "commerciants" : [ {
+      "commerciant" : "Apple",
+      "total" : 1348.2
+    }, {
+      "commerciant" : "KFC",
+      "total" : 945.0
+    } ],
+    "IBAN" : "RO58POOB7344468893732422"
+  },
+  "timestamp" : 25
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "balance" : 3907.666666666667,
+    "currency" : "RON",
+    "transactions" : [ ],
+    "commerciants" : [ ],
+    "IBAN" : "RO69POOB6209498372540635"
+  },
+  "timestamp" : 26
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "balance" : 2634.0,
+    "currency" : "USD",
+    "transactions" : [ ],
+    "commerciants" : [ ],
+    "IBAN" : "RO90POOB5450777208072365"
+  },
+  "timestamp" : 27
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "balance" : 1302.0,
+    "currency" : "USD",
+    "transactions" : [ ],
+    "commerciants" : [ ],
+    "IBAN" : "RO65POOB8944016386845896"
+  },
+  "timestamp" : 28
 } ]

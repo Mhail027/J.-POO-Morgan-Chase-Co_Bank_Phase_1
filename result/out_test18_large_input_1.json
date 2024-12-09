@@ -116,7 +116,14 @@
     "IBAN" : "RO58POOB7344468893732422"
   },
   "timestamp" : 26
-}, null, {
+}, {
+  "command" : "report",
+  "output" : {
+    "description" : "Account not found",
+    "timestamp" : 27
+  },
+  "timestamp" : 27
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Sachi",
@@ -368,6 +375,39 @@
   } ],
   "timestamp" : 53
 }, {
+  "command" : "spendingsReport",
+  "output" : {
+    "balance" : 41457.25,
+    "currency" : "INR",
+    "transactions" : [ {
+      "timestamp" : 43,
+      "description" : "Card payment",
+      "amount" : 83.0,
+      "commerciant" : "Adidas"
+    }, {
+      "timestamp" : 44,
+      "description" : "Card payment",
+      "amount" : 21280.0,
+      "commerciant" : "KFC"
+    } ],
+    "commerciants" : [ {
+      "commerciant" : "Adidas",
+      "total" : 83.0
+    }, {
+      "commerciant" : "KFC",
+      "total" : 21280.0
+    } ],
+    "IBAN" : "RO58POOB7344468893732422"
+  },
+  "timestamp" : 54
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "description" : "Account not found",
+    "timestamp" : 55
+  },
+  "timestamp" : 55
+}, {
   "command" : "printUsers",
   "output" : [ {
     "firstName" : "Sachi",
@@ -569,6 +609,16 @@
     } ]
   } ],
   "timestamp" : 71
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "balance" : 0.0,
+    "currency" : "CHF",
+    "transactions" : [ ],
+    "commerciants" : [ ],
+    "IBAN" : "RO53POOB7122855990652257"
+  },
+  "timestamp" : 75
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -783,6 +833,20 @@
     } ]
   } ],
   "timestamp" : 78
+}, {
+  "command" : "changeInterestRate",
+  "output" : {
+    "description" : "This is not a savings account",
+    "timestamp" : 79
+  },
+  "timestamp" : 79
+}, {
+  "command" : "addInterest",
+  "output" : {
+    "description" : "This is not a savings account",
+    "timestamp" : 80
+  },
+  "timestamp" : 80
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -1019,7 +1083,7 @@
   }, {
     "timestamp" : 24,
     "description" : "Deposit to a Kiwibank savings account",
-    "amount" : "843.0 INR",
+    "amount" : "36881.25 INR",
     "receiverIBAN" : "RO58POOB7344468893732422",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "received"
@@ -1046,6 +1110,13 @@
     "description" : "Card payment",
     "amount" : 21280.0,
     "commerciant" : "KFC"
+  }, {
+    "timestamp" : 48,
+    "description" : "Split payment of 9003.00 RON",
+    "amount" : 900.3,
+    "currency" : "RON",
+    "involvedAccounts" : [ "RO30POOB9523423715747796", "RO90POOB5450777208072365", "RO79POOB3616857825600958", "RO58POOB7344468893732422", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO69POOB6209498372540635", "RO76POOB4035116042454483", "RO37POOB7013767509830666", "RO19POOB4981055641668812" ],
+    "error" : "Account RO19POOB4981055641668812 has insufficient funds for a split payment."
   }, {
     "timestamp" : 49,
     "description" : "Card payment",
@@ -1080,7 +1151,7 @@
   }, {
     "timestamp" : 70,
     "description" : "Purchasing outdoor gear from Kathmandu",
-    "amount" : "1918.0 INR",
+    "amount" : "83912.5 INR",
     "receiverIBAN" : "RO58POOB7344468893732422",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "received"
@@ -1226,78 +1297,6 @@
     "transferType" : "sent"
   } ],
   "timestamp" : 123
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 136
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 137
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 139
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 140
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 141
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 142
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 143
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 144
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 145
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 146
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 147
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 148
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 149
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 150
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 151
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 152
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 153
-}, {
-  "command" : "addAccount",
-  "output" : "Card not found",
-  "timestamp" : 154
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -1509,9 +1508,16 @@
     "balance" : 16301.759999999998,
     "currency" : "NZD",
     "transactions" : [ {
+      "timestamp" : 48,
+      "description" : "Split payment of 9003.00 RON",
+      "amount" : 900.3,
+      "currency" : "RON",
+      "involvedAccounts" : [ "RO30POOB9523423715747796", "RO90POOB5450777208072365", "RO79POOB3616857825600958", "RO58POOB7344468893732422", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO69POOB6209498372540635", "RO76POOB4035116042454483", "RO37POOB7013767509830666", "RO19POOB4981055641668812" ],
+      "error" : "Account RO19POOB4981055641668812 has insufficient funds for a split payment."
+    }, {
       "timestamp" : 52,
       "description" : "EMI payment for a home loan",
-      "amount" : "2183.0 NZD",
+      "amount" : "49.89714285714286 NZD",
       "receiverIBAN" : "RO69POOB6209498372540635",
       "senderIBAN" : "RO58POOB7344468893732422",
       "transferType" : "received"
@@ -1527,7 +1533,7 @@
     "transactions" : [ {
       "timestamp" : 105,
       "description" : "Purchasing clothing at FabIndia",
-      "amount" : "1688.0 EUR",
+      "amount" : "21.70285714285714 EUR",
       "receiverIBAN" : "RO65POOB8944016386845896",
       "senderIBAN" : "RO58POOB7344468893732422",
       "transferType" : "received"
@@ -1535,6 +1541,26 @@
     "IBAN" : "RO65POOB8944016386845896"
   },
   "timestamp" : 167
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "balance" : 917.1964285714286,
+    "currency" : "EUR",
+    "transactions" : [ ],
+    "commerciants" : [ ],
+    "IBAN" : "RO76POOB4035116042454483"
+  },
+  "timestamp" : 170
+}, {
+  "command" : "spendingsReport",
+  "output" : {
+    "balance" : 520.8928571428571,
+    "currency" : "CAD",
+    "transactions" : [ ],
+    "commerciants" : [ ],
+    "IBAN" : "RO19POOB4981055641668812"
+  },
+  "timestamp" : 171
 }, {
   "command" : "printUsers",
   "output" : [ {
@@ -1604,7 +1630,7 @@
     "email" : "Job_Sire-Segerszoen@yandex.nl",
     "accounts" : [ {
       "cards" : [ {
-        "cardNumber" : "6796819982034243",
+        "cardNumber" : "4686471658318359",
         "status" : "active"
       } ],
       "type" : "classic",
@@ -1959,7 +1985,7 @@
     "email" : "Job_Sire-Segerszoen@yandex.nl",
     "accounts" : [ {
       "cards" : [ {
-        "cardNumber" : "6796819982034243",
+        "cardNumber" : "4686471658318359",
         "status" : "active"
       } ],
       "type" : "classic",
@@ -2120,7 +2146,7 @@
   }, {
     "timestamp" : 24,
     "description" : "Deposit to a Kiwibank savings account",
-    "amount" : "843.0 INR",
+    "amount" : "36881.25 INR",
     "receiverIBAN" : "RO58POOB7344468893732422",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "received"
@@ -2147,6 +2173,13 @@
     "description" : "Card payment",
     "amount" : 21280.0,
     "commerciant" : "KFC"
+  }, {
+    "timestamp" : 48,
+    "description" : "Split payment of 9003.00 RON",
+    "amount" : 900.3,
+    "currency" : "RON",
+    "involvedAccounts" : [ "RO30POOB9523423715747796", "RO90POOB5450777208072365", "RO79POOB3616857825600958", "RO58POOB7344468893732422", "RO65POOB8944016386845896", "RO58POOB2721178218599590", "RO69POOB6209498372540635", "RO76POOB4035116042454483", "RO37POOB7013767509830666", "RO19POOB4981055641668812" ],
+    "error" : "Account RO19POOB4981055641668812 has insufficient funds for a split payment."
   }, {
     "timestamp" : 49,
     "description" : "Card payment",
@@ -2181,7 +2214,7 @@
   }, {
     "timestamp" : 70,
     "description" : "Purchasing outdoor gear from Kathmandu",
-    "amount" : "1918.0 INR",
+    "amount" : "83912.5 INR",
     "receiverIBAN" : "RO58POOB7344468893732422",
     "senderIBAN" : "RO69POOB6209498372540635",
     "transferType" : "received"
@@ -2331,6 +2364,9 @@
     "account" : "RO58POOB7344468893732422",
     "card" : "8207906978464446",
     "cardHolder" : "Sachi_Brahmbhatt@protonmail.in"
+  }, {
+    "timestamp" : 173,
+    "description" : "Account couldn't be deleted - there are funds remaining"
   } ],
   "timestamp" : 195
 } ]

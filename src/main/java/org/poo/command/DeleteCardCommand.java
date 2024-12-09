@@ -32,7 +32,7 @@ public class DeleteCardCommand implements Command{
         } catch (Exception e) {
             JsonNode outputNode = objectMapper.valueToTree(
                     SimpleOutput.init(
-                            "addAccount",
+                            "deleteCard",
                             e.getMessage(),
                             timestamp
                     )

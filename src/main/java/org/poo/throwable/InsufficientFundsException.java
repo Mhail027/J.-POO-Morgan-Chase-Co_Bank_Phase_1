@@ -1,4 +1,4 @@
-package org.poo.exception;
+package org.poo.throwable;
 import static org.poo.constants.Constants.INSUFFICIENT_FUNDS;
 
 public class InsufficientFundsException extends Exception{

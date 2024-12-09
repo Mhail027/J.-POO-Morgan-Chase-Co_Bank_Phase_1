@@ -73,6 +73,17 @@ public class CommandFactory {
                         -> new GetReportCommand(bank, commandInput.getAccount(),
                     commandInput.getStartTimestamp(), commandInput.getEndTimestamp(),
                     commandInput.getTimestamp());
+            case "spendingsReport"
+                        -> new GetSpendingsReportCommand(bank, commandInput.getAccount(),
+                        commandInput.getStartTimestamp(), commandInput.getEndTimestamp(),
+                        commandInput.getTimestamp());
+
+            case "changeInterestRate"
+                        -> new ChangeInterestRateCommand(bank, commandInput.getAccount(),
+                        commandInput.getInterestRate(), commandInput.getTimestamp());
+            case "addInterest"
+                    -> new AddInterestCommand(bank, commandInput.getAccount(),
+                    commandInput.getTimestamp());
             default
                     -> throw new IllegalArgumentException("Command type is not valid");
         };

@@ -1,13 +1,14 @@
 package org.poo.output;
 
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 public final class SimpleOutput {
     private static SimpleOutput instance;
 
     private String command;
-    private Object output;
+    @Setter private Object output;
     private int timestamp;
 
     private SimpleOutput() {

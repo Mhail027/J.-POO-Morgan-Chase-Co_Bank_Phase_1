@@ -8,7 +8,7 @@ import org.poo.bank.card.Card;
 import org.poo.bank.client.User;
 import org.poo.bank.currency.CurrencyConvertor;
 import org.poo.bank.transaction.Transaction;
-import org.poo.exception.InsufficientFundsException;
+import org.poo.throwable.InsufficientFundsException;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -186,7 +186,6 @@ public abstract class Account {
         }
 
         balance -= amount;
-        receiver.receivesMoney(iban, amount, currency, currencyConvertor, timestamp, description);
 
         Transaction transaction = new Transaction.TransactionBuilder(timestamp)
                                           .description(description)
@@ -196,6 +195,8 @@ public abstract class Account {
                                           .transferType("sent").build();
         addTransaction(transaction);
         owner.addTransaction(transaction);
+
+        receiver.receivesMoney(iban, amount, currency, currencyConvertor, timestamp, description);
     }
 
     /**
@@ -226,7 +227,7 @@ public abstract class Account {
 
         Transaction transaction = new Transaction.TransactionBuilder(timestamp)
                                           .description(description)
-                                          .amount(amount + " " + currency)
+                                          .amount(convertedAmount + " " + currency)
                                           .senderIBAN(senderIban)
                                           .receiverIBAN(iban)
                                           .transferType("received").build();

@@ -37,7 +37,7 @@ public class DeleteAccountCommand implements Command{
         ObjectMapper objectMapper = new ObjectMapper();
 
         try {
-            bank.deleteAccount(iban, email);
+            bank.deleteAccount(iban, email, timestamp);
             JsonNode outputNode = objectMapper.valueToTree(
                     SimpleOutput.init("deleteAccount",
                             OutputSuccess.init(ACCOUNT_DELETED, timestamp),
