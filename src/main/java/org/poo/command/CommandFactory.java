@@ -24,7 +24,7 @@ public class CommandFactory {
                     commandInput.getTimestamp());
 
             case "addAccount"
-                    -> new CreateAccountCommand(bank, commandInput.getEmail(),
+                    -> new AddAccountCommand(bank, commandInput.getEmail(),
                     commandInput.getCurrency(), commandInput.getInterestRate(),
                     commandInput.getTimestamp());
             case "createCard"

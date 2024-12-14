@@ -5,8 +5,7 @@ import org.poo.bank.account.ClassicAccount;
 import org.poo.bank.account.SavingsAccount;
 import org.poo.bank.client.User;
 
-import static org.poo.constants.Constants.CLASSIC_CARD;
-import static org.poo.constants.Constants.ONE_TIME_CARD;
+import static org.poo.constants.Constants.*;
 
 public final class CardFactory {
     private CardFactory() {
@@ -29,6 +28,6 @@ public final class CardFactory {
         } else if (type.equals(ONE_TIME_CARD)) {
             return new OneTimeCard(owner, acct, cardNumber, timestamp);
         }
-        return null;
+        throw new  IllegalArgumentException(INVALID_TYPE_OF_CARD);
     }
 }

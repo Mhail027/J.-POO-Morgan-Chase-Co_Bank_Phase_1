@@ -18,6 +18,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Objects;
+import java.util.regex.Pattern;
 
 public final class Checker {
     private static int gitScore;
@@ -73,7 +74,7 @@ public final class Checker {
 
         if (finalScore == CheckerConstants.MAX_POINTS) {
             System.out.println("\nPreafercitul Dani te binecuvanteaza. Acum poti spune ca..."
-                    + " https://www.youtube.com/watch?v=rTeObJmb7hQ");
+                                       + " https://www.youtube.com/watch?v=rTeObJmb7hQ");
         }
     }
 
@@ -95,9 +96,9 @@ public final class Checker {
             Files.createDirectories(path);
         }
         var listFile = Arrays.stream(Objects.requireNonNull(directory.listFiles())).
-                sorted(Comparator.comparingInt(Main::fileConsumer))
-                .map(File::getName)
-                .toList();
+                               sorted(Comparator.comparingInt(Main::fileConsumer))
+                               .map(File::getName)
+                               .toList();
         for (String file : listFile) {
             totalScore += calculateScore(file);
         }
@@ -117,7 +118,7 @@ public final class Checker {
                 System.out.print("-");
             }
             System.out.println("--------------------------------------------- PASSED (+"
-                    + getScoreForTest(input) + ")");
+                                       + getScoreForTest(input) + ")");
             return getScoreForTest(input);
         } else {
             System.out.print(input + " ");
@@ -177,8 +178,17 @@ public final class Checker {
             }
         } else if (node.isNumber() && node.isFloatingPointNumber()) {
             BigDecimal roundedValue = BigDecimal.valueOf(node.asDouble())
-                    .setScale(precision, RoundingMode.HALF_UP);
+                                              .setScale(precision, RoundingMode.HALF_UP);
             return mapper.getNodeFactory().numberNode(roundedValue);
+        } else if (node.isTextual() && Pattern.matches(
+                CheckerConstants.DECIMALS_REGEX, node.asText())) {
+            String[] words = node.asText().split(" ");
+
+            BigDecimal roundedValue = BigDecimal.valueOf(Double.parseDouble(words[0]))
+                                              .setScale(precision, RoundingMode.HALF_UP);
+            String actualValue = roundedValue + " " + words[1];
+
+            return mapper.getNodeFactory().textNode(actualValue);
         }
         return node;
     }
@@ -194,22 +204,22 @@ public final class Checker {
         );
 
         if (value >= CheckerConstants.BASIC_START
-                && value <= CheckerConstants.BASIC_END) {
+                    && value <= CheckerConstants.BASIC_END) {
             return CheckerConstants.BASIC_POINTS;
         }
 
         if (value >= CheckerConstants.FUNCTIONAL_START
-                && value <= CheckerConstants.FUNCTIONAL_END) {
+                    && value <= CheckerConstants.FUNCTIONAL_END) {
             return CheckerConstants.FUNCTIONAL_POINTS;
         }
 
         if (value >= CheckerConstants.FLOW_START
-                && value <= CheckerConstants.FLOW_END) {
+                    && value <= CheckerConstants.FLOW_END) {
             return CheckerConstants.FLOW_POINTS;
         }
 
         if (value >= CheckerConstants.BIG_START
-                && value <= CheckerConstants.BIG_END) {
+                    && value <= CheckerConstants.BIG_END) {
             return CheckerConstants.BIG_POINTS;
         }
 

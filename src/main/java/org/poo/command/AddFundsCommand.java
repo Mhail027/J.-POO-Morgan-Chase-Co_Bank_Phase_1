@@ -3,46 +3,55 @@ package org.poo.command;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import lombok.NonNull;
 import org.poo.bank.Bank;
+import org.poo.bank.account.Account;
 import org.poo.output.SimpleOutput;
+import org.poo.validator.PositiveOrZeroValidator;
+import org.poo.validator.PositiveValidator;
 
-public class AddFundsCommand implements Command{
+public class AddFundsCommand implements Command {
     private final Bank bank;
     private final String iban;
     private final double amount;
     private final int timestamp;
 
-    public AddFundsCommand(final Bank bank, final String iban,
-                           final double amount, final int timestamp)
-                           throws IllegalArgumentException {
-        if (bank == null) {
-            throw new IllegalArgumentException("bank can't be null");
-        } else if (iban == null) {
-            throw new IllegalArgumentException("email can't be null");
-        } else if (amount < 0) {
-            throw new IllegalArgumentException("amount can't be negative");
-        }
+    /// Amount should be verified using PositiveValidator. Does not make sense to be 0.
+    public AddFundsCommand(@NonNull final Bank bank, @NonNull final String iban,
+                           final double amount, final int timestamp) {
 
         this.bank = bank;
         this.iban = iban;
-        this.amount = amount;
-        this.timestamp = timestamp;
+        this.amount = PositiveOrZeroValidator.validate(
+                amount
+        );
+        this.timestamp = (int) PositiveOrZeroValidator.validate(
+                timestamp
+        );
     }
 
     public void execute(ArrayNode output) {
-        ObjectMapper objectMapper = new ObjectMapper();
-
         try {
-            bank.addFunds(iban, amount);
+            addFunds();
         } catch (Exception e) {
-            JsonNode outputNode = objectMapper.valueToTree(
-                    SimpleOutput.init(
-                            "addFunds",
-                            e.getMessage(),
-                            timestamp
-                    )
-            );
-            output.add(outputNode);
+            handleError(output, e);
         }
+    }
+
+    private void addFunds() {
+        Account acct = bank.getDatabase().getAccount(iban);
+        acct.addMoney(amount);
+    }
+
+    private void handleError(ArrayNode output, Exception e) {
+        ObjectMapper objectMapper = new ObjectMapper();
+        JsonNode outputNode = objectMapper.valueToTree(
+                SimpleOutput.init(
+                        "addFunds",
+                        e.getMessage(),
+                        timestamp
+                )
+        );
+        output.add(outputNode);
     }
 }

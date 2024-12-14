@@ -22,6 +22,8 @@ public abstract class Constants {
             "Account not found";
     public static final String INVALID_CARD =
             "Card not found";
+    public static final String HAVE_REMAINED_FUNDS =
+            "Account couldn't be deleted - there are funds remaining";
     public static final String CAN_NOT_DELETE_ACCOUNT =
             "Account couldn't be deleted - see org.poo.transactions for details";
     public static final String INSUFFICIENT_FUNDS =

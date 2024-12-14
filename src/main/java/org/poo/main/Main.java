@@ -10,7 +10,6 @@ import org.poo.command.Command;
 import org.poo.command.CommandFactory;
 import org.poo.input.CommandInput;
 import org.poo.input.ObjectInput;
-import org.poo.utils.Utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -79,15 +78,11 @@ public final class Main {
 
         ArrayNode output = objectMapper.createArrayNode();
 
-        System.out.println(filePath1);
-        Utils.resetRandom();
         Bank bank = Bank.init(inputData.getUsers(), inputData.getExchangeRates());
 
         for (CommandInput commandInput : inputData.getCommands()) {
-            try {
-                Command command = CommandFactory.getCommand(commandInput, bank);
-                command.execute(output);
-            } catch (Exception ignored){}
+            Command command = CommandFactory.getCommand(commandInput, bank);
+            command.execute(output);
         }
 
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();

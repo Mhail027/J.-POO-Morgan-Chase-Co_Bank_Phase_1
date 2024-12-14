@@ -2,6 +2,9 @@ package org.poo.bank.account;
 
 import org.poo.bank.client.User;
 
+import static org.poo.constants.Constants.INVALID_INTEREST_RATE;
+import static org.poo.constants.Constants.INVALID_TYPE_OF_CARD;
+
 public final class AccountFactory {
     private AccountFactory() {
     }
@@ -24,6 +27,6 @@ public final class AccountFactory {
         } else if (interestRate > 0) {
             return new SavingsAccount(owner, iban, currency, interestRate, timestamp);
         }
-        return null;
+        throw new  IllegalArgumentException(INVALID_INTEREST_RATE);
     }
 }

@@ -44,7 +44,7 @@ public final class CurrencyConvertor {
     }
 
     /**
-     * Add ALL  possible exchange rates in database.
+     * Add ALL  possible exchange rates in Database.
      *
      * @param exchanges array with initial exchanges of currencies and their rates
      */
