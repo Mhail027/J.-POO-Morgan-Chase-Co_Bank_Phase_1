@@ -5,10 +5,10 @@
     "lastName" : "Popa",
     "email" : "Decebal_Popa@gmail.ro",
     "accounts" : [ {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "RON",
       "balance" : 762.0,
+      "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -16,10 +16,10 @@
     "lastName" : "Munoz de Gautier",
     "email" : "Emmanuel_Munoz_de_Gautier@gmail.fr",
     "accounts" : [ {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "EUR",
       "balance" : 5976.0,
+      "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   } ],
@@ -31,22 +31,22 @@
     "lastName" : "Popa",
     "email" : "Decebal_Popa@gmail.ro",
     "accounts" : [ {
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 762.0,
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
-      "type" : "classic",
-      "currency" : "RON",
-      "balance" : 762.0,
       "IBAN" : "RO58POOB7344468893732422"
     }, {
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 7050.0,
       "cards" : [ {
         "cardNumber" : "7004757825892043",
         "status" : "active"
       } ],
-      "type" : "classic",
-      "currency" : "RON",
-      "balance" : 7050.0,
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   }, {
@@ -54,13 +54,13 @@
     "lastName" : "Munoz de Gautier",
     "email" : "Emmanuel_Munoz_de_Gautier@gmail.fr",
     "accounts" : [ {
+      "type" : "classic",
+      "currency" : "EUR",
+      "balance" : 5976.0,
       "cards" : [ {
         "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
-      "type" : "classic",
-      "currency" : "EUR",
-      "balance" : 5976.0,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   } ],
@@ -72,22 +72,22 @@
     "lastName" : "Popa",
     "email" : "Decebal_Popa@gmail.ro",
     "accounts" : [ {
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 385.0,
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
-      "type" : "classic",
-      "currency" : "RON",
-      "balance" : 385.0,
       "IBAN" : "RO58POOB7344468893732422"
     }, {
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 6694.0,
       "cards" : [ {
         "cardNumber" : "7004757825892043",
         "status" : "active"
       } ],
-      "type" : "classic",
-      "currency" : "RON",
-      "balance" : 6694.0,
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   }, {
@@ -95,13 +95,13 @@
     "lastName" : "Munoz de Gautier",
     "email" : "Emmanuel_Munoz_de_Gautier@gmail.fr",
     "accounts" : [ {
+      "type" : "classic",
+      "currency" : "EUR",
+      "balance" : 5875.0,
       "cards" : [ {
         "cardNumber" : "7901879264253296",
         "status" : "active"
       } ],
-      "type" : "classic",
-      "currency" : "EUR",
-      "balance" : 5875.0,
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   } ],

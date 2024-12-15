@@ -9,19 +9,20 @@ import java.util.List;
 
 @Getter
 public class Report {
-    @JsonProperty("IBAN") protected final String iban;
+    @JsonProperty("IBAN")
+    protected final String iban;
     protected final double balance;
     protected final String currency;
     protected List<Transaction> transactions;
 
-    public Report (final Account account, final int startTimestamp, final int endTimestamp) {
+    public Report(final Account account, final int startTimestamp, final int endTimestamp) {
         iban = account.getIban();
         balance = account.getBalance();
         currency = account.getCurrency();
         transactions = account.getTransactions().stream()
                                         .filter(transaction ->
-                                                transaction.getTimestamp() >= startTimestamp &&
-                                                transaction.getTimestamp() <= endTimestamp
+                                                transaction.getTimestamp() >= startTimestamp
+                                                && transaction.getTimestamp() <= endTimestamp
                                         ).toList();
     }
 

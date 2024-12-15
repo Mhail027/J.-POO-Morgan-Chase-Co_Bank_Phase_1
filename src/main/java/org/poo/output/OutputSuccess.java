@@ -1,6 +1,7 @@
 package org.poo.output;
 
 import lombok.Getter;
+import lombok.NonNull;
 
 @Getter
 public final class OutputSuccess {
@@ -27,19 +28,12 @@ public final class OutputSuccess {
      *
      * @param success a message
      * @param timestamp receiving time of command
-     * @return null, if output is null
-     *         the created simple output, in contrary case
+     * @return instance
      */
-    public static OutputSuccess init(final Object success, final int timestamp) {
-        if (success == null) {
-            return null;
-        }
-
+    public static OutputSuccess init(@NonNull final Object success, final int timestamp) {
         instance = getInstance();
-
         instance.success = success;
         instance.timestamp = timestamp;
-
         return instance;
     }
 }

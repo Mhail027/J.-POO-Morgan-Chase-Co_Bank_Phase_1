@@ -3,7 +3,6 @@ package org.poo.input;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.poo.bank.currency.Exchange;
-import org.poo.bank.client.Commerciant;
 import org.poo.bank.client.User;
 
 @Data
@@ -12,5 +11,4 @@ public final class ObjectInput {
     private User[] users;
     private Exchange[] exchangeRates;
     private CommandInput[] commands;
-    private Commerciant[] commerciants;
 }

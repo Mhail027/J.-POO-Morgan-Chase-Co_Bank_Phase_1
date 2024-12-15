@@ -41,10 +41,16 @@ public abstract class Constants {
             "You have reached the minimum amount of funds, the card will be frozen";
     public static final String FROZEN_CARD =
             "The card is frozen";
-    public static final String BLOCKED_CARD =
-            "The card is frozen";
+    public static final String FROZEN =
+            "frozen";
     public static final String MUST_BE_SAVINGS_ACCOUNT =
             "This is not a savings account";
     public static final String NO_SAVINGS_ACCOUNT_FOR_SPENDINGS_REPORT =
             "This kind of report is not supported for a saving account";
+    public static final String INSUFFICIENT_FUNDS_FOR_SPLIT =
+            "Account %s has insufficient funds for a split payment.";
+    public static final String SPLIT_PAYMENT =
+            "Split payment of %.2f %s";
+    public static final String INTEREST_RATE_CHANGED =
+            "Interest rate of the account changed to %s";
 }

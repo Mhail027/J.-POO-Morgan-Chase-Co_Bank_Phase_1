@@ -21,10 +21,10 @@ public final class Transaction {
     private final String commerciant;
     private final String currency;
     private final List<String> involvedAccounts;
-    private String error;
+    private final String error;
 
 
-    private Transaction (TransactionBuilder builder) {
+    private Transaction(final Builder builder) {
         timestamp = builder.timestamp;
         description = builder.description;
         amount = builder.amount;
@@ -40,7 +40,7 @@ public final class Transaction {
         error = builder.error;
     }
 
-    public static class TransactionBuilder {
+    public static final class Builder {
         private final int timestamp;
         private String description;
         private String amount;
@@ -50,71 +50,71 @@ public final class Transaction {
         private String account;
         private String card;
         private String cardHolder;
-        public String commerciant;
-        public String currency;
-        public List<String> involvedAccounts;
-        public String error;
+        private String commerciant;
+        private String currency;
+        private List<String> involvedAccounts;
+        private String error;
 
-        public TransactionBuilder(final int timestamp) {
+        public Builder(final int timestamp) {
             this.timestamp = timestamp;
         }
 
-        public TransactionBuilder description(final String description) {
+        public Builder description(final String description) {
             this.description = description;
             return this;
         }
 
-        public TransactionBuilder amount(final String amount) {
+        public Builder amount(final String amount) {
             this.amount = amount;
             return this;
         }
 
-        public TransactionBuilder receiverIBAN(final String receiverIBAN) {
+        public Builder receiverIBAN(final String receiverIBAN) {
             this.receiverIBAN = receiverIBAN;
             return this;
         }
 
-        public TransactionBuilder senderIBAN(final String senderIBAN) {
+        public Builder senderIBAN(final String senderIBAN) {
             this.senderIBAN = senderIBAN;
             return this;
         }
 
-        public TransactionBuilder transferType(final String transferType) {
+        public Builder transferType(final String transferType) {
             this.transferType = transferType;
             return this;
         }
 
-        public TransactionBuilder account(final String account) {
+        public Builder account(final String account) {
             this.account = account;
             return this;
         }
 
-        public TransactionBuilder card(final String card) {
+        public Builder card(final String card) {
             this.card = card;
             return this;
         }
 
-        public TransactionBuilder cardHolder(final String cardHolder) {
+        public Builder cardHolder(final String cardHolder) {
             this.cardHolder = cardHolder;
             return this;
         }
 
-        public TransactionBuilder commerciant(final String commerciant) {
+        public Builder commerciant(final String commerciant) {
             this.commerciant = commerciant;
             return this;
         }
 
-        public TransactionBuilder currency(final String currency) {
+        public Builder currency(final String currency) {
             this.currency = currency;
             return this;
         }
 
-        public TransactionBuilder involvedAccounts(List<String> involvedAccounts) {
+        public Builder involvedAccounts(final List<String> involvedAccounts) {
             this.involvedAccounts = involvedAccounts;
             return this;
         }
 
-        public TransactionBuilder error(String error) {
+        public Builder error(final String error) {
             this.error = error;
             return this;
         }
@@ -124,18 +124,28 @@ public final class Transaction {
         }
     }
 
+    /**
+     * Get amount field as:
+     *      String, if saves the currency
+     *      Double, if it does not contain the currency
+     * @return amount as String or Double
+     */
     public Object getAmount() {
-        try{
+        try {
             return Double.parseDouble(amount);
         } catch (Exception e) {
             return amount;
         }
     }
 
+    /**
+     * @return numerical part from the field amount
+     */
     @JsonIgnore
     public double getAmountAsDouble() {
-        if (amount == null)
+        if (amount == null) {
             return 0;
+        }
 
         String numericalPart = amount.replaceAll("[^0-9.]", "");
         return Double.parseDouble(numericalPart);

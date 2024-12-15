@@ -1,6 +1,7 @@
 package org.poo.output;
 
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
 
 @Getter
@@ -30,15 +31,10 @@ public final class SimpleOutput {
      * @param command name of command
      * @param output output
      * @param timestamp receiving time of command
-     * @return null, if output is null
-     *         the created simple output, in contrary case
+     * @return instance
      */
-    public static SimpleOutput init(final String command, final Object output,
+    public static SimpleOutput init(@NonNull final String command, @NonNull final Object output,
                                     final int timestamp) {
-        if (output == null) {
-            return null;
-        }
-
         instance = getInstance();
 
         instance.command = command;

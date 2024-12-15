@@ -5,16 +5,16 @@
     "lastName" : "Dumitrescu",
     "email" : "Emanuel_Dumitrescu@gmail.ro",
     "accounts" : [ {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "RON",
       "balance" : 838.0,
+      "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     }, {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "RON",
       "balance" : 216.0,
+      "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
@@ -22,16 +22,16 @@
     "lastName" : "Loiseau",
     "email" : "Jacques_Loiseau@gmail.fr",
     "accounts" : [ {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "EUR",
       "balance" : 791.0,
+      "cards" : [ ],
       "IBAN" : "RO90POOB5450777208072365"
     }, {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "EUR",
       "balance" : 586.0,
+      "cards" : [ ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
   } ],
@@ -43,19 +43,19 @@
     "lastName" : "Dumitrescu",
     "email" : "Emanuel_Dumitrescu@gmail.ro",
     "accounts" : [ {
+      "type" : "classic",
+      "currency" : "RON",
+      "balance" : 272.5,
       "cards" : [ {
         "cardNumber" : "8207906978464446",
         "status" : "active"
       } ],
-      "type" : "classic",
-      "currency" : "RON",
-      "balance" : 272.5,
       "IBAN" : "RO58POOB7344468893732422"
     }, {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "RON",
       "balance" : 497.0,
+      "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
@@ -63,16 +63,16 @@
     "lastName" : "Loiseau",
     "email" : "Jacques_Loiseau@gmail.fr",
     "accounts" : [ {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "EUR",
       "balance" : 791.0,
+      "cards" : [ ],
       "IBAN" : "RO90POOB5450777208072365"
     }, {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "EUR",
       "balance" : 586.0,
+      "cards" : [ ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
   } ],

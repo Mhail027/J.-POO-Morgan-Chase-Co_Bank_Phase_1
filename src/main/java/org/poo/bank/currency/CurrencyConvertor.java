@@ -1,5 +1,6 @@
 package org.poo.bank.currency;
 
+import lombok.NonNull;
 import org.poo.graph.DirectedGraph;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -78,19 +79,14 @@ public final class CurrencyConvertor {
      * @param finalCurrency currency which we want it
      * @return sum of money converted in the new currency
      */
-    public double exchangeMoney(final double amount, final String initialCurrency,
-                                       final String finalCurrency)
-                                       throws IllegalArgumentException {
+    public double exchangeMoney(final double amount, @NonNull final String initialCurrency,
+                                @NonNull final String finalCurrency)
+                                throws IllegalArgumentException {
         if (amount <  0) {
             throw new IllegalArgumentException("amount can't be negative");
-        } else if (initialCurrency == null) {
-            throw new IllegalArgumentException("initial currency can't be null");
-        } else if (finalCurrency == null) {
-            throw new IllegalArgumentException("final currency can't be null");
-        }
-
-        if (initialCurrency.equals(finalCurrency)) {
+        } else if (initialCurrency.equals(finalCurrency)) {
             return amount;
+
         }
 
         Double exchangeRate = exchangeRates.get(initialCurrency + " -> " + finalCurrency);

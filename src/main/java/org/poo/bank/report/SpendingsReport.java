@@ -4,19 +4,21 @@ import lombok.Getter;
 import org.poo.bank.account.Account;
 import org.poo.bank.transaction.Transaction;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Getter
-public final class SpendingsReport extends Report{
-    private List<CommerciantReport> commerciants;
+public final class SpendingsReport extends Report {
+    private final List<CommerciantReport> commerciants;
 
-    public SpendingsReport(final Account account, final int startTimestamp, final int endTimestamp) {
+    public SpendingsReport(final Account account, final int startTimestamp,
+                           final int endTimestamp) {
         super(account, startTimestamp, endTimestamp);
-
         transactions = transactions.stream()
                                .filter(transaction -> transaction.getCommerciant() != null)
                                .toList();
-
         commerciants = findCommerciants().stream()
                                .sorted((r1, r2)
                                         -> r1.getCommerciant().compareTo(r2.getCommerciant())
@@ -25,7 +27,6 @@ public final class SpendingsReport extends Report{
 
     private Collection<CommerciantReport> findCommerciants() {
         Map<String, CommerciantReport> commerciantsMap = new HashMap<>();
-
         for (Transaction transaction : transactions) {
             String commerciant = transaction.getCommerciant();
             double amount = transaction.getAmountAsDouble();
@@ -38,7 +39,6 @@ public final class SpendingsReport extends Report{
                 commerciantsMap.put(commerciant, report);
             }
         }
-
         return commerciantsMap.values();
     }
 

@@ -1,11 +1,12 @@
 package org.poo.bank.account;
 
+import lombok.NonNull;
 import org.poo.bank.client.User;
 
 public final class ClassicAccount extends Account {
-    public ClassicAccount(final User owner, final String iban,
-                          final String currency, int timestamp) throws IllegalArgumentException {
-        super(owner, iban, currency, timestamp);
+    public ClassicAccount(@NonNull final User owner, @NonNull final String iban,
+                          @NonNull final String currency) {
+        super(owner, iban, currency);
         type = "classic";
     }
 }

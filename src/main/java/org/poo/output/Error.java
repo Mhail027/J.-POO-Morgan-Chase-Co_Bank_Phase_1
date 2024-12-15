@@ -1,6 +1,7 @@
 package org.poo.output;
 
 import lombok.Getter;
+import lombok.NonNull;
 
 @Getter
 public final class Error {
@@ -25,18 +26,11 @@ public final class Error {
      * Alternative to constructor, without to break Singleton pattern.
      *
      * @param error a message
-     * @return null, if output is null
-     *         the created simple output, in contrary case
+     * @return instance
      */
-    public static Error init(final Object error) {
-        if (error == null) {
-            return null;
-        }
-
+    public static Error init(@NonNull final Object error) {
         instance = getInstance();
-
         instance.error = error;
-
         return instance;
     }
 }

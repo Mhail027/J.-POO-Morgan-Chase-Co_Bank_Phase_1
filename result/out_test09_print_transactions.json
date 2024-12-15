@@ -5,10 +5,10 @@
     "lastName" : "Johnson",
     "email" : "Laurie_Johnson@gmail.us",
     "accounts" : [ {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "USD",
       "balance" : 3500.0,
+      "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -16,10 +16,10 @@
     "lastName" : "Stafford",
     "email" : "Alicia_Stafford@gmail.us",
     "accounts" : [ {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "USD",
       "balance" : 813.0,
+      "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
@@ -27,10 +27,10 @@
     "lastName" : "Cousin",
     "email" : "Denis_Cousin@hotmail.fr",
     "accounts" : [ {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "EUR",
       "balance" : 29.0,
+      "cards" : [ ],
       "IBAN" : "RO90POOB5450777208072365"
     } ]
   } ],
@@ -56,10 +56,10 @@
     "lastName" : "Johnson",
     "email" : "Laurie_Johnson@gmail.us",
     "accounts" : [ {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "USD",
       "balance" : 3283.0,
+      "cards" : [ ],
       "IBAN" : "RO58POOB7344468893732422"
     } ]
   }, {
@@ -67,10 +67,10 @@
     "lastName" : "Stafford",
     "email" : "Alicia_Stafford@gmail.us",
     "accounts" : [ {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "USD",
       "balance" : 922.0,
+      "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
   }, {
@@ -78,16 +78,16 @@
     "lastName" : "Cousin",
     "email" : "Denis_Cousin@hotmail.fr",
     "accounts" : [ {
-      "cards" : [ ],
       "type" : "classic",
       "currency" : "EUR",
       "balance" : 29.0,
+      "cards" : [ ],
       "IBAN" : "RO90POOB5450777208072365"
     }, {
-      "cards" : [ ],
       "type" : "savings",
       "currency" : "EUR",
       "balance" : 283.4,
+      "cards" : [ ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
   } ],

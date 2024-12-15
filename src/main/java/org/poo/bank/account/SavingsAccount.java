@@ -1,39 +1,28 @@
 package org.poo.bank.account;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.NonNull;
 import lombok.Setter;
+
 import org.poo.bank.client.User;
-import org.poo.bank.transaction.Transaction;
+import org.poo.validator.PositiveValidator;
 
 @Setter
 public final class SavingsAccount extends Account {
     private double interestRate;
 
-    public SavingsAccount(final User owner, final String iban,
-                          final String currency, final double interestRate,
-                          final int timestamp)
-                          throws IllegalArgumentException {
-        super(owner, iban, currency, timestamp);
+    public SavingsAccount(@NonNull final User owner, @NonNull final String iban,
+                          @NonNull final String currency, final double interestRate) {
+        super(owner, iban, currency);
         type = "savings";
-        this.interestRate = interestRate;
+        this.interestRate = PositiveValidator.validate(
+                interestRate
+        );
     }
 
+    /**
+     * Add the interest of the account.
+     */
     public void addInterest() {
         balance = balance + balance * interestRate;
-    }
-
-    public void changeInterestRate(final double newInterestRate, final int timestamp) {
-        interestRate = newInterestRate;
-
-        Transaction transaction = new Transaction.TransactionBuilder(timestamp)
-                                          .description("Interest rate of the account changed to " + interestRate)
-                                          .build();
-        addTransaction(transaction);
-        owner.addTransaction(transaction);
-    }
-
-    @JsonIgnore
-    public double getInterestRate() {
-        return interestRate;
     }
 }

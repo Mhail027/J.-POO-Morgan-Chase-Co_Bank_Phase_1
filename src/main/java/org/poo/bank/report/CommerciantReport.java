@@ -1,13 +1,6 @@
 package org.poo.bank.report;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
-import org.poo.bank.account.Account;
-import org.poo.bank.card.Card;
-import org.poo.bank.transaction.Transaction;
-
-import java.util.List;
 
 @Getter
 public final class CommerciantReport {
@@ -19,6 +12,10 @@ public final class CommerciantReport {
         this.total = total;
     }
 
+    /**
+     * Increase the total sum of money.
+     * @param amount amount with which is increased th total
+     */
     public void addAtTotal(final double amount) {
         total += amount;
     }

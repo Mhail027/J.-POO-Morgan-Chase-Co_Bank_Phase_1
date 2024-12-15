@@ -1,12 +1,21 @@
 package org.poo.bank.database;
 
+import lombok.NonNull;
+
 import org.poo.bank.account.Account;
 import org.poo.bank.card.Card;
 import org.poo.bank.client.User;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.List;
+import java.util.LinkedList;
 
-import static org.poo.constants.Constants.*;
+import static org.poo.constants.Constants.INVALID_ACCOUNT;
+import static org.poo.constants.Constants.INVALID_USER;
+import static org.poo.constants.Constants.INVALID_CARD;
 
 
 public final class Database {
@@ -17,9 +26,9 @@ public final class Database {
     private final Map<String, Card> cards; // key = card number
 
     private Database() {
-        users = new LinkedHashMap<String, User>();
-        accounts = new HashMap<String, Account>();
-        cards = new HashMap<String, Card>();
+        users = new LinkedHashMap<>();
+        accounts = new HashMap<>();
+        cards = new HashMap<>();
     }
 
     /**
@@ -38,11 +47,7 @@ public final class Database {
      * @param users array of users
      * @return created Database
      */
-    public static Database init(final User[] users) throws IllegalArgumentException {
-        if (users == null) {
-            throw new IllegalArgumentException("users can't be null");
-        }
-
+    public static Database init(@NonNull final User[] users) {
         instance = getInstance();
 
         instance.clear();
@@ -65,7 +70,7 @@ public final class Database {
      *
      * @param newUsers array of users
      */
-    private void addUsers(final User[] newUsers) {
+    private void addUsers(@NonNull final User[] newUsers) {
         for (User user : newUsers) {
             users.put(user.getEmail(), user);
         }
@@ -83,17 +88,18 @@ public final class Database {
      * @return true, if exists a user with this email
      *         false, if not
      */
-    public boolean hasUser(final String email) {
+    public boolean hasUser(@NonNull final String email) {
         return users.containsKey(email);
     }
 
     /**
      * @param email email of someone
      * @return details of user with given email
+     * @throws IllegalArgumentException if no user has the given email
      */
-    public User getUser(final String email) throws IllegalArgumentException {
+    public User getUser(@NonNull final String email) throws IllegalArgumentException {
         User user = users.get(email);
-        if (user == null){
+        if (user == null) {
             throw new IllegalArgumentException(INVALID_USER);
         }
         return user;
@@ -104,11 +110,7 @@ public final class Database {
      *
      * @param acct details of account
      */
-    public void addAccount(final Account acct) throws IllegalArgumentException {
-        if (acct == null) {
-            throw new IllegalArgumentException("acct can't be null");
-        }
-
+    public void addAccount(@NonNull final Account acct) throws IllegalArgumentException {
         accounts.put(acct.getIban(), acct);
     }
 
@@ -116,23 +118,20 @@ public final class Database {
      * Remove an account and all cards associated with it.
      *
      * @param iban number of account
+     * @throws IllegalArgumentException if no account have the given iban
      */
-    public void removeAccount(final String iban) throws IllegalArgumentException {
-        Account acct = accounts.remove(iban);
-        if (acct == null) {
-            throw new IllegalArgumentException(INVALID_ACCOUNT);
-        }
-
+    public void removeAccount(@NonNull final String iban) throws IllegalArgumentException {
+        Account acct = getAccount(iban);
         removeCards(acct.getCards());
-
         acct.delete();
     }
 
     /**
      * @param iban account number
      * @return details of the account with given iban
+     * @throws IllegalArgumentException if no account has the given iban
      */
-    public Account getAccount(final String iban) throws IllegalArgumentException {
+    public Account getAccount(@NonNull final String iban) throws IllegalArgumentException {
         Account acct = accounts.get(iban);
         if (acct == null) {
             throw new IllegalArgumentException(INVALID_ACCOUNT);
@@ -145,33 +144,27 @@ public final class Database {
      * @param email email of user
      * @return details of account with given identifier
      */
-    public Account getAccount(final String identifier, final String email)
-                              throws IllegalArgumentException {
+    public Account getAccount(@NonNull final String identifier, @NonNull final String email) {
         User user = getUser(email);
-        if (user == null) {
-            throw new IllegalArgumentException(INVALID_USER);
-        }
-
         String iban = user.getAccountByAlias(identifier);
         if (iban == null) {
             iban = identifier;
         }
-
         return getAccount(iban);
     }
 
-    public List<Account> getAccounts (List<String> ibans)
-                                      throws IllegalArgumentException {
+    /**
+     * Does a list with details of accounts which has the given ibans.
+     *
+     * @param ibans list with account numbers as Strings
+     * @return list with info of accounts
+     */
+    public List<Account> getAccounts(@NonNull final List<String> ibans) {
         List<Account> accountsList = new LinkedList<>();
-
         for (String iban : ibans) {
             Account acct = getAccount(iban);
-            if (acct == null) {
-                throw new IllegalArgumentException(INVALID_ACCOUNT);
-            }
             accountsList.add(acct);
         }
-
         return accountsList;
     }
 
@@ -180,7 +173,7 @@ public final class Database {
      * @return true, if an account with given iban is in Database
      *         false, if not
      */
-    public boolean hasAccount(final String iban) {
+    public boolean hasAccount(@NonNull final String iban) {
         return accounts.containsKey(iban);
     }
 
@@ -189,11 +182,7 @@ public final class Database {
      *
      * @param card details of card
      */
-    public void addCard(final Card card) throws IllegalArgumentException {
-        if (card == null) {
-            throw new IllegalArgumentException("card can't be null");
-        }
-
+    public void addCard(@NonNull final Card card) {
         cards.put(card.getCardNumber(), card);
     }
 
@@ -202,7 +191,7 @@ public final class Database {
      *
      * @param oldCards array of cards which will be removed
      */
-    public void removeCards(final List<Card> oldCards) {
+    public void removeCards(@NonNull final List<Card> oldCards) {
         for (Card card : oldCards) {
             cards.remove(card.getCardNumber());
         }
@@ -212,32 +201,36 @@ public final class Database {
      * Remove a card from Database.
      *
      * @param cardNumber number of card
+     * @throws IllegalArgumentException if no card has the given number
      */
-    public void removeCard(final String cardNumber, final int timestamp)
-                           throws IllegalArgumentException {
+    public void removeCard(@NonNull final String cardNumber) throws IllegalArgumentException {
         Card card = cards.remove(cardNumber);
         if (card == null) {
             throw new IllegalArgumentException(INVALID_CARD);
         }
-
-        card.delete(timestamp);
+        card.delete();
     }
 
     /**
      * @param cardNumber number of card
-     * @return true, if a card with the given number is in dataBae
+     * @return true, if a card with the given number is in dataBase
      *         false, if not
      */
-    public boolean hasCard(final String cardNumber) {
+    public boolean hasCard(@NonNull final String cardNumber) {
         return cards.containsKey(cardNumber);
     }
 
     /**
      * @param cardNumber number of a card
      * @return details of the card with given number
+     * @throws IllegalArgumentException if no card has the given number
      */
-    public Card getCard(final String cardNumber) {
-        return cards.get(cardNumber);
+    public Card getCard(@NonNull final String cardNumber) throws IllegalArgumentException {
+        Card card = cards.get(cardNumber);
+        if (card == null) {
+            throw new IllegalArgumentException(INVALID_CARD);
+        }
+        return card;
     }
 
 }

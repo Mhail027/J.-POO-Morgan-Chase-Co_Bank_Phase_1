@@ -6,8 +6,8 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.poo.bank.Bank;
 import org.poo.checker.Checker;
 import org.poo.checker.CheckerConstants;
-import org.poo.command.Command;
-import org.poo.command.CommandFactory;
+import org.poo.bank.command.Command;
+import org.poo.bank.command.CommandFactory;
 import org.poo.input.CommandInput;
 import org.poo.input.ObjectInput;
 
@@ -43,9 +43,15 @@ public final class Main {
         if (Files.exists(path)) {
             File resultFile = new File(String.valueOf(path));
             for (File file : Objects.requireNonNull(resultFile.listFiles())) {
-                file.delete();
+                boolean success = file.delete();
+                if (!success) {
+                    throw new IOException("Could not delete the file");
+                }
             }
-            resultFile.delete();
+            boolean success = resultFile.delete();
+            if (!success) {
+                throw new IOException("Could not delete the file");
+            }
         }
         Files.createDirectories(path);
 
@@ -88,6 +94,7 @@ public final class Main {
         ObjectWriter objectWriter = objectMapper.writerWithDefaultPrettyPrinter();
         objectWriter.writeValue(new File(filePath2), output);
     }
+
 
     /**
      * Method used for extracting the test number from the file name.
