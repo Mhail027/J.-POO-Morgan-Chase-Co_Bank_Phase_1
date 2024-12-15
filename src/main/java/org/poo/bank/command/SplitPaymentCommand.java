@@ -7,6 +7,7 @@ import lombok.NonNull;
 import org.poo.bank.Bank;
 import org.poo.bank.account.Account;
 import org.poo.bank.transaction.Transaction;
+import org.poo.bank.transaction.TransactionBuilder;
 import org.poo.output.OutputMessage;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
@@ -99,7 +100,8 @@ public final class SplitPaymentCommand implements Command {
 
     private void addFailedTransaction(final List<Account> accounts, final Account problemAcct,
                                       final double amountPerAccount) {
-        Transaction transaction = new Transaction.Builder(timestamp)
+        Transaction transaction = new TransactionBuilder()
+                                          .timestamp(timestamp)
                                           .amount(String.valueOf(amountPerAccount))
                                           .currency(currency)
                                           .involvedAccounts(ibans)
@@ -120,7 +122,8 @@ public final class SplitPaymentCommand implements Command {
     }
 
     private Transaction createSuccessfulTransaction(final double amountPerAccount) {
-        return new Transaction.Builder(timestamp)
+        return new TransactionBuilder()
+                       .timestamp(timestamp)
                        .amount(String.valueOf(amountPerAccount))
                        .currency(currency)
                        .involvedAccounts(ibans)

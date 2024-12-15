@@ -8,6 +8,7 @@ import org.poo.bank.Bank;
 import org.poo.bank.account.Account;
 import org.poo.bank.client.User;
 import org.poo.bank.transaction.Transaction;
+import org.poo.bank.transaction.TransactionBuilder;
 import org.poo.output.OutputError;
 import org.poo.output.OutputSuccess;
 import org.poo.output.SimpleOutput;
@@ -62,7 +63,8 @@ public class DeleteAccountCommand implements Command {
     }
 
     private void haveRemainedFunds(final Account acct, final User owner) {
-        Transaction transaction  = new Transaction.Builder(timestamp)
+        Transaction transaction  = new TransactionBuilder()
+                                           .timestamp(timestamp)
                                            .description(HAVE_REMAINED_FUNDS)
                                            .build();
         acct.addTransaction(transaction);

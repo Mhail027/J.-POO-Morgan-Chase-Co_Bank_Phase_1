@@ -8,6 +8,7 @@ import org.poo.bank.Bank;
 import org.poo.bank.account.Account;
 import org.poo.bank.account.SavingsAccount;
 import org.poo.bank.transaction.Transaction;
+import org.poo.bank.transaction.TransactionBuilder;
 import org.poo.output.OutputMessage;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
@@ -63,7 +64,8 @@ public final class ChangeInterestRateCommand implements Command {
     }
 
     private void addSuccessfulTransaction(final Account acct) {
-        Transaction transaction = new Transaction.Builder(timestamp)
+        Transaction transaction = new TransactionBuilder()
+                                          .timestamp(timestamp)
                                           .description(
                                                   String.format(INTEREST_RATE_CHANGED,
                                                           Double.toString(interestRate)))

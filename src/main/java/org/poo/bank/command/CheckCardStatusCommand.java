@@ -7,6 +7,7 @@ import lombok.NonNull;
 import org.poo.bank.Bank;
 import org.poo.bank.card.Card;
 import org.poo.bank.transaction.Transaction;
+import org.poo.bank.transaction.TransactionBuilder;
 import org.poo.output.OutputMessage;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
@@ -54,8 +55,10 @@ public final class CheckCardStatusCommand implements Command {
     }
 
     private void cardBecomesFrozen(final Card card) {
-        Transaction transaction = new Transaction.Builder(timestamp)
-                                          .description(CARD_WILL_BE_FROZEN).build();
+        Transaction transaction = new TransactionBuilder()
+                                          .timestamp(timestamp)
+                                          .description(CARD_WILL_BE_FROZEN)
+                                          .build();
         card.getOwner().addTransaction(transaction);
         card.setStatus(FROZEN);
     }

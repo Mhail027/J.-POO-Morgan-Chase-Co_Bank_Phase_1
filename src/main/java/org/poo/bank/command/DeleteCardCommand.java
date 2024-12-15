@@ -4,6 +4,7 @@ import lombok.NonNull;
 import org.poo.bank.Bank;
 import org.poo.bank.card.Card;
 import org.poo.bank.transaction.Transaction;
+import org.poo.bank.transaction.TransactionBuilder;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -54,7 +55,8 @@ public final class DeleteCardCommand implements Command {
     }
 
     private void addSuccessfulTransaction(final Card card) {
-        Transaction transaction =  new Transaction.Builder(timestamp)
+        Transaction transaction =  new TransactionBuilder()
+                                           .timestamp(timestamp)
                                            .account(card.getAccount().getIban())
                                            .card(cardNumber)
                                            .cardHolder(card.getOwner().getEmail())

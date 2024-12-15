@@ -8,6 +8,7 @@ import org.poo.bank.Bank;
 import org.poo.bank.card.Card;
 import org.poo.bank.card.OneTimeCard;
 import org.poo.bank.transaction.Transaction;
+import org.poo.bank.transaction.TransactionBuilder;
 import org.poo.output.OutputMessage;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
@@ -105,7 +106,8 @@ public final class PayOnlineCommand implements Command {
     }
 
     private void addFailedTransaction(final Card card, final String message) {
-        Transaction transaction = new Transaction.Builder(timestamp)
+        Transaction transaction = new TransactionBuilder()
+                                          .timestamp(timestamp)
                                           .description(message)
                                           .build();
         card.getAccount().addTransaction(transaction);
@@ -116,7 +118,8 @@ public final class PayOnlineCommand implements Command {
         /// Description should be the received description in constructor.
         /// I change the description of transaction because the refs are bad made.
         /// Also, the transaction should include the currency.
-        Transaction transaction = new Transaction.Builder(timestamp)
+        Transaction transaction = new TransactionBuilder()
+                                          .timestamp(timestamp)
                                           .amount(String.valueOf(amountConverted))
                                           .commerciant(commerciant)
                                           .description("Card payment").build();

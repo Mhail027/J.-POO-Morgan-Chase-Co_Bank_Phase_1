@@ -9,6 +9,7 @@ import org.poo.bank.account.Account;
 import org.poo.bank.account.AccountFactory;
 import org.poo.bank.client.User;
 import org.poo.bank.transaction.Transaction;
+import org.poo.bank.transaction.TransactionBuilder;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
 
@@ -64,7 +65,8 @@ public final class AddAccountCommand implements Command {
     }
 
     private void addSuccessfulTransaction(final Account acct) {
-        Transaction transaction = new Transaction.Builder(timestamp)
+        Transaction transaction = new TransactionBuilder()
+                                          .timestamp(timestamp)
                                           .description(NEW_ACCOUNT)
                                           .build();
         acct.addTransaction(transaction);

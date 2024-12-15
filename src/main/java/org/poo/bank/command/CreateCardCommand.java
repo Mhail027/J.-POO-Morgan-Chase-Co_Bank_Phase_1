@@ -10,6 +10,7 @@ import org.poo.bank.card.Card;
 import org.poo.bank.card.CardFactory;
 import org.poo.bank.client.User;
 import org.poo.bank.transaction.Transaction;
+import org.poo.bank.transaction.TransactionBuilder;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
 
@@ -68,7 +69,8 @@ public final class CreateCardCommand implements Command {
 
     private void addSuccessfulTransaction(final Account acct, final User owner,
                                           final String cardNumber) {
-        Transaction transaction =  new Transaction.Builder(timestamp)
+        Transaction transaction =  new TransactionBuilder()
+                                           .timestamp(timestamp)
                                            .account(acct.getIban())
                                            .card(cardNumber)
                                            .cardHolder(owner.getEmail())

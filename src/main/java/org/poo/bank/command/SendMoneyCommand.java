@@ -7,6 +7,7 @@ import lombok.NonNull;
 import org.poo.bank.Bank;
 import org.poo.bank.account.Account;
 import org.poo.bank.transaction.Transaction;
+import org.poo.bank.transaction.TransactionBuilder;
 import org.poo.output.OutputMessage;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
@@ -91,7 +92,8 @@ public final class SendMoneyCommand implements Command {
     }
 
     private void hasInsufficientFunds(final Account sender) {
-        Transaction transaction = new Transaction.Builder(timestamp)
+        Transaction transaction = new TransactionBuilder()
+                                          .timestamp(timestamp)
                                           .description(INSUFFICIENT_FUNDS)
                                           .build();
         sender.addTransaction(transaction);
@@ -100,7 +102,8 @@ public final class SendMoneyCommand implements Command {
 
     private void addSuccessfulTransaction(final Account account, final String type,
                                           final double amountPerAccount) {
-        Transaction transaction = new Transaction.Builder(timestamp)
+        Transaction transaction = new TransactionBuilder()
+                                          .timestamp(timestamp)
                                           .description(description)
                                           .amount(amountPerAccount + " " + account.getCurrency())
                                           .senderIBAN(senderIban)
