@@ -113,6 +113,9 @@ public final class TransactionBuilder {
         return this;
     }
 
+    /**
+     * @return the transaction which was built
+     */
     public Transaction build() {
         return transaction;
     }

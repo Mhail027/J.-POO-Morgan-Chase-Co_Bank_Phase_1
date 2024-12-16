@@ -1,15 +1,18 @@
 package org.poo.graph;
 
+import lombok.NonNull;
+
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
+import java.util.stream.Collectors;
 
 public class DirectedGraph<T> {
-    private final Map<T, GraphNode<T>> nodes;  /// key = values of node
+    private final Map<T, GraphNode<T>> nodes;  // key = values of node
     private final BiFunction<Double, Double, Double> operation;
 
-    public DirectedGraph(final BiFunction<Double, Double, Double> operation) {
+    public DirectedGraph(@NonNull final BiFunction<Double, Double, Double> operation) {
         nodes = new HashMap<>();
         this.operation = operation;
     }
@@ -21,8 +24,8 @@ public class DirectedGraph<T> {
      * @param destinations array with values of ending nodes
      * @param weights array with costs of edges
      */
-    public void addEdges(final T[] sources, final T[] destinations,
-                         final Double[] weights) {
+    public void addEdges(@NonNull final T[] sources, @NonNull final T[] destinations,
+                         @NonNull final Double[] weights) throws IllegalArgumentException {
         if (sources.length != destinations.length || sources.length != weights.length) {
             throw new IllegalArgumentException("Arrays don't have same number of elements.");
         }
@@ -41,7 +44,7 @@ public class DirectedGraph<T> {
      *
      * @param value value of node
      */
-    public void addNode(final T value) {
+    public void addNode(@NonNull final T value) {
         if (!hasNode(value)) {
             nodes.put(value, new GraphNode<>(value));
         }
@@ -54,7 +57,7 @@ public class DirectedGraph<T> {
      * @return true, if the node exists
      *         false, if not
      */
-    private boolean hasNode(final T value) {
+    private boolean hasNode(@NonNull final T value) {
         return nodes.get(value) != null;
     }
 
@@ -64,7 +67,7 @@ public class DirectedGraph<T> {
      * @param value value of node
      * @return the node corresponding with the value
      */
-    private GraphNode<T> getNode(final T value) {
+    private GraphNode<T> getNode(@NonNull final T value) {
         return nodes.get(value);
     }
 
@@ -106,13 +109,12 @@ public class DirectedGraph<T> {
      *          the values are the weights of edges
      */
     private Map<String, Double> getEdgesWeights() {
-        Map<String, Double> edgesWeights = new HashMap<>();
-        for (GraphNode<T> node : nodes.values()) {
-            for (Edge<T> edge : node.getEdges()) {
-                edgesWeights.put(edge.getSrc() + " -> " + edge.getDest(), edge.getWeight());
-            }
-        }
-
-        return edgesWeights;
+        return nodes.values().stream()
+                .flatMap(node -> node.getEdges().stream())
+                .collect(Collectors.toMap(
+                        edge -> edge.getSrc() + " -> " + edge.getDest(),
+                        Edge::getWeight
+                        )
+                );
     }
  }

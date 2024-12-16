@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] /home/necula-mihail/Desktop/J.-POO-Morgan-Chase-Co/./src/main/java/org/poo/bank/transaction/TransactionBuilder.java:116:5: Missing a Javadoc comment. [MissingJavadocMethod]
 Audit done.
-Checkstyle ends with 1 errors.

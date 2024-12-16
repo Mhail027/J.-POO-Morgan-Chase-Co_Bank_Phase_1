@@ -12,8 +12,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import static org.poo.constants.Constants.INVALID_CARD;
-import static org.poo.constants.Constants.INVALID_USER;
-
 
 @Getter
 public abstract class Account {
@@ -27,7 +25,6 @@ public abstract class Account {
 
     protected User owner;
     protected final List<Card> cards;
-    protected final List<User> allowedUsers;
     protected final List<Transaction> transactions;
 
     public Account(@NonNull final User owner, @NonNull final String iban,
@@ -39,10 +36,9 @@ public abstract class Account {
 
         this.owner = owner;
         cards = new LinkedList<>();
-        allowedUsers = new LinkedList<>();
         transactions = new LinkedList<>();
 
-        addUser(owner);
+        owner.addAccount(this);
     }
 
     /**
@@ -71,9 +67,6 @@ public abstract class Account {
         }
 
         cards.add(card);
-        if (!hasUser(card.getOwner().getEmail())) {
-            allowedUsers.add(card.getOwner());
-        }
     }
 
     /**
@@ -90,21 +83,11 @@ public abstract class Account {
 
     /**
      * Revoke the access permission of a card to account.
-     * Also,revoke the access permission of the owner of the card,
-     * if the owner has just one card associated with the account.
      *
      * @param cardNumber number of card
      */
     public void removeCard(@NonNull final String cardNumber) {
         cards.removeIf(card -> card.getCardNumber().equals(cardNumber));
-
-        removeUser(getOwner().getEmail());
-        for (Card card : cards) {
-            if (!hasUser(card.getOwner().getEmail())) {
-                addUser(card.getOwner());
-                break;
-            }
-        }
     }
 
     /**
@@ -124,53 +107,6 @@ public abstract class Account {
     }
 
     /**
-     * A new user has access to account.
-     *
-     * @param user details of user
-     * @throws IllegalArgumentException if the user has access already to account
-     */
-    public void addUser(@NonNull final User user) throws IllegalArgumentException {
-        if (hasUser(user.getEmail())) {
-            throw  new IllegalArgumentException("User has already access to account");
-        }
-
-        allowedUsers.add(user);
-        user.addAccount(this);
-    }
-
-    /**
-     * Verify if a user has access to account.
-     *
-     * @param email email of user
-     * @return true, if user has access to account
-     *         false, if not
-     */
-    private boolean hasUser(@NonNull final String email) {
-        return allowedUsers.stream()
-                       .anyMatch(user -> user.getEmail().equals(email));
-    }
-
-    /**
-     * Revoke the access permission of a user to account.
-     *
-     * @param email email of user
-     * @throws IllegalArgumentException if the given user does not have access to account
-     */
-    private void removeUser(@NonNull final String email) throws IllegalArgumentException {
-        if (owner.getEmail().equals(email)) {
-            return;
-        }
-
-        for (User user : allowedUsers) {
-            if (user.getEmail().equals(email)) {
-                allowedUsers.remove(user);
-                return;
-            }
-        }
-        throw new IllegalArgumentException(INVALID_USER);
-    }
-
-    /**
      * Save the info of a transaction.
      *
      * @param transaction details of transaction
@@ -180,17 +116,10 @@ public abstract class Account {
     }
 
     /**
-     * No user will have access to this account anymore.
+     * The owner will not have access to this account anymore.
      */
     public void delete() {
-        for (User user : allowedUsers) {
-            user.removeAccount(iban);
-        }
-    }
-
-    @JsonIgnore
-    private List<User> getAllowedUsers() {
-        return allowedUsers;
+        owner.removeAccount(iban);
     }
 
     @JsonIgnore

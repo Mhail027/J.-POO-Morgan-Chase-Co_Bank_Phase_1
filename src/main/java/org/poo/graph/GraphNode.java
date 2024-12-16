@@ -1,17 +1,19 @@
 package org.poo.graph;
 
 import lombok.Getter;
+import lombok.NonNull;
+
 import java.util.LinkedList;
 import java.util.List;
 
 @Getter
 public class GraphNode<T> {
-    private T value;
-    private List<Edge<T>> edges;
+    private final T value;
+    private final List<Edge<T>> edges;
 
-    public GraphNode(final T value) {
+    public GraphNode(@NonNull final T value) {
         this.value = value;
-        edges = new LinkedList<Edge<T>>();
+        edges = new LinkedList<>();
     }
 
     /**
@@ -20,12 +22,13 @@ public class GraphNode<T> {
      * @param dest   destination of the edge
      * @param weight cost of the edge
      */
-    public void addEdge(final T dest, final double weight) {
+    public void addEdge(@NonNull final T dest, @NonNull final double weight) {
         Edge<T> edge = findEdge(dest);
+
         if (edge != null) {
             edge.setWeight(weight);
         } else {
-            edges.add(new Edge<T>(this.value, dest, weight));
+            edges.add(new Edge<>(this.value, dest, weight));
         }
     }
 
@@ -36,12 +39,9 @@ public class GraphNode<T> {
      * @return true, if the edge exists
      * false, if not
      */
-    public Edge<T> findEdge(final T dest) {
-        for (Edge<T> edge : edges) {
-            if (edge.getDest().equals(dest)) {
-                return edge;
-            }
-        }
-        return null;
+    public Edge<T> findEdge(@NonNull final T dest) {
+        return edges.stream()
+                       .filter(edge -> edge.getDest().equals(dest))
+                       .findFirst().orElse(null);
     }
 }
