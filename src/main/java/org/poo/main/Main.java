@@ -8,7 +8,7 @@ import org.poo.checker.Checker;
 import org.poo.checker.CheckerConstants;
 import org.poo.bank.command.Command;
 import org.poo.bank.command.CommandFactory;
-import org.poo.input.CommandInput;
+import org.poo.bank.command.CommandInput;
 import org.poo.input.ObjectInput;
 
 import java.io.File;

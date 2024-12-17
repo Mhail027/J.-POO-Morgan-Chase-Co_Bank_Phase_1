@@ -30,7 +30,6 @@ public final class SplitPaymentCommand implements Command {
         this.bank = bank;
         this.ibans = ibans;
         this.currency = currency;
-
         this.amount = PositiveOrZeroValidator.validate(
                 amount
         );
@@ -71,9 +70,7 @@ public final class SplitPaymentCommand implements Command {
             double convertedAmount = bank.getCurrencyConvertor().exchangeMoney(
                     amountPerAccount, currency, acct.getCurrency());
             acct.removeFunds(convertedAmount);
-
             acct.addTransaction(transaction);
-            acct.getOwner().addTransaction(transaction);
         }
     }
 
@@ -117,7 +114,6 @@ public final class SplitPaymentCommand implements Command {
 
         for (Account account : accounts) {
             account.addTransaction(transaction);
-            account.getOwner().addTransaction(transaction);
         }
     }
 

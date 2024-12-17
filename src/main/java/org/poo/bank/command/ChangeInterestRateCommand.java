@@ -71,7 +71,6 @@ public final class ChangeInterestRateCommand implements Command {
                                                           Double.toString(interestRate)))
                                           .build();
         acct.addTransaction(transaction);
-        acct.getOwner().addTransaction(transaction);
     }
 
     private void handleError(final ArrayNode output, final Exception e) {

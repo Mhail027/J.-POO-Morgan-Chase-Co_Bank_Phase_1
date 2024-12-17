@@ -113,6 +113,7 @@ public abstract class Account {
      */
     public void addTransaction(final Transaction transaction) {
         transactions.add(transaction);
+        owner.addTransaction(transaction);
     }
 
     /**

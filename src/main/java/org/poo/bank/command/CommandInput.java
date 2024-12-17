@@ -1,4 +1,4 @@
-package org.poo.input;
+package org.poo.bank.command;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

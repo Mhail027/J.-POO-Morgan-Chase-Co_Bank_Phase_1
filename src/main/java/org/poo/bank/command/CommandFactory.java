@@ -2,10 +2,10 @@ package org.poo.bank.command;
 
 import lombok.NonNull;
 import org.poo.bank.Bank;
-import org.poo.input.CommandInput;
 
 import static org.poo.constants.Constants.CLASSIC_CARD;
 import static org.poo.constants.Constants.ONE_TIME_CARD;
+import static org.poo.constants.Constants.INVALID_COMMAND;
 
 public final class CommandFactory {
     private CommandFactory() {
@@ -78,18 +78,19 @@ public final class CommandFactory {
                     commandInput.getStartTimestamp(), commandInput.getEndTimestamp(),
                     commandInput.getTimestamp());
             case "spendingsReport"
-                        -> new GetSpendingsReportCommand(bank, commandInput.getAccount(),
-                        commandInput.getStartTimestamp(), commandInput.getEndTimestamp(),
-                        commandInput.getTimestamp());
+                    -> new GetSpendingsReportCommand(bank, commandInput.getAccount(),
+                    commandInput.getStartTimestamp(), commandInput.getEndTimestamp(),
+                    commandInput.getTimestamp());
 
             case "changeInterestRate"
-                        -> new ChangeInterestRateCommand(bank, commandInput.getAccount(),
-                        commandInput.getInterestRate(), commandInput.getTimestamp());
+                    -> new ChangeInterestRateCommand(bank, commandInput.getAccount(),
+                    commandInput.getInterestRate(), commandInput.getTimestamp());
             case "addInterest"
                     -> new AddInterestCommand(bank, commandInput.getAccount(),
                     commandInput.getTimestamp());
+
             default
-                    -> throw new IllegalArgumentException("Command type is not valid");
+                    -> throw new IllegalArgumentException(INVALID_COMMAND);
         };
     }
 }

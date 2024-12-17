@@ -97,7 +97,6 @@ public final class SendMoneyCommand implements Command {
                                           .description(INSUFFICIENT_FUNDS)
                                           .build();
         sender.addTransaction(transaction);
-        sender.getOwner().addTransaction(transaction);
     }
 
     private void addSuccessfulTransaction(final Account account, final String type,
@@ -111,7 +110,6 @@ public final class SendMoneyCommand implements Command {
                                           .transferType(type)
                                           .build();
         account.addTransaction(transaction);
-        account.getOwner().addTransaction(transaction);
     }
 
     private void handleError(final ArrayNode output, final Exception e) {

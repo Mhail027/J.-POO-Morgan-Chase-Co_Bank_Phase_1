@@ -9,7 +9,7 @@ public class Edge<T> {
     private T dest;
     private double weight;
 
-    public Edge(@NonNull final T src, @NonNull final T dest, @NonNull final double weight) {
+    public Edge(@NonNull final T src, @NonNull final T dest, final double weight) {
         this.src = src;
         this.dest = dest;
         this.weight = weight;

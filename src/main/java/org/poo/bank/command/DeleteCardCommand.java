@@ -63,7 +63,6 @@ public final class DeleteCardCommand implements Command {
                                            .description(DESTROYED_CARD)
                                            .build();
         card.getAccount().addTransaction(transaction);
-        card.getOwner().addTransaction(transaction);
     }
 
     private void handleError(final ArrayNode output, final Exception e) {

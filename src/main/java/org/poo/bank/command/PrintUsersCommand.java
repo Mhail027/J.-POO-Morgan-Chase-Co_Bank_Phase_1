@@ -6,14 +6,17 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import lombok.NonNull;
 import org.poo.bank.Bank;
 import org.poo.output.SimpleOutput;
+import org.poo.validator.PositiveOrZeroValidator;
 
 public final class PrintUsersCommand implements Command {
     private final Bank bank;
     private final int timestamp;
 
-    public PrintUsersCommand(@NonNull final Bank bank, @NonNull final int timestamp) {
+    public PrintUsersCommand(@NonNull final Bank bank, final int timestamp) {
         this.bank = bank;
-        this.timestamp = timestamp;
+        this.timestamp = (int) PositiveOrZeroValidator.validate(
+                timestamp
+        );
     }
 
     /**

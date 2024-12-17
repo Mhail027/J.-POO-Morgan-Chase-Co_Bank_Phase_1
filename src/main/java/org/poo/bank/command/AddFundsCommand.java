@@ -18,7 +18,6 @@ public final class AddFundsCommand implements Command {
     /// Amount should be verified using PositiveValidator. Does not make sense to be 0.
     public AddFundsCommand(@NonNull final Bank bank, @NonNull final String iban,
                            final double amount, final int timestamp) {
-
         this.bank = bank;
         this.iban = iban;
         this.amount = PositiveOrZeroValidator.validate(

@@ -111,7 +111,6 @@ public final class PayOnlineCommand implements Command {
                                           .description(message)
                                           .build();
         card.getAccount().addTransaction(transaction);
-        card.getOwner().addTransaction(transaction);
     }
 
     private void addSuccessfulTransaction(final Card card, final double amountConverted) {
@@ -124,7 +123,6 @@ public final class PayOnlineCommand implements Command {
                                           .commerciant(commerciant)
                                           .description("Card payment").build();
         card.getAccount().addTransaction(transaction);
-        card.getOwner().addTransaction(transaction);
     }
 
     private void deleteCard(final ArrayNode output) {

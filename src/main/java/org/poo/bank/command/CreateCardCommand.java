@@ -101,7 +101,6 @@ public final class CreateCardCommand implements Command {
                                            .description(NEW_CARD)
                                            .build();
         acct.addTransaction(transaction);
-        owner.addTransaction(transaction);
     }
 
     private void handleError(final ArrayNode output, final Exception e) {

@@ -6,7 +6,6 @@ import com.fasterxml.jackson.databind.node.ArrayNode;
 import lombok.NonNull;
 import org.poo.bank.Bank;
 import org.poo.bank.account.Account;
-import org.poo.bank.client.User;
 import org.poo.bank.transaction.Transaction;
 import org.poo.bank.transaction.TransactionBuilder;
 import org.poo.output.OutputError;
@@ -53,23 +52,20 @@ public class DeleteAccountCommand implements Command {
      */
     private void deleteAccount(final ArrayNode output) {
         Account acct = bank.getDatabase().getAccount(iban);
-        User owner = acct.getOwner();
         if (acct.getBalance() > 0) {
-            haveRemainedFunds(acct, owner);
+            haveRemainedFunds(acct);
         }
 
         bank.getDatabase().removeAccount(iban);
         addSuccessfulOperation(output);
     }
 
-    private void haveRemainedFunds(final Account acct, final User owner) {
+    private void haveRemainedFunds(final Account acct) {
         Transaction transaction  = new TransactionBuilder()
                                            .timestamp(timestamp)
                                            .description(HAVE_REMAINED_FUNDS)
                                            .build();
         acct.addTransaction(transaction);
-        owner.addTransaction(transaction);
-
         throw new IllegalArgumentException(CAN_NOT_DELETE_ACCOUNT);
     }
 

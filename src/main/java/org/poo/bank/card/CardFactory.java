@@ -23,7 +23,7 @@ public final class CardFactory {
      * @throws IllegalArgumentException if given type of card does not exit
      */
     public static Card getCard(@NonNull final User owner, @NonNull final Account acct,
-                               @NonNull final String cardNumber, final String type) {
+                               @NonNull final String cardNumber, @NonNull final String type) {
         if (type.equals(CLASSIC_CARD)) {
             return new ClassicCard(owner, acct, cardNumber);
         } else if (type.equals(ONE_TIME_CARD)) {

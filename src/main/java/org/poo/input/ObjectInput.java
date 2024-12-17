@@ -2,6 +2,7 @@ package org.poo.input;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.poo.bank.command.CommandInput;
 import org.poo.bank.currency.Exchange;
 import org.poo.bank.client.User;
 

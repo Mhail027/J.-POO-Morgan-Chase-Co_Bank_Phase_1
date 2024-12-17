@@ -28,7 +28,6 @@ public final class AddAccountCommand implements Command {
         this.bank = bank;
         this.email = email;
         this.currency = currency;
-
         this.interestRate = PositiveOrZeroValidator.validate(
                 interestRate
         );
@@ -70,7 +69,6 @@ public final class AddAccountCommand implements Command {
                                           .description(NEW_ACCOUNT)
                                           .build();
         acct.addTransaction(transaction);
-        acct.getOwner().addTransaction(transaction);
     }
 
     private void handleError(final ArrayNode output, final Exception e) {
