@@ -9,7 +9,7 @@ import org.poo.bank.card.Card;
 import org.poo.bank.card.OneTimeCard;
 import org.poo.bank.transaction.Transaction;
 import org.poo.bank.transaction.TransactionBuilder;
-import org.poo.output.OutputMessage;
+import org.poo.output.message.SimpleMessage;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
 import org.poo.validator.PositiveValidator;
@@ -139,7 +139,7 @@ public final class PayOnlineCommand implements Command {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode outputNode = objectMapper.valueToTree(
                 SimpleOutput.init("payOnline",
-                        OutputMessage.init(e.getMessage(), timestamp),
+                        SimpleMessage.init(e.getMessage(), timestamp),
                         timestamp)
         );
         output.add(outputNode);

@@ -7,8 +7,8 @@ import lombok.NonNull;
 import org.poo.bank.Bank;
 import org.poo.bank.account.Account;
 import org.poo.bank.report.SpendingsReport;
-import org.poo.output.Error;
-import org.poo.output.OutputMessage;
+import org.poo.output.ErrorOutput;
+import org.poo.output.message.SimpleMessage;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
 
@@ -81,7 +81,7 @@ public final class GetSpendingsReportCommand implements Command {
             outputNode = objectMapper.valueToTree(
                     SimpleOutput.init(
                             "spendingsReport",
-                            Error.init(e.getMessage()),
+                            ErrorOutput.init(e.getMessage()),
                             timestamp
                     )
             );
@@ -89,7 +89,7 @@ public final class GetSpendingsReportCommand implements Command {
             outputNode = objectMapper.valueToTree(
                     SimpleOutput.init(
                             "spendingsReport",
-                            OutputMessage.init(e.getMessage(), timestamp),
+                            SimpleMessage.init(e.getMessage(), timestamp),
                             timestamp
                     )
             );

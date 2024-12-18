@@ -1,5 +1,6 @@
 [ {
   "command" : "printUsers",
+  "timestamp" : 14,
   "output" : [ {
     "firstName" : "Beniamin",
     "lastName" : "Popa",
@@ -42,10 +43,10 @@
       } ],
       "IBAN" : "RO90POOB5450777208072365"
     } ]
-  } ],
-  "timestamp" : 14
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 18,
   "output" : [ {
     "firstName" : "Beniamin",
     "lastName" : "Popa",
@@ -88,17 +89,17 @@
       } ],
       "IBAN" : "RO90POOB5450777208072365"
     } ]
-  } ],
-  "timestamp" : 18
+  } ]
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 19,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 19
-  },
-  "timestamp" : 19
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 21,
   "output" : [ {
     "firstName" : "Beniamin",
     "lastName" : "Popa",
@@ -141,6 +142,5 @@
       } ],
       "IBAN" : "RO90POOB5450777208072365"
     } ]
-  } ],
-  "timestamp" : 21
+  } ]
 } ]

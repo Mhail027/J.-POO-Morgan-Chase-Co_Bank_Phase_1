@@ -7,7 +7,7 @@ import lombok.NonNull;
 import org.poo.bank.Bank;
 import org.poo.bank.account.Account;
 import org.poo.bank.account.SavingsAccount;
-import org.poo.output.OutputMessage;
+import org.poo.output.message.SimpleMessage;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
 
@@ -59,7 +59,7 @@ public final class AddInterestCommand implements Command {
         JsonNode outputNode = objectMapper.valueToTree(
                 SimpleOutput.init(
                         "addInterest",
-                        OutputMessage.init(e.getMessage(), timestamp),
+                        SimpleMessage.init(e.getMessage(), timestamp),
                         timestamp
                 )
         );

@@ -9,5 +9,4 @@ public final class Exchange {
     private String from;
     private String to;
     private double rate;
-    private int timestamp;
 }

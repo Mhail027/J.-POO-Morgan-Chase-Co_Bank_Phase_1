@@ -1,24 +1,24 @@
-package org.poo.output;
+package org.poo.output.message;
 
 import lombok.Getter;
 import lombok.NonNull;
 
 @Getter
-public final class OutputError {
-    private static OutputError instance;
+public final class SuccessMessage {
+    private static SuccessMessage instance;
 
-    private Object error;
+    private Object success;
     private int timestamp;
 
-    private OutputError() {
+    private SuccessMessage() {
     }
 
     /**
      * @return only instance of this class
      */
-    private static OutputError getInstance() {
+    private static SuccessMessage getInstance() {
         if (instance == null) {
-            instance = new OutputError();
+            instance = new SuccessMessage();
         }
         return instance;
     }
@@ -30,9 +30,9 @@ public final class OutputError {
      * @param timestamp receiving time of command
      * @return instance
      */
-    public static OutputError init(@NonNull final Object success, final int timestamp) {
+    public static SuccessMessage init(@NonNull final Object success, final int timestamp) {
         instance = getInstance();
-        instance.error = success;
+        instance.success = success;
         instance.timestamp = timestamp;
         return instance;
     }

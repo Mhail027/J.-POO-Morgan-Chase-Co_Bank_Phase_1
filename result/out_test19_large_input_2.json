@@ -1,19 +1,20 @@
 [ {
   "command" : "deleteAccount",
+  "timestamp" : 9,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 9
-  },
-  "timestamp" : 9
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 36,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 36
-  },
-  "timestamp" : 36
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 38,
   "output" : [ {
     "firstName" : "Selma",
     "lastName" : "Birnbaum",
@@ -189,150 +190,150 @@
     "lastName" : "Bovet",
     "email" : "Roland_Bovet@zoho.ch",
     "accounts" : [ ]
-  } ],
-  "timestamp" : 38
+  } ]
 }, {
   "command" : "payOnline",
+  "timestamp" : 72,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 72
-  },
-  "timestamp" : 72
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 73,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 73
-  },
-  "timestamp" : 73
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 74,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 74
-  },
-  "timestamp" : 74
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 75,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 75
-  },
-  "timestamp" : 75
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 76,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 76
-  },
-  "timestamp" : 76
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 77,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 77
-  },
-  "timestamp" : 77
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 78,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 78
-  },
-  "timestamp" : 78
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 79,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 79
-  },
-  "timestamp" : 79
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 80,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 80
-  },
-  "timestamp" : 80
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 81,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 81
-  },
-  "timestamp" : 81
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 82,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 82
-  },
-  "timestamp" : 82
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 83,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 83
-  },
-  "timestamp" : 83
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 84,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 84
-  },
-  "timestamp" : 84
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 85,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 85
-  },
-  "timestamp" : 85
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 86,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 86
-  },
-  "timestamp" : 86
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 87,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 87
-  },
-  "timestamp" : 87
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 88,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 88
-  },
-  "timestamp" : 88
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 89,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 89
-  },
-  "timestamp" : 89
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 90,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 90
-  },
-  "timestamp" : 90
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 91,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 91
-  },
-  "timestamp" : 91
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 92,
   "output" : [ {
     "firstName" : "Selma",
     "lastName" : "Birnbaum",
@@ -586,150 +587,150 @@
       "cards" : [ ],
       "IBAN" : "RO71POOB1634969878734749"
     } ]
-  } ],
-  "timestamp" : 92
+  } ]
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 93,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 93
-  },
-  "timestamp" : 93
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 94,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 94
-  },
-  "timestamp" : 94
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 95,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 95
-  },
-  "timestamp" : 95
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 96,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 96
-  },
-  "timestamp" : 96
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 97,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 97
-  },
-  "timestamp" : 97
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 98,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 98
-  },
-  "timestamp" : 98
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 99,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 99
-  },
-  "timestamp" : 99
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 100,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 100
-  },
-  "timestamp" : 100
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 101,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 101
-  },
-  "timestamp" : 101
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 102,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 102
-  },
-  "timestamp" : 102
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 103,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 103
-  },
-  "timestamp" : 103
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 104,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 104
-  },
-  "timestamp" : 104
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 105,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 105
-  },
-  "timestamp" : 105
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 106,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 106
-  },
-  "timestamp" : 106
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 107,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 107
-  },
-  "timestamp" : 107
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 108,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 108
-  },
-  "timestamp" : 108
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 109,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 109
-  },
-  "timestamp" : 109
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 110,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 110
-  },
-  "timestamp" : 110
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 111,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 111
-  },
-  "timestamp" : 111
+  }
 }, {
   "command" : "checkCardStatus",
+  "timestamp" : 112,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 112
-  },
-  "timestamp" : 112
+  }
 }, {
   "command" : "printTransactions",
+  "timestamp" : 119,
   "output" : [ {
     "timestamp" : 5,
     "description" : "New account created"
@@ -783,10 +784,10 @@
     "currency" : "CHF",
     "involvedAccounts" : [ "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO96POOB6738272785416988", "RO69POOB9846198978826791", "RO38POOB0964823730995794", "RO53POOB7122855990652257", "RO00POOB5687892910835215", "RO79POOB3616857825600958", "RO10POOB4354933866366881", "RO19POOB4981055641668812", "RO33POOB4049920806186500", "RO71POOB1634969878734749", "RO33POOB9999273999620457", "RO37POOB7013767509830666", "RO68POOB1848616931405475", "RO32POOB0130532963818359", "RO98POOB8412955460158769", "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO76POOB4035116042454483" ],
     "error" : "Account RO98POOB8412955460158769 has insufficient funds for a split payment."
-  } ],
-  "timestamp" : 119
+  } ]
 }, {
   "command" : "report",
+  "timestamp" : 124,
   "output" : {
     "balance" : 2149.0,
     "currency" : "NZD",
@@ -819,150 +820,150 @@
       "error" : "Account RO98POOB8412955460158769 has insufficient funds for a split payment."
     } ],
     "IBAN" : "RO90POOB5450777208072365"
-  },
-  "timestamp" : 124
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 145,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 145
-  },
-  "timestamp" : 145
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 146,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 146
-  },
-  "timestamp" : 146
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 147,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 147
-  },
-  "timestamp" : 147
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 148,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 148
-  },
-  "timestamp" : 148
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 149,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 149
-  },
-  "timestamp" : 149
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 150,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 150
-  },
-  "timestamp" : 150
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 151,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 151
-  },
-  "timestamp" : 151
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 152,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 152
-  },
-  "timestamp" : 152
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 153,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 153
-  },
-  "timestamp" : 153
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 154,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 154
-  },
-  "timestamp" : 154
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 155,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 155
-  },
-  "timestamp" : 155
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 156,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 156
-  },
-  "timestamp" : 156
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 157,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 157
-  },
-  "timestamp" : 157
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 158,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 158
-  },
-  "timestamp" : 158
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 159,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 159
-  },
-  "timestamp" : 159
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 160,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 160
-  },
-  "timestamp" : 160
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 161,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 161
-  },
-  "timestamp" : 161
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 162,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 162
-  },
-  "timestamp" : 162
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 163,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 163
-  },
-  "timestamp" : 163
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 164,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 164
-  },
-  "timestamp" : 164
+  }
 }, {
   "command" : "printTransactions",
+  "timestamp" : 172,
   "output" : [ {
     "timestamp" : 1,
     "description" : "New account created"
@@ -1032,10 +1033,10 @@
     "receiverIBAN" : "RO65POOB8944016386845896",
     "senderIBAN" : "RO98POOB8412955460158769",
     "transferType" : "received"
-  } ],
-  "timestamp" : 172
+  } ]
 }, {
   "command" : "printTransactions",
+  "timestamp" : 173,
   "output" : [ {
     "timestamp" : 4,
     "description" : "New account created"
@@ -1119,10 +1120,10 @@
     "amount" : 348.25,
     "currency" : "EUR",
     "involvedAccounts" : [ "RO30POOB9523423715747796", "RO19POOB4981055641668812", "RO65POOB8944016386845896", "RO68POOB1848616931405475" ]
-  } ],
-  "timestamp" : 173
+  } ]
 }, {
   "command" : "printTransactions",
+  "timestamp" : 174,
   "output" : [ {
     "timestamp" : 41,
     "description" : "New account created"
@@ -1147,10 +1148,10 @@
     "currency" : "CHF",
     "involvedAccounts" : [ "RO58POOB2721178218599590", "RO65POOB8944016386845896", "RO96POOB6738272785416988", "RO69POOB9846198978826791", "RO38POOB0964823730995794", "RO53POOB7122855990652257", "RO00POOB5687892910835215", "RO79POOB3616857825600958", "RO10POOB4354933866366881", "RO19POOB4981055641668812", "RO33POOB4049920806186500", "RO71POOB1634969878734749", "RO33POOB9999273999620457", "RO37POOB7013767509830666", "RO68POOB1848616931405475", "RO32POOB0130532963818359", "RO98POOB8412955460158769", "RO90POOB5450777208072365", "RO30POOB9523423715747796", "RO76POOB4035116042454483" ],
     "error" : "Account RO98POOB8412955460158769 has insufficient funds for a split payment."
-  } ],
-  "timestamp" : 174
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 175,
   "output" : [ {
     "firstName" : "Selma",
     "lastName" : "Birnbaum",
@@ -1413,20 +1414,20 @@
       "cards" : [ ],
       "IBAN" : "RO71POOB1634969878734749"
     } ]
-  } ],
-  "timestamp" : 175
+  } ]
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 176,
   "output" : {
     "balance" : 2498.2,
     "currency" : "NZD",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO90POOB5450777208072365"
-  },
-  "timestamp" : 176
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 177,
   "output" : {
     "balance" : 5927.375,
     "currency" : "RON",
@@ -1441,178 +1442,177 @@
       "total" : 1915.0
     } ],
     "IBAN" : "RO65POOB8944016386845896"
-  },
-  "timestamp" : 177
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 178,
   "output" : {
     "balance" : 7336.913461538462,
     "currency" : "CHF",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO58POOB2721178218599590"
-  },
-  "timestamp" : 178
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 179,
   "output" : {
     "balance" : 2363.666666666667,
     "currency" : "CAD",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO76POOB4035116042454483"
-  },
-  "timestamp" : 179
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 180,
   "output" : {
     "error" : "This kind of report is not supported for a saving account"
-  },
-  "timestamp" : 180
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 181,
   "output" : {
     "error" : "This kind of report is not supported for a saving account"
-  },
-  "timestamp" : 181
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 182,
   "output" : {
     "balance" : 2290.75,
     "currency" : "EUR",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO30POOB9523423715747796"
-  },
-  "timestamp" : 182
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 183,
   "output" : {
     "balance" : 1006.0,
     "currency" : "NZD",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO79POOB3616857825600958"
-  },
-  "timestamp" : 183
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 184,
   "output" : {
     "balance" : 558.0,
     "currency" : "GBP",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO00POOB5687892910835215"
-  },
-  "timestamp" : 184
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 185,
   "output" : {
     "balance" : 1107.0,
     "currency" : "CAD",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO96POOB6738272785416988"
-  },
-  "timestamp" : 185
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 186,
   "output" : {
     "balance" : 7476.0,
     "currency" : "INR",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO33POOB4049920806186500"
-  },
-  "timestamp" : 186
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 187,
   "output" : {
     "balance" : 1800.0,
     "currency" : "RON",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO69POOB9846198978826791"
-  },
-  "timestamp" : 187
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 188,
   "output" : {
     "balance" : 4991.636363636364,
     "currency" : "MXN",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO98POOB8412955460158769"
-  },
-  "timestamp" : 188
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 189,
   "output" : {
     "balance" : 212.0,
     "currency" : "INR",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO32POOB0130532963818359"
-  },
-  "timestamp" : 189
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 190,
   "output" : {
     "balance" : 6077.972222222223,
     "currency" : "CAD",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO68POOB1848616931405475"
-  },
-  "timestamp" : 190
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 191,
   "output" : {
     "balance" : 798.0,
     "currency" : "EUR",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO10POOB4354933866366881"
-  },
-  "timestamp" : 191
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 192,
   "output" : {
     "balance" : 189.0,
     "currency" : "MXN",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO33POOB9999273999620457"
-  },
-  "timestamp" : 192
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 193,
   "output" : {
     "balance" : 11308.0,
     "currency" : "CHF",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO38POOB0964823730995794"
-  },
-  "timestamp" : 193
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 194,
   "output" : {
     "balance" : 1024.0,
     "currency" : "CHF",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO53POOB7122855990652257"
-  },
-  "timestamp" : 194
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 195,
   "output" : {
     "balance" : 2951.0,
     "currency" : "CHF",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO71POOB1634969878734749"
-  },
-  "timestamp" : 195
+  }
 } ]

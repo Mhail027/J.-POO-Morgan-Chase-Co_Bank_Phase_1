@@ -1,5 +1,6 @@
 [ {
   "command" : "printUsers",
+  "timestamp" : 6,
   "output" : [ {
     "firstName" : "Sachi",
     "lastName" : "Brahmbhatt",
@@ -105,26 +106,26 @@
     "lastName" : "Desrosiers",
     "email" : "Alexandre-Jonathan_Desrosiers@aol.ca",
     "accounts" : [ ]
-  } ],
-  "timestamp" : 6
+  } ]
 }, {
   "command" : "report",
+  "timestamp" : 26,
   "output" : {
     "balance" : 51504.25,
     "currency" : "INR",
     "transactions" : [ ],
     "IBAN" : "RO58POOB7344468893732422"
-  },
-  "timestamp" : 26
+  }
 }, {
   "command" : "report",
+  "timestamp" : 27,
   "output" : {
     "description" : "Account not found",
     "timestamp" : 27
-  },
-  "timestamp" : 27
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 28,
   "output" : [ {
     "firstName" : "Sachi",
     "lastName" : "Brahmbhatt",
@@ -230,10 +231,10 @@
     "lastName" : "Desrosiers",
     "email" : "Alexandre-Jonathan_Desrosiers@aol.ca",
     "accounts" : [ ]
-  } ],
-  "timestamp" : 28
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 53,
   "output" : [ {
     "firstName" : "Sachi",
     "lastName" : "Brahmbhatt",
@@ -372,10 +373,10 @@
     "lastName" : "Desrosiers",
     "email" : "Alexandre-Jonathan_Desrosiers@aol.ca",
     "accounts" : [ ]
-  } ],
-  "timestamp" : 53
+  } ]
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 54,
   "output" : {
     "balance" : 41457.25,
     "currency" : "INR",
@@ -398,17 +399,17 @@
       "total" : 21280.0
     } ],
     "IBAN" : "RO58POOB7344468893732422"
-  },
-  "timestamp" : 54
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 55,
   "output" : {
     "description" : "Account not found",
     "timestamp" : 55
-  },
-  "timestamp" : 55
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 71,
   "output" : [ {
     "firstName" : "Sachi",
     "lastName" : "Brahmbhatt",
@@ -607,20 +608,20 @@
       "cards" : [ ],
       "IBAN" : "RO38POOB0964823730995794"
     } ]
-  } ],
-  "timestamp" : 71
+  } ]
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 75,
   "output" : {
     "balance" : 0.0,
     "currency" : "CHF",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO53POOB7122855990652257"
-  },
-  "timestamp" : 75
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 78,
   "output" : [ {
     "firstName" : "Sachi",
     "lastName" : "Brahmbhatt",
@@ -831,24 +832,24 @@
       "cards" : [ ],
       "IBAN" : "RO38POOB0964823730995794"
     } ]
-  } ],
-  "timestamp" : 78
+  } ]
 }, {
   "command" : "changeInterestRate",
+  "timestamp" : 79,
   "output" : {
     "description" : "This is not a savings account",
     "timestamp" : 79
-  },
-  "timestamp" : 79
+  }
 }, {
   "command" : "addInterest",
+  "timestamp" : 80,
   "output" : {
     "description" : "This is not a savings account",
     "timestamp" : 80
-  },
-  "timestamp" : 80
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 81,
   "output" : [ {
     "firstName" : "Sachi",
     "lastName" : "Brahmbhatt",
@@ -1059,10 +1060,10 @@
       "cards" : [ ],
       "IBAN" : "RO38POOB0964823730995794"
     } ]
-  } ],
-  "timestamp" : 81
+  } ]
 }, {
   "command" : "printTransactions",
+  "timestamp" : 123,
   "output" : [ {
     "timestamp" : 1,
     "description" : "New account created"
@@ -1295,10 +1296,10 @@
     "receiverIBAN" : "RO53POOB7122855990652257",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
-  } ],
-  "timestamp" : 123
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 156,
   "output" : [ {
     "firstName" : "Sachi",
     "lastName" : "Brahmbhatt",
@@ -1500,10 +1501,10 @@
       "cards" : [ ],
       "IBAN" : "RO38POOB0964823730995794"
     } ]
-  } ],
-  "timestamp" : 156
+  } ]
 }, {
   "command" : "report",
+  "timestamp" : 166,
   "output" : {
     "balance" : 16301.759999999998,
     "currency" : "NZD",
@@ -1523,10 +1524,10 @@
       "transferType" : "received"
     } ],
     "IBAN" : "RO69POOB6209498372540635"
-  },
-  "timestamp" : 166
+  }
 }, {
   "command" : "report",
+  "timestamp" : 167,
   "output" : {
     "balance" : 14669.339999999998,
     "currency" : "EUR",
@@ -1539,30 +1540,30 @@
       "transferType" : "received"
     } ],
     "IBAN" : "RO65POOB8944016386845896"
-  },
-  "timestamp" : 167
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 170,
   "output" : {
     "balance" : 917.1964285714286,
     "currency" : "EUR",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO76POOB4035116042454483"
-  },
-  "timestamp" : 170
+  }
 }, {
   "command" : "spendingsReport",
+  "timestamp" : 171,
   "output" : {
     "balance" : 520.8928571428571,
     "currency" : "CAD",
     "transactions" : [ ],
     "commerciants" : [ ],
     "IBAN" : "RO19POOB4981055641668812"
-  },
-  "timestamp" : 171
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 172,
   "output" : [ {
     "firstName" : "Sachi",
     "lastName" : "Brahmbhatt",
@@ -1767,157 +1768,157 @@
       "cards" : [ ],
       "IBAN" : "RO38POOB0964823730995794"
     } ]
-  } ],
-  "timestamp" : 172
+  } ]
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 173,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 173
-  },
-  "timestamp" : 173
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 174,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 174
-  },
-  "timestamp" : 174
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 175,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 175
-  },
-  "timestamp" : 175
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 176,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 176
-  },
-  "timestamp" : 176
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 177,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 177
-  },
-  "timestamp" : 177
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 178,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 178
-  },
-  "timestamp" : 178
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 179,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 179
-  },
-  "timestamp" : 179
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 180,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 180
-  },
-  "timestamp" : 180
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 181,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 181
-  },
-  "timestamp" : 181
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 182,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 182
-  },
-  "timestamp" : 182
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 183,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 183
-  },
-  "timestamp" : 183
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 184,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 184
-  },
-  "timestamp" : 184
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 185,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 185
-  },
-  "timestamp" : 185
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 186,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 186
-  },
-  "timestamp" : 186
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 187,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 187
-  },
-  "timestamp" : 187
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 188,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 188
-  },
-  "timestamp" : 188
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 189,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 189
-  },
-  "timestamp" : 189
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 190,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 190
-  },
-  "timestamp" : 190
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 191,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 191
-  },
-  "timestamp" : 191
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 192,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 192
-  },
-  "timestamp" : 192
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 193,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 193
-  },
-  "timestamp" : 193
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 194,
   "output" : [ {
     "firstName" : "Sachi",
     "lastName" : "Brahmbhatt",
@@ -2122,10 +2123,10 @@
       "cards" : [ ],
       "IBAN" : "RO38POOB0964823730995794"
     } ]
-  } ],
-  "timestamp" : 194
+  } ]
 }, {
   "command" : "printTransactions",
+  "timestamp" : 195,
   "output" : [ {
     "timestamp" : 1,
     "description" : "New account created"
@@ -2367,6 +2368,5 @@
   }, {
     "timestamp" : 173,
     "description" : "Account couldn't be deleted - there are funds remaining"
-  } ],
-  "timestamp" : 195
+  } ]
 } ]

@@ -9,7 +9,7 @@ import org.poo.bank.account.Account;
 import org.poo.bank.account.SavingsAccount;
 import org.poo.bank.transaction.Transaction;
 import org.poo.bank.transaction.TransactionBuilder;
-import org.poo.output.OutputMessage;
+import org.poo.output.message.SimpleMessage;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
 
@@ -78,7 +78,7 @@ public final class ChangeInterestRateCommand implements Command {
         JsonNode outputNode = objectMapper.valueToTree(
                 SimpleOutput.init(
                         "changeInterestRate",
-                        OutputMessage.init(e.getMessage(), timestamp),
+                        SimpleMessage.init(e.getMessage(), timestamp),
                         timestamp
                 )
         );

@@ -1,5 +1,6 @@
 [ {
   "command" : "printUsers",
+  "timestamp" : 7,
   "output" : [ {
     "firstName" : "Daniel",
     "lastName" : "Masson",
@@ -48,17 +49,17 @@
     "lastName" : "Diaconescu",
     "email" : "Marina_Diaconescu@outlook.ro",
     "accounts" : [ ]
-  } ],
-  "timestamp" : 7
+  } ]
 }, {
   "command" : "payOnline",
+  "timestamp" : 11,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 11
-  },
-  "timestamp" : 11
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 18,
   "output" : [ {
     "firstName" : "Daniel",
     "lastName" : "Masson",
@@ -110,10 +111,10 @@
     "lastName" : "Diaconescu",
     "email" : "Marina_Diaconescu@outlook.ro",
     "accounts" : [ ]
-  } ],
-  "timestamp" : 18
+  } ]
 }, {
   "command" : "printTransactions",
+  "timestamp" : 30,
   "output" : [ {
     "timestamp" : 1,
     "description" : "New account created"
@@ -162,10 +163,10 @@
     "amount" : 1214.0,
     "currency" : "USD",
     "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB7344468893732422", "RO58POOB2721178218599590" ]
-  } ],
-  "timestamp" : 30
+  } ]
 }, {
   "command" : "printTransactions",
+  "timestamp" : 34,
   "output" : [ {
     "timestamp" : 21,
     "description" : "New account created"
@@ -175,6 +176,5 @@
     "amount" : 265.8333333333333,
     "currency" : "USD",
     "involvedAccounts" : [ "RO58POOB2721178218599590", "RO76POOB4035116042454483", "RO58POOB7344468893732422", "RO90POOB5450777208072365", "RO69POOB6209498372540635", "RO65POOB8944016386845896" ]
-  } ],
-  "timestamp" : 34
+  } ]
 } ]

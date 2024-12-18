@@ -1,5 +1,6 @@
 [ {
   "command" : "printUsers",
+  "timestamp" : 10,
   "output" : [ {
     "firstName" : "Margaux",
     "lastName" : "Nicolas",
@@ -44,17 +45,17 @@
       "cards" : [ ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
-  } ],
-  "timestamp" : 10
+  } ]
 }, {
   "command" : "payOnline",
+  "timestamp" : 11,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 11
-  },
-  "timestamp" : 11
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 16,
   "output" : [ {
     "firstName" : "Margaux",
     "lastName" : "Nicolas",
@@ -99,10 +100,10 @@
       "cards" : [ ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
-  } ],
-  "timestamp" : 16
+  } ]
 }, {
   "command" : "printTransactions",
+  "timestamp" : 19,
   "output" : [ {
     "timestamp" : 1,
     "description" : "New account created"
@@ -124,6 +125,5 @@
     "amount" : 1598.5,
     "currency" : "EUR",
     "involvedAccounts" : [ "RO69POOB6209498372540635", "RO58POOB7344468893732422" ]
-  } ],
-  "timestamp" : 19
+  } ]
 } ]

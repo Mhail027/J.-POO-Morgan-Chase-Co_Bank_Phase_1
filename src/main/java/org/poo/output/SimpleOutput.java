@@ -1,5 +1,6 @@
 package org.poo.output;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
@@ -9,7 +10,8 @@ public final class SimpleOutput {
     private static SimpleOutput instance;
 
     private String command;
-    @Setter private Object output;
+    @Setter @JsonProperty("output")
+    private Object message;
     private int timestamp;
 
     private SimpleOutput() {
@@ -38,7 +40,7 @@ public final class SimpleOutput {
         instance = getInstance();
 
         instance.command = command;
-        instance.output = output;
+        instance.message = output;
         instance.timestamp = timestamp;
 
         return instance;

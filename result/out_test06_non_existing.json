@@ -1,5 +1,6 @@
 [ {
   "command" : "printUsers",
+  "timestamp" : 7,
   "output" : [ {
     "firstName" : "Nicole",
     "lastName" : "Daniels",
@@ -22,17 +23,17 @@
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
-  } ],
-  "timestamp" : 7
+  } ]
 }, {
   "command" : "payOnline",
+  "timestamp" : 9,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 9
-  },
-  "timestamp" : 9
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 12,
   "output" : [ {
     "firstName" : "Nicole",
     "lastName" : "Daniels",
@@ -64,17 +65,17 @@
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
-  } ],
-  "timestamp" : 12
+  } ]
 }, {
   "command" : "payOnline",
+  "timestamp" : 14,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 14
-  },
-  "timestamp" : 14
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 15,
   "output" : [ {
     "firstName" : "Nicole",
     "lastName" : "Daniels",
@@ -103,10 +104,10 @@
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
-  } ],
-  "timestamp" : 15
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 19,
   "output" : [ {
     "firstName" : "Nicole",
     "lastName" : "Daniels",
@@ -138,10 +139,10 @@
       } ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
-  } ],
-  "timestamp" : 19
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 21,
   "output" : [ {
     "firstName" : "Nicole",
     "lastName" : "Daniels",
@@ -173,6 +174,5 @@
       } ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
-  } ],
-  "timestamp" : 21
+  } ]
 } ]

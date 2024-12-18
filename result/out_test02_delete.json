@@ -1,5 +1,6 @@
 [ {
   "command" : "printUsers",
+  "timestamp" : 1,
   "output" : [ {
     "firstName" : "Antoine",
     "lastName" : "Couturier",
@@ -10,10 +11,10 @@
     "lastName" : "Mazilescu",
     "email" : "Dragos_Mazilescu@hotmail.ro",
     "accounts" : [ ]
-  } ],
-  "timestamp" : 1
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 4,
   "output" : [ {
     "firstName" : "Antoine",
     "lastName" : "Couturier",
@@ -36,17 +37,17 @@
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
-  } ],
-  "timestamp" : 4
+  } ]
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 5,
   "output" : {
     "success" : "Account deleted",
     "timestamp" : 5
-  },
-  "timestamp" : 5
+  }
 }, {
   "command" : "printUsers",
+  "timestamp" : 6,
   "output" : [ {
     "firstName" : "Antoine",
     "lastName" : "Couturier",
@@ -63,6 +64,5 @@
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
-  } ],
-  "timestamp" : 6
+  } ]
 } ]

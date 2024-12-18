@@ -1,5 +1,6 @@
 [ {
   "command" : "printUsers",
+  "timestamp" : 10,
   "output" : [ {
     "firstName" : "Laurie",
     "lastName" : "Johnson",
@@ -33,10 +34,10 @@
       "cards" : [ ],
       "IBAN" : "RO90POOB5450777208072365"
     } ]
-  } ],
-  "timestamp" : 10
+  } ]
 }, {
   "command" : "printTransactions",
+  "timestamp" : 14,
   "output" : [ {
     "timestamp" : 1,
     "description" : "New account created"
@@ -47,10 +48,10 @@
     "receiverIBAN" : "RO69POOB6209498372540635",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
-  } ],
-  "timestamp" : 14
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 19,
   "output" : [ {
     "firstName" : "Laurie",
     "lastName" : "Johnson",
@@ -90,6 +91,5 @@
       "cards" : [ ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
-  } ],
-  "timestamp" : 19
+  } ]
 } ]

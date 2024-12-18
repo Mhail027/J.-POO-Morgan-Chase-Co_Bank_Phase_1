@@ -8,13 +8,14 @@ import org.poo.bank.Bank;
 import org.poo.bank.account.Account;
 import org.poo.bank.transaction.Transaction;
 import org.poo.bank.transaction.TransactionBuilder;
-import org.poo.output.OutputError;
-import org.poo.output.OutputSuccess;
+import org.poo.output.message.ErrorMessage;
+import org.poo.output.message.SuccessMessage;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
 
-import static org.poo.constants.Constants.CAN_NOT_DELETE_ACCOUNT;
 import static org.poo.constants.Constants.HAVE_REMAINED_FUNDS;
+import static org.poo.constants.Constants.INVALID_USER;
+import static org.poo.constants.Constants.CAN_NOT_DELETE_ACCOUNT;
 import static org.poo.constants.Constants.ACCOUNT_DELETED;
 
 public class DeleteAccountCommand implements Command {
@@ -52,14 +53,23 @@ public class DeleteAccountCommand implements Command {
      */
     private void deleteAccount(final ArrayNode output) {
         Account acct = bank.getDatabase().getAccount(iban);
-        if (acct.getBalance() > 0) {
-            haveRemainedFunds(acct);
+        if (!canDeleteAccount(acct)) {
+            return;
         }
 
         bank.getDatabase().removeAccount(iban);
         addSuccessfulOperation(output);
     }
 
+    private boolean canDeleteAccount(final Account acct) throws IllegalArgumentException {
+        if (acct.getBalance() > 0) {
+            haveRemainedFunds(acct);
+            return false;
+        } else if (!acct.getOwner().getEmail().equals(email)) {
+            throw new IllegalArgumentException(INVALID_USER);
+        }
+        return true;
+    }
     private void haveRemainedFunds(final Account acct) {
         Transaction transaction  = new TransactionBuilder()
                                            .timestamp(timestamp)
@@ -73,7 +83,7 @@ public class DeleteAccountCommand implements Command {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode outputNode = objectMapper.valueToTree(
                 SimpleOutput.init("deleteAccount",
-                        OutputSuccess.init(ACCOUNT_DELETED, timestamp),
+                        SuccessMessage.init(ACCOUNT_DELETED, timestamp),
                         timestamp)
         );
         output.add(outputNode);
@@ -84,7 +94,7 @@ public class DeleteAccountCommand implements Command {
         JsonNode outputNode = objectMapper.valueToTree(
                 SimpleOutput.init(
                         "deleteAccount",
-                        OutputError.init(e.getMessage(), timestamp),
+                        ErrorMessage.init(e.getMessage(), timestamp),
                         timestamp
                 )
         );

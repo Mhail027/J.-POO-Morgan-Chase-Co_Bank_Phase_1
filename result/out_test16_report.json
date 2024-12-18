@@ -1,5 +1,6 @@
 [ {
   "command" : "printUsers",
+  "timestamp" : 9,
   "output" : [ {
     "firstName" : "Emanuel",
     "lastName" : "Dumitrescu",
@@ -34,10 +35,10 @@
       "cards" : [ ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
-  } ],
-  "timestamp" : 9
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 14,
   "output" : [ {
     "firstName" : "Emanuel",
     "lastName" : "Dumitrescu",
@@ -75,24 +76,24 @@
       "cards" : [ ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
-  } ],
-  "timestamp" : 14
+  } ]
 }, {
   "command" : "payOnline",
+  "timestamp" : 23,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 23
-  },
-  "timestamp" : 23
+  }
 }, {
   "command" : "payOnline",
+  "timestamp" : 24,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 24
-  },
-  "timestamp" : 24
+  }
 }, {
   "command" : "report",
+  "timestamp" : 25,
   "output" : {
     "balance" : 836.5,
     "currency" : "RON",
@@ -114,10 +115,10 @@
       "commerciant" : "Burger King"
     } ],
     "IBAN" : "RO58POOB7344468893732422"
-  },
-  "timestamp" : 25
+  }
 }, {
   "command" : "report",
+  "timestamp" : 26,
   "output" : {
     "balance" : 902.5,
     "currency" : "RON",
@@ -126,10 +127,10 @@
       "description" : "New account created"
     } ],
     "IBAN" : "RO69POOB6209498372540635"
-  },
-  "timestamp" : 26
+  }
 }, {
   "command" : "report",
+  "timestamp" : 27,
   "output" : {
     "balance" : 541.0,
     "currency" : "EUR",
@@ -142,15 +143,14 @@
       "transferType" : "sent"
     } ],
     "IBAN" : "RO90POOB5450777208072365"
-  },
-  "timestamp" : 27
+  }
 }, {
   "command" : "report",
+  "timestamp" : 28,
   "output" : {
     "balance" : 1367.0,
     "currency" : "EUR",
     "transactions" : [ ],
     "IBAN" : "RO65POOB8944016386845896"
-  },
-  "timestamp" : 28
+  }
 } ]

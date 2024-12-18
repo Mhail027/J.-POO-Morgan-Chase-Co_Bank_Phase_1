@@ -4,20 +4,20 @@ import lombok.Getter;
 import lombok.NonNull;
 
 @Getter
-public final class Error {
-    private static Error instance;
+public final class ErrorOutput {
+    private static ErrorOutput instance;
 
     private Object error;
 
-    private Error() {
+    private ErrorOutput() {
     }
 
     /**
      * @return only instance of this class
      */
-    private static Error getInstance() {
+    private static ErrorOutput getInstance() {
         if (instance == null) {
-            instance = new Error();
+            instance = new ErrorOutput();
         }
         return instance;
     }
@@ -28,7 +28,7 @@ public final class Error {
      * @param error a message
      * @return instance
      */
-    public static Error init(@NonNull final Object error) {
+    public static ErrorOutput init(@NonNull final Object error) {
         instance = getInstance();
         instance.error = error;
         return instance;

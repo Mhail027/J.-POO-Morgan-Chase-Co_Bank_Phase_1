@@ -1,5 +1,6 @@
 [ {
   "command" : "printTransactions",
+  "timestamp" : 8,
   "output" : [ {
     "timestamp" : 1,
     "description" : "New account created"
@@ -10,24 +11,24 @@
     "receiverIBAN" : "RO69POOB6209498372540635",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
-  } ],
-  "timestamp" : 8
+  } ]
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 10,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 10
-  },
-  "timestamp" : 10
+  }
 }, {
   "command" : "deleteAccount",
+  "timestamp" : 15,
   "output" : {
     "error" : "Account couldn't be deleted - see org.poo.transactions for details",
     "timestamp" : 15
-  },
-  "timestamp" : 15
+  }
 }, {
   "command" : "printTransactions",
+  "timestamp" : 17,
   "output" : [ {
     "timestamp" : 1,
     "description" : "New account created"
@@ -52,10 +53,10 @@
     "receiverIBAN" : "RO90POOB5450777208072365",
     "senderIBAN" : "RO58POOB7344468893732422",
     "transferType" : "sent"
-  } ],
-  "timestamp" : 17
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 22,
   "output" : [ {
     "firstName" : "Marinela",
     "lastName" : "Puscasu",
@@ -103,17 +104,17 @@
       } ],
       "IBAN" : "RO65POOB8944016386845896"
     } ]
-  } ],
-  "timestamp" : 22
+  } ]
 }, {
   "command" : "payOnline",
+  "timestamp" : 26,
   "output" : {
     "description" : "Card not found",
     "timestamp" : 26
-  },
-  "timestamp" : 26
+  }
 }, {
   "command" : "printTransactions",
+  "timestamp" : 27,
   "output" : [ {
     "timestamp" : 18,
     "description" : "New account created"
@@ -140,6 +141,5 @@
     "account" : "RO65POOB8944016386845896",
     "card" : "8207906978464446",
     "cardHolder" : "Andre_Martin@gmail.fr"
-  } ],
-  "timestamp" : 27
+  } ]
 } ]

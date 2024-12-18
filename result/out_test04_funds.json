@@ -1,5 +1,6 @@
 [ {
   "command" : "printUsers",
+  "timestamp" : 1,
   "output" : [ {
     "firstName" : "Chantal",
     "lastName" : "Nicolas",
@@ -15,10 +16,10 @@
     "lastName" : "Ionita",
     "email" : "Marcel_Ionita@gmail.ro",
     "accounts" : [ ]
-  } ],
-  "timestamp" : 1
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 6,
   "output" : [ {
     "firstName" : "Chantal",
     "lastName" : "Nicolas",
@@ -52,10 +53,10 @@
     "lastName" : "Ionita",
     "email" : "Marcel_Ionita@gmail.ro",
     "accounts" : [ ]
-  } ],
-  "timestamp" : 6
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 9,
   "output" : [ {
     "firstName" : "Chantal",
     "lastName" : "Nicolas",
@@ -89,10 +90,10 @@
     "lastName" : "Ionita",
     "email" : "Marcel_Ionita@gmail.ro",
     "accounts" : [ ]
-  } ],
-  "timestamp" : 9
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 13,
   "output" : [ {
     "firstName" : "Chantal",
     "lastName" : "Nicolas",
@@ -132,6 +133,5 @@
       "cards" : [ ],
       "IBAN" : "RO90POOB5450777208072365"
     } ]
-  } ],
-  "timestamp" : 13
+  } ]
 } ]

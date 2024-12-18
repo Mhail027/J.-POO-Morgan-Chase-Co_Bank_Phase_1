@@ -8,7 +8,7 @@ import org.poo.bank.Bank;
 import org.poo.bank.account.Account;
 import org.poo.bank.transaction.Transaction;
 import org.poo.bank.transaction.TransactionBuilder;
-import org.poo.output.OutputMessage;
+import org.poo.output.message.SimpleMessage;
 import org.poo.output.SimpleOutput;
 import org.poo.validator.PositiveOrZeroValidator;
 
@@ -121,7 +121,7 @@ public final class SendMoneyCommand implements Command {
         ObjectMapper objectMapper = new ObjectMapper();
         JsonNode outputNode = objectMapper.valueToTree(
                 SimpleOutput.init("sendMoney",
-                        OutputMessage.init(e.getMessage(), timestamp),
+                        SimpleMessage.init(e.getMessage(), timestamp),
                         timestamp)
         );
         output.add(outputNode);

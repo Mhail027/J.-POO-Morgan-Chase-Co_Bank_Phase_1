@@ -1,5 +1,6 @@
 [ {
   "command" : "printUsers",
+  "timestamp" : 5,
   "output" : [ {
     "firstName" : "Decebal",
     "lastName" : "Popa",
@@ -22,10 +23,10 @@
       "cards" : [ ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
-  } ],
-  "timestamp" : 5
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 11,
   "output" : [ {
     "firstName" : "Decebal",
     "lastName" : "Popa",
@@ -63,10 +64,10 @@
       } ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
-  } ],
-  "timestamp" : 11
+  } ]
 }, {
   "command" : "printUsers",
+  "timestamp" : 17,
   "output" : [ {
     "firstName" : "Decebal",
     "lastName" : "Popa",
@@ -104,6 +105,5 @@
       } ],
       "IBAN" : "RO69POOB6209498372540635"
     } ]
-  } ],
-  "timestamp" : 17
+  } ]
 } ]
