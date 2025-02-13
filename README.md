@@ -4,7 +4,7 @@ Year: 2024 - 2025
 
 # Assignment POO - Project J. POO Morgan - Phase One
 
-![](donald_duck_counting_money.gif.gif)
+![](media/donald_duck_counting_money.gif.gif)
 
 #### Assignment Link: [https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/2024/proiect-e1](https://ocw.cs.pub.ro/courses/poo-ca-cd/teme/2024/proiect-e1)
 
